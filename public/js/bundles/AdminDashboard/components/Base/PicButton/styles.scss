@@ -1,0 +1,35 @@
+/*---- buttons styling -----*/
+
+.button-container{
+	cursor: pointer;
+	display: block;
+
+	a:not([href="/admin/tools"]), .click-area{
+		display: block;
+	    padding: 6px 16px;
+
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+.centering-container{
+	position: relative;
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	top: 50%;
+	transform: translateY(-50%);
+}	
+
+.btn-text{
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+.pointer{
+	cursor: pointer;
+}

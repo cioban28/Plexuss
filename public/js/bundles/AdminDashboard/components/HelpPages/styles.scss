@@ -1,0 +1,17 @@
+@import './../Base/_base';
+
+.help{
+
+ 	&-title{
+		font-size: 35px;
+		font-weight: 300;
+	}
+
+
+	&-faq{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -661px -12px;
+		margin-right: 5px;
+		width: 39px;
+		height: 30px;
+	}
+}

@@ -1,0 +1,91 @@
+.rightbar-list{
+    .quad{
+        color: #000;
+        padding-top: 0;
+        .header{
+            text-align: center;
+            line-height: 22px;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 26px 20px 20px;
+            border-bottom: 0.2px solid #e9e9e9;
+        }
+        .card{
+            padding: 20px 10px;
+            border-bottom: 0.2px solid #e9e9e9;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .img_parent{
+                img{
+                    margin: 0 auto;
+                    display: block;
+                }
+                .news{
+                    width: 32px;
+                    height: 29px;
+                }
+                .essay{
+                    width: 24px;
+                    height: 34px;
+                }
+                .trivia{
+                    width: 28px;
+                    height: 32px;
+                }
+                .fun{
+                    width: 30px;
+                    height: 31px;
+                }
+                .IntlStnd{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+            .text{
+                font-size: 15px;
+                &.active {
+                    color: #2AC56C;
+                }
+            }
+            &:hover{
+                color: #2AC56C;
+            }
+        }
+        .upgrade_btn_parent{
+            text-align: center;
+            padding-top: 20px;
+            background: #F9F9F9;
+            .upgrade_btn{
+                background: #FF5C26;
+                width: 222px;
+                height: 44px;
+                border-radius: 6px;
+                color: #FFFFFF;
+                font-size: 13px;
+                display: inline-flex;
+                align-items: center;
+                img{
+                    width: 22px;
+                    height: 30px;
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+}
+@media all and(max-width: 767px){
+    .rightbar-list .quad .header{
+        font-size: 21px;
+        font-weight: 600;
+        background: #F9F9F9;
+        padding: 26px 10px 10px;
+        height: 80px;
+    }
+    .quad_parent{
+        background: #F9F9F9;
+        .rightbar-list{
+            background: #FFFFFF;
+        }
+    }
+}

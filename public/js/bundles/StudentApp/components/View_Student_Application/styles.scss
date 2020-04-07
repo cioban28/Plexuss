@@ -1,0 +1,15 @@
+// /View_Student_Application/styles.scss
+
+@import './../../utils/_global';
+
+$offset: 240px;
+
+#_View_Student_Application{
+
+	.reviewapp-wrapper{
+		position: relative;
+		padding: 53px $offset 0 0;
+		margin: 0.1px 0 0;
+	}
+	
+}	

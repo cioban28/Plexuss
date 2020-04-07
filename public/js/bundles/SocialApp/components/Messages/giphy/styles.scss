@@ -1,0 +1,87 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+$error: rgb(246, 65, 65);
+.error {
+  color: $error;
+  text-align: center;
+  font-size: 24px;
+}
+.ReactModal__Content ReactModal__Content--after-open{
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  &::-webkit-scrollbar
+  {
+    width: 7px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    background-color: #949494
+  }
+}
+.giphy__container1{
+  background: #fff;
+  overflow: auto;
+  padding: 10px;
+  .footer{
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+    .giphy__name{
+      font-size: 24px;
+      font-weight: 900;
+      color: gray;
+    }
+  }
+  .giphy__list{
+    .giphy__item{
+      list-style: none;
+    }
+  }
+  .giphy__input {
+    display: inline;
+    text-align: center;
+    padding-top: 10px;
+    img{
+      margin-bottom: -58px;
+      margin-left: 9px;
+      width: 16px;
+    }
+    input { 
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 6px 10px 7px 30px;
+      color: #000;
+      font-size: 14px;
+      -webkit-appearance: none;
+      appearance: none;
+  
+      &:focus {
+        background: #fff;
+        outline: none;
+      }
+    }
+  }  
+}
+@media all and (max-width: 767px){
+  .giphy__container {
+    width: auto;
+  }
+}

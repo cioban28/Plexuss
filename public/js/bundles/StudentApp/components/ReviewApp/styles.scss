@@ -1,0 +1,406 @@
+/* /ReviewApp/styles.scss*/
+
+@import './../../utils/_global';
+
+#_appReviewer{
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 14px;
+
+	.section{
+		@include fadeInUp(0.3s);
+
+		.inner{
+			max-width: 850px;
+			margin: auto;
+			position: relative;
+			padding: 20px 0;
+
+			.arrow{
+				position: absolute;
+				left: 3px; top: -13px;
+			}
+
+			.preview-uploads-modal{
+				-webkit-transform: scale(1.25);
+				    -ms-transform: scale(1.25);
+				        transform: scale(1.25);
+			}
+
+			.review-sponsor-data{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: justify;
+				    -ms-flex-pack: justify;
+				        justify-content: space-between;
+				-ms-flex-wrap: wrap;
+				    flex-wrap: wrap;
+
+				.sponsor-table{
+					border: 0;
+					width: 47%;
+					-webkit-box-shadow: 1px 2px 2px 2px #333333;
+					        box-shadow: 1px 2px 2px 2px #333333;
+					padding-bottom: 1.5em;
+
+					tbody{
+						tr{
+							&:nth-child(odd){
+								background-color: $gray;
+							}
+
+							&:nth-child(even){
+								background-color: $sic_color2;
+							}
+						}
+
+						th {
+							color: #fff;
+							&:nth-child(even){
+								text-align: right;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:nth-child(odd){
+			.arrow{ @include upArrow(9px, rgb(85, 85, 85)); }
+		}
+
+		&:nth-child(even){
+			background-color: $darkgray;
+			.arrow{ @include upArrow(9px, $darkgray); }
+		}
+
+		&.bannr{
+			padding: 100px;
+			text-align: center;
+			text-transform: capitalize;
+
+			> div:first-child{ font-size: 24px; }
+		}
+	}
+
+	.rev-header{
+		position: relative;
+		margin: 0 0 20px;
+
+		> div{
+			font-size: 20px;
+			color: $green; }
+
+		> span{
+			display: block;
+			cursor: pointer;
+			width: 30px; height: 27px;
+			background-color: #eee;
+			@include bRadius(100%);
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/sales/pick_a_college_spritesheet.png) no-repeat;
+			background-position: -92px 0px;
+		}
+		> a{
+			> span{
+				display: block;
+				cursor: pointer;
+				width: 30px; height: 27px;
+				background-color: #eee;
+				@include bRadius(100%);
+				position: absolute;
+				top: 0; right: 0; bottom: 0;
+				background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/sales/pick_a_college_spritesheet.png) no-repeat;
+				background-position: -92px 0px;
+			}
+		}
+	}
+
+	.item{
+		margin: 0 0 10px;
+		position: relative;
+
+		&.col{
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+		}
+
+		&.upload{
+			cursor: pointer;
+			font-size: 13px;
+			margin: 0 0 20px;
+			overflow: hidden;
+			-o-text-overflow: ellipsis;
+			   text-overflow: ellipsis;
+			padding: 0 11px 0 32px; }
+
+		&.fill{ padding: 0 50% 0 0; }
+
+		> div:not(.doc){
+			display: inline-block;
+			vertical-align: top;
+			word-break: break-word;
+			width: 50%;
+		}
+
+		.lbl{ font-weight: bold; }
+		.val:not(.email){ text-transform: capitalize; }
+		.val.email { word-break: break-word; }
+
+		.doc{
+			width: 26px; height: 33px;
+			background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/upload-icons_25x32.png);
+			background-repeat: no-repeat;
+			cursor: pointer;
+			position: absolute;
+			top: 0; left: 0; bottom: 0;
+			margin: auto;
+
+			&.transcript{ background-position: 0 0; }
+			&.toefl{ background-position: 0 -35px; }
+			&.ielts{ background-position: 0 -72px; }
+			&.financial{ background-position: 0 -108px; }
+			&.resume{ background-position: 0 -144px; }
+			&.essay{ background-position: 0 -246px; }
+			&.passport{ background-position: 0 -283px; }
+			&.other{ background-position: 0 -320px; }
+		}
+	}
+
+	.award{
+		font-weight: 600;
+		margin: 0 0 20px;
+
+		.title > div{
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			border-bottom: 1px solid #fff;
+			padding: 0 0 5px;
+			margin: 0 0 5px;
+
+			&:last-child{ text-align: right; }
+		}
+
+		.descrip{ font-weight: 400; }
+	}
+
+	.notice{ margin: -25px 0 25px; }
+
+	.my-college{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px 10px 0;
+		width: 85px; height: 75px;
+		background-color: #fff;
+		@include bRadius(3px);
+		text-align: center;
+		position: relative;
+
+		> div{
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			margin: auto;
+			width: 20px; height: 26px;
+			color: #ddd;
+			font-weight: bold;
+			font-size: 18px;
+			@include bRadius(3px);
+
+			&.bg{
+				width: 65px; height: 80%;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		&.submit-college-logo:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: #4d4d58;
+			-webkit-transition: all .3s linear;
+			-o-transition: all .3s linear;
+			transition: all .3s linear;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+			filter: alpha(opacity=80);
+			-moz-opacity: 0.8;
+			-khtml-opacity: 0.8;
+			opacity: 0.8;
+			z-index: 1;
+		}
+
+		&.submit-college-logo{
+			&.done:before{
+    			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+				-moz-opacity: 0;
+				-khtml-opacity: 0;
+				opacity: 0;
+			}
+		}
+	}
+
+	p{ color: #fff; }
+
+	.heading{
+		font-size: 18px;
+		color: #fff !important;
+	}
+
+	.gpa{
+		font-size: 13px;
+		padding: 0 0 0 15px;
+	}
+
+	.scores-container{
+		.exam{
+			padding: 5px 10px;
+
+			> div{
+				display: inline-block;
+				vertical-align: middle;
+				width: 15%;
+
+				&:last-child{ width: 85%; }
+			}
+
+			.title{ font-weight: 600; }
+
+			.score > div{
+				display: inline-block;
+				vertical-align: top;
+				width: 20%;
+				word-break: break-word;
+			}
+
+			&:nth-child(odd){
+				background-color: $gray;
+			}
+		}
+	}
+
+	.additional-questions-container{
+
+		.additional-questions-loader{
+			margin: auto;
+		    border: 3px solid #f3f3f3;
+		    border-top: 3px solid #555;
+		    border-bottom: 3px solid #555;
+		    border-radius: 50%;
+		    width: 20px;
+		    height: 20px;
+		    -webkit-animation: spin 1s linear infinite;
+		            animation: spin 1s linear infinite;
+
+			@-webkit-keyframes spin {
+			    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+			    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+			}
+
+			@keyframes spin {
+			    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+			    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+			}
+		}
+
+		.heading:hover {
+			background-color: #666666;
+			border-radius: 2px 2px 0 0;
+		}
+
+		.heading{
+			cursor: pointer;
+			display: inline-block;
+			padding: 5px;
+		}
+
+		table{
+			@include fadeIn(1s);
+
+			border: 0;
+
+			tbody{
+				tr:nth-child(odd){
+					background-color: $gray;
+				}
+
+				tr:nth-child(even){
+					background-color: $sic_color2;
+				}
+
+				th {
+					color: #fff;
+				}
+			}
+
+		}
+	}
+
+	.school{
+		.head{
+			margin: 0 0 10px;
+
+			> div{
+				display: inline-block;
+				vertical-align: bottom;
+				width: 33.3333%;
+
+				span{ color: $green; }
+
+				&:not(:first-child){ text-align: center; }
+				&:first-child{
+					font-size: 18px;
+					font-weight: 600;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.courses{
+			.course{
+				padding: 5px 10px;
+
+				 > div{
+					display: inline-block;
+					vertical-align: top;
+					width: 25%;
+					@include ellipses();
+				}
+
+				&:nth-child(odd){ background-color: $gray; }
+			}
+		}
+
+		&:not(:first-child){ margin: 25px 0 0; }
+	}
+
+	.obj{
+		max-width: 500px;
+
+		> div{ margin: 0 0 10px; }
+		b{ text-transform: capitalize; }
+	}
+
+}
+
+@media only screen and (max-width: 1095px){
+	#_appReviewer .section .inner{
+		padding: 20px 10px;
+	}
+}
+@media screen and (max-width: 767px) {
+	#_appReviewer .scores-container .exam .score > div {
+		width: unset;
+		font-size: 11px;
+		margin-left: 11px;
+	}
+}

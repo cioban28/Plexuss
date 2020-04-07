@@ -1,0 +1,261 @@
+// /Application/styles.scss
+
+@import './../_global';
+
+#_application_container{
+	max-width: 1100px;
+	padding: 15px 15px 15px $toolsNavWidth;
+	position: relative;
+	height: 100%;
+	color: $gray;	
+
+	.spinner-wrapper{ padding: 9px 0; }
+
+	.content_container{
+		max-width: 900px;
+		> div{ @include fadeInLeft(0.4s); }
+	}
+
+	.heading{
+		> div:not(#_customModal){
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+		}
+
+		.title{ font-size: 24px; }
+
+		.descrip{ 
+			width: 100%;
+			font-size: 14px; }
+
+		.preview{
+			color: $green;
+			text-decoration: underline;
+			text-align: right;
+			cursor: pointer;
+		}
+	}
+
+	.require-section{
+		margin: 20px 0 0;
+
+		> label, > div{
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+			color: $gray;
+		}
+
+		input[type="checkbox"]{ margin: 0 10px 0 0; }
+
+		> div{ 
+			&.full{ width: 100%; }
+			text-align: right; }
+
+		.save-requirement{
+			background: $green;
+			color: #fff;
+			@include bRadius(3px);
+			padding: 7px 50px;
+			display: inline-block;
+			margin: 0;
+
+			&:active{ @include activeBtnClick(); }
+		}
+	}
+
+	.uploads{
+		.doc{
+			display: inline-block;
+			vertical-align: top;
+			width: 75px;
+
+			&:not(:last-child){ margin: 0 10px 0 0; }
+
+			.icon{
+				width: 26px; height: 33px;
+				margin: auto auto 5px;
+				background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/upload-icons_25x32.png);
+				background-repeat: no-repeat;
+
+				&.transcript{ background-position: 0 0; }
+				&.toefl{ background-position: 0 -35px; }
+				&.ielts{ background-position: 0 -72px; }
+				&.financial{ background-position: 0 -108px; }
+				&.resume{ background-position: 0 -144px; }
+				&.essay{ background-position: 0 -246px; }
+				&.passport{ background-position: 0 -283px; }
+				&.other{ background-position: 0 -320px; }
+			}
+
+			label{ 
+				color: $gray;
+				font-weight: 100;
+				text-align: center; 
+			}
+
+			input[type="checkbox"]{ margin: 20px 0; }
+		}
+	}
+
+	.add-another{
+		display: inline-block;
+		vertical-align: top;
+		padding: 5px 15px;
+		background: $gray;
+		color: #fff;
+		font-size: 14px;
+		cursor: pointer;
+		@include bRadius(3px);
+
+		&:active{ @include activeBtnClick(); }
+	}
+
+	.prompt{ 
+		margin: 0 0 30px;
+		@include fadeInLeft(0.5s); }
+
+	.prompt-head{
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+			font-size: 14px;
+			color: $gray;
+
+			&:last-child{ text-align: right; }
+			&:first-child{ 
+				font-weight: 400;
+				text-align: left; }
+		}
+
+		span{
+			text-align: right;
+			color: $orange;
+			cursor: pointer;
+		}
+	}
+
+	.prompt-body{
+		position: relative;
+		padding: 0 0 0 90px;
+		
+		&.question{ margin: 10px 0; }
+
+		&.answer{ padding: 0 0 0 110px; }
+
+		input, select{ margin: 0; }
+
+		input[type="radio"], input[type="checkbox"]{
+			position: absolute;
+			top: 0; bottom: 0; left: 90px;
+			margin: auto;
+		}
+
+		> label{
+			position: absolute;
+			top: 0; left: 0; bottom: 0;
+			margin: auto;
+			z-index: 1;
+			height: 22px;
+			color: $gray;
+			font-weight: 100;
+		}
+
+		.remove{
+			position: absolute;
+			top: 0; left: 100%; bottom: 0;
+			margin: auto;
+			z-index: 1;
+			font-size: 26px;
+			height: 37px;
+			line-height: 35px;
+			cursor: pointer;
+		}
+	}
+
+	.mand{
+		margin: 0 0 40px;
+		&.gpa{ max-width: 350px; }
+	}
+
+	.add-answer{
+		color: $gray;
+		text-decoration: underline;
+		cursor: pointer;
+		font-size: 14px;
+		padding: 0 0 0 110px;
+	}
+
+	.preview-img{
+		max-width: 700px;
+
+		&.essay{ max-width: 500px; }
+
+		.close{
+			text-align: right;
+
+			> span{ 
+				font-size: 30px;
+				color: #fff;
+				cursor: pointer; }
+		}
+	}
+
+	.spin-wrapper{
+		height: 18px;
+		width: 35px;
+	}
+
+	.cat-top{
+		position: relative;
+
+		.col-lab{
+			position: absolute;
+			top: 8px; right: 0; bottom: 0;
+			margin: auto;
+			display: inline-block;
+
+			&.req{ right: -28px; }
+			&.opt{ right: 55px; }
+		}
+	}
+
+	.custom-category{ 
+		max-width: 300px;
+		text-transform: capitalize; }
+
+	.question-list{
+		label{
+			position: relative;
+			padding: 10px 155px 10px 0;
+			color: $gray;
+			border-bottom: 1px solid #eee;
+		}
+
+		input{
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			margin: auto;
+			
+			&[name$='_optional']{ right: 80px; }
+
+		}
+
+		span{
+			display: inline-block;
+			vertical-align: center;
+		}
+
+		#addtl_tip > div > div:first-child{ font-weight: 600; }
+		#addtl_tip > div > div{ margin: 0 0 10px; }
+	}
+
+	.prog-msg{ font-size: 14px; }
+
+	.programs{
+		label{ color: $gray; }
+		input{ margin: 0 10px 10px 0; }
+	}
+}

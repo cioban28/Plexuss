@@ -1,0 +1,278 @@
+.title_college {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+.college_title {
+    width: 20%;
+    font-size: 14px;
+    margin: 20px 40px;
+    padding: 4px;
+}
+.colleges {
+    margin: 0px 35px;
+}
+.loading {
+    height: 100px;
+}
+.slick-disabled {
+    pointer-events: none;
+}
+.slick-next, .slick-prev {
+    width: 60px;
+    height: 60px;
+    z-index: 50;
+}
+.slick-next:before, .slick-prev:before {
+    font-size: 60px;
+    background: #939393;
+    box-shadow: 0px 2px 5px rgb(0,0,0.3);
+    border-radius: 30px;
+    content: ' ' !important;
+}
+.news {
+    display: block !important;
+    margin: 0 5px;
+    color: #303336;
+}
+.news:hover {
+    color: #303336;
+}
+.rank-link {
+    font-size: 14px;
+    margin: 25px 0px;
+    color: black;
+}
+.rank-link :hover {
+    color: #258faf;
+}
+.college_com {
+    height: 276px;
+    display: flex;
+    .item {
+        color: #797979;
+        border-radius: 6px;
+        margin: 0 5px;
+        position: relative;
+        padding: 30px 0;
+        background-color: #fff;
+        flex: 1;
+        height: 267px;
+    }
+    .news-back-img {
+        height: 160px;
+        border-radius: 6px 6px 0px 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .news-footer {
+        background-color: white;
+        border-radius: 0px 0px 6px 6px;
+        height: 110px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .news-title-text {
+        font-size: 15px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .news-footer-author {
+        display: flex;
+        align-items: center;
+    }
+    .avatar {
+        width: 23px;
+        height: 23px;
+    }
+    .author-name {
+        font-size: 10px;
+        opacity: 0.7;
+        padding-left: 5px;
+    }
+    .background-college-logo {
+        width: 50%;
+        height: 90px;
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    .college-pin-school-name {
+        font-size: 16px;
+        font-weight: 600;
+        height: 90px;
+        padding: 30px 10px;
+    }
+    .pin-page-turn-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-bottom-right-radius: 6px;
+    }
+    div.effect-sadie {
+        .overlay {
+            position: absolute; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+            border-radius: 6px;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+        }
+        figcaption:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            opacity: 0;
+            transform: translate3d(0,50%,0);
+        }
+        .pin-back, .college-pin-footer-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translate3d(0,10px,0);
+            z-index: 2;
+        }
+        .college-pin-footer-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .college-pin-footer-container, .pin-back, figcaption:before {
+            transition: opacity .35s,transform .35s;
+        }
+        .college-pin-footer-container, hover h2{
+            color: #fff;
+            transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+        }
+        &:hover {
+            .pin-back, .college-pin-footer-container, .figcaption:before {
+                opacity: 1;
+                transform: translateZ(0);
+            }
+            .overlay {
+                display: block;
+            }
+            .college-pin-virtualtour-school-name {
+                display: none;
+            }
+        }
+        .college-pin-footer-container.college-news-pin-container {
+            top: 0;
+        }
+        .green-back {
+            background-color: rgba(38,178,75,.7);
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+        }
+        .rank {
+            position: absolute;
+            left: 5px;
+            top: 10px;
+        }
+        .border-radius {
+            border-radius: 6px;
+        }
+    }
+    .pin-back {
+        height: 100%;
+        border-radius: 6px;
+    }
+    .pin-back-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        height: 267px;
+    }
+    .college-pin-link {
+        color: #fff;
+    }
+    .top-rank-pin-rank-icon {
+        width: 45px;
+        height: 37px;
+        background-color: #2AC56C;
+        border-radius: 5px;
+        color: #fff;
+        padding-top: 8px;
+        font-size: 14px;
+    }
+    .college-pin-virtualtour-school-name {
+        font-size: 16px;
+        font-weight: 600;
+        height: 78px;
+        padding: 15px 0px;
+        color: #fff;
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 0px 0px 6px 6px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .pin-item-footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 5px;
+        color: #fff;
+        font-weight: 700;
+        background: #2BC56D;
+        border-radius: 0px 0px 6px 6px;
+        width: 100%;
+        position: absolute;
+    }
+    .pin-mile {
+        width: 100%;
+        font-size: 22px;
+    }
+    .college-pin-footer-container {
+        z-index: 20 !important;
+    }
+    .news-pin-hover-icon-img {
+        padding-top: 25px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .news-pin-hover-desc {
+        font-weight: 600;
+        position: absolute;
+        width: 100%;
+        bottom: 30%;
+    }
+    .news-pin-inner-container {
+        position: relative;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        padding-top: 25px;
+    }
+    .text-white {
+        color: white;
+        font-size: 21px;
+        font-family: "Open Sans, Semibold";
+    }
+}
+
+@media all and (max-width: 767px){
+    .title_college {
+        justify-content: center;
+    }
+    .college_title {
+        width: 40%;
+        margin: 20px 0px;
+    }
+    .rank-link {
+        margin-left: 10px;
+    }
+}

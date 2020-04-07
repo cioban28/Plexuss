@@ -1,0 +1,124 @@
+.notifications_parent{
+  padding-bottom: 0;
+}
+.notification-head{
+  text-align: center;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 26px 20px 20px;
+  border-bottom: 0.2px solid #e9e9e9;
+}
+.notifications{
+  font-family: Open Sans;
+  color: #202020;
+  height: 80%;
+  overflow: auto;
+  padding-bottom: 95px;
+}
+.notifications li a {
+  padding: 27px 5px;
+  font-size: 16px;
+  line-height: 21px;
+  display: table;
+  width: 100%;
+  border-bottom: 0.2px solid #e9e9e9;
+  .imgage_classes{
+    margin-left: 8px !important;
+    width: 28px;
+  }
+  .user_image{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin: 0;
+    margin-left: 8px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.notifications li a.unread{
+  border-left: 7px solid #FD716F;
+  font-weight: 600;
+}
+.notifications li a:hover {
+  background: #f2f2f2;
+  color: #202020;
+}
+.notifications li img {
+  width: 19px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.notifications li span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 77% !important;
+  font-size: 13px;
+  line-height: 17px;
+  margin-left: 10px !important;
+  color: #202020;
+}
+.notifications li div {
+  float: right;
+  margin-top: -21px;
+  margin-right: 10px;
+  font-size: 11px;
+  color: #202020;
+}
+.notifications li a.read{
+  span{
+    font-weight: 400 !important;
+  }
+  div{
+    font-weight: 100 !important;
+  }
+}
+.notifications.rightbar-list .view_all_btn_parent{
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.9);
+  .view_all_btn{
+    position: relative;
+    width: 50%;
+    border-radius: 6px;
+    border: 1px solid #2AC56C;
+    color: #2AC56C;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 16px;
+    text-align: center;
+    margin: 0 auto;
+    &:hover{
+      background-color: #2AC56C;
+      color: #fff;
+    };
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .notifications.rightbar-list .view_all_btn_parent{
+    .view_all_btn{
+      width: 70%;
+    }
+  }
+}
+@media all and (max-width: 767px){
+  .notifications.rightbar-list {
+    .view_all_btn_parent {
+      width: 100%;
+    }
+  }
+  .rightbar{
+    width: 100%;
+    top: 94px;
+  }
+}

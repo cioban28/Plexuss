@@ -1,0 +1,108 @@
+//styles.scss
+
+@import './../_global';
+
+#_application_link_container{
+	max-width: 100%;
+	padding: 15px;
+
+	.app-link-label{
+		color: $gray;
+	}
+
+	input[type="text"]{
+		margin: 0;
+		color: $gray;
+
+		&.has-err{
+			border: 1px solid $error;
+		}
+	}
+
+	.err-msg{
+		color: $error;
+		border: 1px solid $error;
+		padding: 5px 0 5px 7px;
+		font-size: 13px;
+	}
+
+	.actions{
+		text-align: right;
+		margin: 20px 0 0;
+
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+			width: 150px;
+		}
+
+		.save, .cancel{
+			text-align: center;
+		}
+
+		.save{
+			background-color: $green;
+			color: #fff;
+			@include bRadius(3px);
+			width: 100%;
+			margin: 0;
+			height: 40px;
+			line-height: 8px;
+		}
+
+		.cancel{
+			color: $gray;
+			cursor: pointer;
+		}
+	}
+
+	.embed-label{
+		margin: 40px 0 0;
+
+		> div{
+			color: $gray;
+		}
+
+		> div:last-child{
+			font-size: 13px;
+		}
+
+
+	}
+
+	.codeblock{
+		border-left: 5px solid $gray;
+		background-color: #f8f8f8;
+		padding: 15px;
+		position: relative;
+
+		code{
+			font-size: 14px;
+			border: none;
+			color: $gray;
+		}
+	}
+
+	.clipboard{
+		position: absolute;
+	    top: 0; right: 0; bottom: 0; left: 0;
+	    background-color: #202020;
+	    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+	    @include bRadius(3px);
+	    padding: 3px 0;
+	    width: 230px;
+	    margin: auto;
+	    height: 28px;
+	    color: #aaa;
+	    text-align: center;
+	    z-index: 1;
+	}
+
+	img{
+		max-width: 300px;
+	}
+
+	.spinner-wrapper{
+		padding: 9px 0;
+	}
+}

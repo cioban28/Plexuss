@@ -1,0 +1,43 @@
+#social-newsfeed {
+  padding-bottom: 5%;
+  background: #F2F4F6;
+  .content-padding-left {
+    padding-left: 181px;
+  }
+  .row {
+    overflow-x: inherit !important;
+  }
+  button {
+    margin: 0;
+    height: unset;
+    top: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    background-color: unset;
+    color: unset;
+  }
+  .black-bg-under-header {
+    width: 100%;
+    height: 150px;
+    background: #000;
+  }
+  #newsfeed-content {
+    background: #fff;
+    border-radius: 15px;
+    margin: -6% 50px 0;
+  }
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  z-index: 1000;
+  overflow: auto;
+}
+
+@media(max-width: 1300px) {
+  #social-newsfeed {
+    #newsfeed-content {
+      margin: -6% 25px 0;
+    }
+  }
+}

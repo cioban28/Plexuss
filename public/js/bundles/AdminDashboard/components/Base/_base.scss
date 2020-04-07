@@ -1,0 +1,121 @@
+$mainTextColor: #797979;
+$mainTextColorHover: #636363;
+$mainBackColor: #f2f2f2;
+$DarkGreyBack: #3e3e3e;
+
+$statsColor: #ffffff;
+
+$mainFont: 'Open Sans', sans-serif;
+
+
+$plexred: #C83A22;
+$plexorange: #DC5400;
+$plexsalmon: #ff5c26;
+$plexgold: #FD9A01;
+$plexyellow: #FFC71C;
+$plexdblue: #0085B2;
+$plexblue: #00A2FF;
+$plexteal: #35D9A4;
+$plexgreen: #2AC56C;
+
+*{
+	font-family: $mainFont;
+}
+
+button:active,
+button:focus{
+	background: transparent;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.redtext{
+	color: $plexred;
+}
+.orangetext{
+	color: $plexorange;
+}
+.goldtext{
+	color: $plexgold;
+}
+.yellowtext{
+	color: $plexyellow;
+}
+.dbluetext{
+	color: $plexdblue;
+}
+.bluetext{
+	color: $plexblue;
+}
+.tealtext{
+	color: $plexteal;
+}
+.greentext{
+	color: $plexgreen;
+}
+
+
+.whiteback{
+	background-color: #ffffff;
+}
+.redback{
+	background-color: $plexred;
+}
+.orangeback{
+	background-color: $plexorange;
+}
+.goldback{
+	background-color: $plexgold;
+}
+.yellowback{
+	background-color: $plexyellow;
+}
+.dblueback{
+	background-color: $plexdblue;
+}
+.blueback{
+	background-color: $plexblue;
+}
+.tealback{
+	background-color: $plexteal;
+}
+.greenback{
+	background-color: $plexgreen;
+}
+
+
+.bold{
+	font-weight: bold;
+}
+
+
+/* as name describes --> put it all in a line! */
+.all-in-a-line *{
+	display: inline-block;
+}
+
+.float-right{
+	float: right;
+}
+
+.morepadding{
+	height: 45px;
+}
+
+.noMarginTop{
+	margin-top: 0px !important;
+}
+
+
+/**************** MEDIA QUERIES ***************/
+
+@media all and (max-width: 1104px){
+	.dash-centered-row{
+		width: 90%;
+		max-width: 90%;
+	}
+
+}
+
+

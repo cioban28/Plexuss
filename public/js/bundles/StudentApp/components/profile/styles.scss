@@ -1,0 +1,2405 @@
+@import './../../utils/_global';
+
+
+
+
+.error-txt {
+    font-size: 11px;
+    color: #fb6044;
+}
+
+._profile{
+    width: 100%;
+    position: absolute;
+    background-color: #3d3e41;
+    width: 100%;
+    min-height: 120%;
+    padding-right: 240px;
+    top: 0px;
+    padding-top: 50px;
+    color: #ffffff;
+
+
+    .percent-meter-dash{
+        -webkit-transform: rotateZ(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotateZ(-45deg);
+        -webkit-transform-origin: center;
+            -ms-transform-origin: center;
+                transform-origin: center;
+    }
+    .percentage{
+        position: absolute;
+        font-size: 11px;
+        top: 17px;
+        left: 13px;
+    }
+
+    .centering{
+        width: 420px;
+        max-width: 85%;
+        margin: 70px auto;
+        text-align: center;
+    }
+
+
+    .name{
+        margin: 15px auto 50px auto;
+        font-size: 21px;
+    }
+
+}
+.edit-profile-loader {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	padding: 30% 0;
+	img {
+		width: 50px;
+	}
+}
+._profileOption{
+    padding: 25px 20px 25px 0px;
+    border-bottom: 1px solid #6b6b6b;
+    position: relative;
+    cursor: pointer;
+
+    a{ color: #ffffff; }
+
+    .left{
+        width: 20%;
+        float: left;
+        text-align: left;
+
+        img{
+            width: 69%;
+            margin-left: 3px;
+            height: auto;
+        }
+    }
+    .right{
+        width: 75%;
+        float: right;
+        text-align: left;
+
+
+        .title{
+            font-size: 16px;
+            color: #ffffff;
+            padding-right: 50px;
+            min-height: 25px;
+        }
+
+        .option-desc{
+            font-size: 14px;
+            color: rgba(250,250,250,.6);
+            font-weight: 100;
+            margin: 3px 0px;
+            padding-right: 50px;
+            min-height: 22px;
+
+        }
+
+        .arrow{
+            position: absolute;
+            right: 3px;
+            top: 20%;
+            font-size: 38px;
+        }
+    }
+}
+
+/*********** profile public view edit *********************************************************************/
+._profile_edit{
+    width: 100%;
+    position: absolute;
+    background-color: #3d3e41;
+    width: 100%;
+    min-height: 120%;
+    padding-right: 240px;
+    padding-bottom: 3em;
+    top: 0px;
+    color: #ffffff;
+
+    .info-tooltip-container {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid white;
+        text-align: center;
+        font-size: 10pt;
+        cursor: pointer;
+
+        .info-tooltip-icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            color: #fff;
+        }
+    }
+
+    .avatar-container{
+        width: 100%;
+        padding: 75px 50px;
+        text-align: center;
+        background-color: #797572;
+    }
+
+    .abs-wrapper{
+        position: relative;
+        .stylish-scrollbar{
+            z-index: 10;
+        }
+    }
+
+    .edu-row{
+        max-width: 100%;
+        margin: 25px 0;
+        font-size: 14px;
+        .edu-col{
+            float: left;
+            padding-left: 0;
+        }
+        .edu-category{
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .edu-value{
+            color: #999999;
+        }
+    }
+    .remove-edu-school{
+        text-align: right;
+        border-bottom: 1px solid #999999;
+        margin-bottom: 5px;
+        span{
+            cursor: pointer;
+        }
+    }
+    .add-edu-school{
+        color: #2AC56C;
+        cursor: pointer;
+        text-align: right;
+        text-decoration: underline;
+        margin: 10px 55px 10px 0;
+    }
+
+    .profile-skills-endorsements-container {
+        .single-skill-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-bottom: 1em;
+            @include fadeIn(0.3s);
+
+            .single-skill-name {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                color: #d1d1d1;
+                min-width: 15%;
+                font-size: 9pt;
+                cursor: pointer;
+                text-transform: uppercase;
+
+                .arrow-icon {
+                    font-size: 8px;
+                }
+
+                .skill-name-text {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    -o-text-overflow: ellipsis;
+                       text-overflow: ellipsis;
+                }
+
+                .single-skill-more-details-row {
+
+                }
+            }
+
+            .single-skill-details {
+                width: auto;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                margin-left: 0.5em;
+
+                .skill-detail {
+                    width: 25px;
+                    height: 28px;
+                    margin-right: 0.5em;
+
+                    &.group {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -23px -1px;
+                    }
+
+                    &.position {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -60px 0px;
+                    }
+
+                    &.awards {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -96px 1px;
+                    }
+                }
+            }
+
+            .single-skill-endorsement-button {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                text-align: center;
+                border-radius: 3px;
+                background-color: #2bc56d;
+                color: #fff;
+                width: 30px;
+                height: 28px;
+                font-weight: bold;
+                margin-right: 0.5em;
+                cursor: pointer;
+                -webkit-transition: opacity 0.5s ease-in;
+                -o-transition: opacity 0.5s ease-in;
+                transition: opacity 0.5s ease-in;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            .single-skill-endorsement-count {
+                border: 1px solid #d1d1d1;
+                color: #d1d1d1;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                text-align: center;
+                margin-right: 1em;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                font-size: 10pt;
+            }
+
+            .single-skill-endorsement-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                .single-endorsement-avatar {
+                    margin-right: 0.5em;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+        }
+
+        .single-skill-more-details-container {
+            border: 1px solid #363636;
+            padding: 1em;
+            color: #a6a6a6;
+            width: 70%;
+            margin-bottom: 1em;
+            @include fadeIn(0.3s);
+
+            .close-more-details-button {
+                float: right;
+                cursor: pointer;
+                font-size: 14pt;
+            }
+
+            .single-skill-more-details-row {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                font-size: 12pt;
+                margin-bottom: 1em;
+
+                .more-details-icon {
+                    width: 25px;
+                    height: 28px;
+                    margin-right: 0.5em;
+
+                    &.group {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -23px -1px;
+                    }
+
+                    &.position {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -60px 0px;
+                    }
+
+                    &.awards {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -96px -1px;
+                    }
+                }
+
+                .single-skill-more-details-formatted-type {
+                    width: 15%;
+                }
+
+                .single-skill-more-details-text {
+                    margin-left: 2em;
+                }
+            }
+        }
+    }
+
+    .add-publication-fields-container {
+        margin-top: 1em;
+        @include fadeIn(1s);
+
+        .invalid-field {
+            border: 2px solid red;
+        }
+    }
+
+    .profile-projects-publications-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-left: -1em;
+
+        .single-publication-container {
+            width: 230px;
+            background-color: #5c5c5c;
+            color: black;
+            cursor: pointer;
+            margin: 1em;
+
+            .single-publication-picture-container {
+                height: 8em;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+            }
+
+            .single-publication-delete-notice {
+                opacity: 0;
+                height: 0;
+            }
+
+            .single-publication-short-description {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                background-color: #fff;
+                height: 3em;
+                margin-top: -0.5em;
+                font-size: 10pt;
+            }
+
+            &.edit-mode {
+                &:hover {
+                    .single-publication-short-description {
+                        display: none;
+                    }
+
+                    .single-publication-delete-notice {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                            -ms-flex-align: center;
+                                align-items: center;
+                        -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                                justify-content: center;
+                        background-color: rgba(175, 17, 16, 0.75);
+                        color: #fff;
+                        height: 3em;
+                        margin-top: -0.5em;
+                        font-size: 10pt;
+                        opacity: 0.9;
+                        -webkit-transition: opacity 0.5s ease-in;
+                        -o-transition: opacity 0.5s ease-in;
+                        transition: opacity 0.5s ease-in;
+                    }
+                }
+            }
+        }
+
+        .add-publication-button {
+            cursor: pointer;
+            height: 10em;
+            width: 230px;
+            margin: 1em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            background-color: #5c5c5c;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-transition: opacity 0.3s ease-in;
+            -o-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            .add-publication-plus-button {
+                font-size: 40pt;
+                font-weight: bold;
+                margin: -0.2em 0;
+            }
+
+            .add-publication-text {
+                font-weight: 100;
+            }
+        }
+    }
+
+    .profile-liked-colleges-container {
+        margin-top: 1em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+        .college-logo-avatar {
+            position: relative;
+
+            .college-logo-image {
+                width: 50px;
+                height: 50px;
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
+                background-position: center !important;
+                background-color: #fff !important;
+                margin-right: 1em;
+                margin-bottom: 1em;
+            }
+            .remove-liked-college-container {
+                position: absolute;
+                top: -6px;
+                right: 10px;
+                border: 1px solid #000;
+                display: -ms-flexbox;
+                display: -webkit-box;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-box-align: center;
+                        align-items: center;
+                -ms-flex-pack: center;
+                -webkit-box-pack: center;
+                        justify-content: center;
+                width: 1.25em;
+                height: 1.25em;
+                border-radius: 50%;
+                background-color: #fff;
+
+                .remove-liked-college-x {
+                    color: red;
+                    float: right;
+                    font-weight: bold;
+                    font-size: 15pt;
+                    -webkit-transition: opacity 0.3s ease-in;
+                    -o-transition: opacity 0.3s ease-in;
+                    transition: opacity 0.3s ease-in;
+                }
+            }
+        }
+    }
+
+    .profile-edit-header-banner-container {
+        width: 100%;
+        height: 227px;
+        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/profile-edit-header-banner-bg.png) 0 -75px;
+        background-size: cover;
+        .share_profile_incognito_banner{
+            float: right;
+            margin: 20px;
+            .share_profile_container{
+                margin: 0 auto 10px;
+                padding: 10px 20px;
+                background-color: #26b24b;
+                color: #fff;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 200;
+                border-radius: 3px;
+                float: right;
+            }
+            .social_media_icons_container{
+                display: block;
+                margin-top: 10px;
+                .social_media_icons{
+                    display: none;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    .share_url_banner{
+                        padding: 5px 10px;
+                        background: #cccccc;
+                        color: #000;
+                        border-radius: 3px;
+                        margin-right: 15px;
+                    }
+                    .share_on_social_tag{
+                        color: #000;
+                        margin-right: 15px;
+                    }
+                    .socila_btn{
+                        margin: 5px;
+                    }
+                }
+            }
+            &:hover{
+                .social_media_icons{
+                    display: -webkit-inline-box;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                }
+            }
+        }
+        .view-profile-as-button {
+            cursor: pointer;
+            float: right;
+            margin-right: 1em;
+            margin-top: 1em;
+            border: 1px solid #fff;
+            padding: 0.25em 1em;
+            border-radius: 5px;
+        }
+    }
+    .profile-recommendations-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-left: -0.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        .single-recommendation-container {
+            width: 40%;
+            border: 2px solid #606060;
+            border-radius: 0.5em;
+            padding: 1em;
+            margin: 0.5em;
+
+            .view-full-button-container {
+                width: 100%;
+                text-align: right;
+
+                .view-full-button {
+                    display: inline-block;
+                    color: #fff;
+                    text-decoration: underline;
+                    font-size: 10pt;
+                    cursor: pointer;
+                    margin-top: 1em;
+                }
+            }
+
+            .recommendation-top-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                margin-bottom: 1em;
+
+                .recommendation-name {
+                    font-size: 11pt;
+                    color: #fff;
+                }
+
+                .recommendation-position {
+                    font-size: 10pt;
+                    color: #bcbcbc;
+                }
+
+                .recommendation-profile-image {
+                    margin-right: 0.75em;
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .recommendation-details {
+                font-size: 10pt;
+                color: #bcbcbc;
+                @include fadeIn(0.3s);
+            }
+        }
+    }
+
+    .profile-edit-skills-preview {
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        .no-skills-added-yet {
+            color: #d3d3d3;
+        }
+    }
+
+    .edit-skills-container {
+        margin-top: 2em;
+
+        ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-top: 1em;
+            margin-left: -0.5em;
+
+            .edit-skill-breadcrumb {
+                width: 12em;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                background-color: #787878;
+                color: #fff;
+                cursor: pointer;
+                padding-right: 0.5em;
+                padding-left: 0.5em;
+                margin: 0.5em;
+
+                &:hover{
+                     background-color: #2AC56C;
+                }
+
+                &.active {
+                    background-color: #2AC56C;
+                }
+
+                .edit-skill-breadcrumb-name-text {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    -o-text-overflow: ellipsis;
+                       text-overflow: ellipsis;
+                    max-width: 90%;
+                }
+
+                .remove-button {
+                    width: 1em;
+                    height: 1em;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    color: #787878;
+                    cursor: pointer;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    font-size: 14px;
+                    -webkit-transition: opacity 0.3s ease-in;
+                    -o-transition: opacity 0.3s ease-in;
+                    transition: opacity 0.3s ease-in;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                .hamburger-icon {
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+
+            .edit-skill-dragged {
+                opacity: 0.5;
+                -webkit-transition: opacity 0.2s ease-in-out;
+                -o-transition: opacity 0.2s ease-in-out;
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            .edit-skill-placeholder {
+                opacity: 0.1;
+            }
+        }
+
+        .drag-notice-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: start;
+            margin-top: 0.5em;
+            margin-bottom: 2em;
+
+            img {
+                width: 70px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .drag-to-reorder-text {
+                font-size: 12pt;
+                color: #757575;
+                padding-bottom: 0.25em;
+                margin-right: 1em;
+            }
+        }
+
+        .edit-skill-details-container {
+            margin-top: 2em;
+
+            .edit-skill-details-input-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                margin-bottom: 1em;
+
+                input {
+                    margin: 0;
+                }
+
+                .edit-skill-details-label {
+                    width: 6em;
+                }
+
+                .edit-skill-details-icon {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 0.5em;
+
+                    &.group {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -23px -1px;
+                    }
+
+                    &.position {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -60px -1px;
+                    }
+
+                    &.awards {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -96px -1px;
+                    }
+                }
+            }
+        }
+
+        .edit-skills-top-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+
+            input {
+                width: 25%;
+                margin: 0;
+                margin-right: 1em;
+            }
+
+            .add-skill-button {
+                display: -ms-inline-grid;
+                display: inline-grid;
+                cursor: pointer;
+                background-color: #fff;
+                color: #29c46b;
+                font-weight: bold;
+                font-size: 17pt;
+                width: 47px;
+                height: 35px;
+                text-align: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                border-radius: 3px;
+                -webkit-transition: opacity 0.3s ease-in-out;
+                -o-transition: opacity 0.3s ease-in-out;
+                transition: opacity 0.3s ease-in-out;
+
+                &.disabled {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    .people-also-viewed-container {
+        margin-top: 1em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-left: -1em;
+        margin-bottom: 3em;
+
+        .also-viewed-person {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            width: 40%;
+            margin: 1em;
+
+            .also-viewed-person-name {
+                cursor: pointer;
+                color: #fff;
+            }
+
+            .also-viewed-person-school {
+                color: #b5b5b5;
+                font-size: 11pt;
+            }
+
+            .also-viewed-person-type {
+                color: #7b7b7b;
+                font-size: 10pt;
+            }
+        }
+    }
+
+    .no-docs {
+        margin: 60px auto;
+    }
+
+    .edit-prof-section{
+        width: 100%;
+        padding: 25px 110px 25px 100px;
+        position: relative;
+
+        &.basic-section {
+            background-color: #221e1f !important;
+            padding-top: 1em;
+            padding-bottom: 1em;
+
+            &:before {
+                display: none;
+            }
+
+            .cancel-btn {
+                margin-left: 10em;
+            }
+        }
+
+        &.claim-to-fame {
+
+            &:before {
+                display: none;
+            }
+
+            .claim-to-fame-preview-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-top: 1em;
+
+
+                .claim-to-fame-detail {
+                    // width: 36%;
+                    margin-right: 2em;
+                    color: #d3d3d3;
+                    font-size: 14px;
+                    line-height: 2em;
+                }
+
+                .claim-to-fame-video {
+                    margin-top: -2.5em;
+                }
+            }
+
+            .claim-to-fame-edit-container {
+                .about-yourself-container {
+                    textarea {
+                        margin-top: 0.5em;
+                        height: 195px;
+                        width: 950px;
+
+                        &.invalid-field {
+                            border: 2px solid red;
+                        }
+                    }
+                }
+
+                .video-link-input-container {
+                    margin-top: 1em;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+
+                    .url-input-error {
+                        margin-top: -1em;
+                        margin-bottom: 1em;
+                        font-size: 10pt;
+                        color: firebrick;
+                    }
+
+                    .claim-to-fame-input-container {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+
+                        input {
+                            text-indent: 2em;
+
+                            &.invalid-field {
+                                border: 2px solid red;
+                            }
+                        }
+
+                        .claim-to-fame-youtube-icon {
+                            background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-v1.png) 0px 3px;
+                            width: 47px;
+                            height: 38px;
+                            -webkit-transform: scale(0.8);
+                                -ms-transform: scale(0.8);
+                                    transform: scale(0.8);
+                            margin-top: 0.2em;
+                            position: absolute;
+                        }
+
+                        .claim-to-fame-vimeo-icon {
+                            background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-v1.png) 0px 34px;
+                            width: 47px;
+                            height: 36px;
+                            margin-top: 0.2em;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+
+        .edit-mode-basic-student-title {
+            margin-left: 8.7em;
+        }
+
+        .left-side-user-info {
+            margin-left: 11em;
+        }
+
+        .right-side-user-info {
+            width: 30% !important;
+        }
+
+        .left,.right{ width: 50%; }
+        .right-state{ width: 30%; float: left; }
+
+        .save-btn {
+            display: inline-block;
+            background-color: #2ac56c;
+            padding: 0.5em 3em;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13pt;
+        }
+
+        .cancel-btn{
+            display: inline-block;
+            padding: 0.5em 2.5em;
+            border-radius: 3px;
+            border: 1px solid #eeeeee;
+            cursor: pointer;
+            margin-right: 2em;
+            font-size: 13pt;
+        }
+
+        input, select {
+            line-height: normal;
+            height: 35px;
+            border-radius: 3px;
+            border: 1px solid #eeeeee;
+            display: block;
+            margin: 5px 0px 25px 0px;
+            width: 500px;
+            max-width: 90%;
+            padding: 0px 20px;
+            color: #303030;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .edit-label {
+            font-size: 14px;
+        }
+
+        input[type="checkbox"]{
+            width: 15px;
+            height: 15px;
+            background: transparent;
+            border: 1px solid #eeeeee;
+        }
+
+        &:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+
+
+
+
+        &:nth-child(even){
+            background-color: #3a3a3a;
+
+            &:before{
+                content: '';
+                width: 0px;
+                height: 0px;
+                border-bottom: 20px solid #3a3a3a;
+                border-right: 18px solid transparent;
+                border-top: 18px solid transparent;
+                border-left: 18px solid transparent;
+                position: absolute;
+                top: -30px;
+            }
+        }
+
+
+
+        &:nth-child(odd){
+
+            &:before{
+                content: '';
+                width: 0px;
+                height: 0px;
+                border-bottom: 20px solid #2a2a2a;
+                border-right: 18px solid transparent;
+                border-top: 18px solid transparent;
+                border-left: 18px solid transparent;
+                position: absolute;
+                top: -30px;
+            }
+        }
+
+        .basic-student-preview-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: .5em 0;
+
+            .upload-avatar-button {
+                cursor: pointer;
+
+                input {
+                    display: none;
+                }
+
+                div {
+                    -webkit-transition: opacity 0.3s ease-in-out;
+                    -o-transition: opacity 0.3s ease-in-out;
+                    transition: opacity 0.3s ease-in-out;
+                }
+                .upload-avatar-overlay{
+                    text-align: center;
+                    background-color: rgba(0,0,0, .5);
+                    width: 145px;
+                    height: 145px;
+                    top: -.45em;
+                    border-radius: 50%;
+                    line-height: 140px;
+                    img{
+                        width: 30px;
+                    }
+                    &:hover{
+                       background-color: rgba(0,0,0, .7);
+                    }
+                }
+            }
+
+        }
+
+        .basic-student-edit-container {
+            .upload-avatar-button {
+                cursor: pointer;
+
+                input {
+                    display: none;
+                }
+
+                div {
+                    -webkit-transition: opacity 0.3s ease-in-out;
+                    -o-transition: opacity 0.3s ease-in-out;
+                    transition: opacity 0.3s ease-in-out;
+                }
+                .upload-avatar-overlay{
+                    text-align: center;
+                    background-color: rgba(0,0,0, .5);
+                    width: 145px;
+                    height: 145px;
+                    top: -.45em;
+                    border-radius: 50%;
+                    line-height: 140px;
+                    img{
+                        width: 30px;
+                    }
+                    &:hover{
+                       background-color: rgba(0,0,0, .7);
+                    }
+                }
+            }
+        }
+
+        .sec1-left{
+            margin-left: 10em;
+            /* float: left;*/
+            /* width: 70%;*/
+        }
+
+        .sec1-right{
+            float: right;
+            width: 30%;
+            text-align: right;
+        }
+    }/* end edit-prof-sect */
+
+
+    .avatar-container + .edit-prof-section{
+        &:before{
+            content: '';
+            border: none;
+
+        }
+    }
+
+    .edit-btn{
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 27px;
+        background-color: #eee;
+        border-radius: 100%;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        bottom: 0;
+        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/sales/pick_a_college_spritesheet.png) no-repeat;
+        background-position: -92px 0px;
+    }
+
+    .close-btn{
+        display: block;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        background: transparent;
+        /* background-color: #eee; */
+        text-align: center;
+        line-height: 25px;
+        font-size: 21px;
+        vertical-align: middle;
+        border-radius: 100%;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        bottom: 0;
+        color: #797979;
+        border: 2px solid #797979;
+    }
+
+
+    .edit-name {
+        font-size: 21px;
+        margin-bottom: 7px;
+    }
+
+    .green-title{
+        font-size: 20px;
+        color: #2AC56C;
+        margin-bottom: 7px;
+
+        .endorsement-count {
+            color: #c2c2c2;
+            margin-left: 1em;
+            font-size: 10pt;
+        }
+
+    }
+    .profile_edit_privacy_setting{
+        position: relative;
+        .privacy_setting{
+            margin-left: 5px;
+            color: #fff;
+            padding: 0 7px;
+            border-radius: 0 0 7px 7px;
+            .privacy_icon{
+                img{
+                    width: 14px;
+                }
+            }
+            .carat_down_conatiner{
+                margin-left: 5px;
+            }
+        }
+        .cursor_pointer{
+            cursor: pointer;
+        }
+        .selected_privacy_setting{
+            background: #2AC56C;
+        }
+        .privacy_setting_dropdown{
+            color:  #d3d3d3;
+            position: absolute;
+            background: #242222;
+            border-radius: 5px;
+            margin-left: 0;
+            padding: 10px;
+            font-size: 14px;
+            z-index: 1;
+            left: 0;
+            top: 100%;
+            min-width: 165px;
+            margin-top: 8px;
+            .setting{
+                img{
+                    width: 12px;
+                    margin-bottom: 5px;
+                    height: 14px;
+                }
+            }
+            .selected_setting{
+                color: #2AC56C;
+            }
+        }
+    }
+
+    .skills-section-tooltip-content {
+        padding: 1em;
+
+        .skills-section-tooltip-header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            font-size: 14pt;
+            margin-bottom: 1em;
+
+            .info-icon {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                font-size: 10pt;
+                margin-right: 0.5em;
+            }
+        }
+
+        .skills-section-tooltip-detail {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-bottom: 1em;
+
+            .group-icon {
+                background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -23px -1px;
+                width: 25px;
+                height: 26px;
+                margin-right: 0.5em;
+            }
+
+            .position-icon {
+                background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -60px -1px;
+                width: 25px;
+                height: 26px;
+                margin-right: 0.5em;
+            }
+
+            .awards-icon {
+                background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/public-profile-sprite-2.png) -96px -1px;
+                width: 25px;
+                height: 26px;
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    .bold{ font-weight: 700; color: #ffffff;}
+    .edit-detail {
+        font-size: 14px;
+        color: #d3d3d3;
+
+        &.lh-2{
+            line-height: 1.7em;
+        }
+
+        &.large{
+            font-size: 15px;
+        }
+    }
+
+    .what-label{
+        font-weight: 100;
+    }
+
+    .majar-results{
+        margin: 0px 0px 50px 0px;
+    }
+
+
+    .jobs-results-container,
+    .school-results-container,
+    .major-results-container {
+        position: absolute;
+        top: 95%;
+        background-color: #ffffff;
+        width: 500px;
+        max-width: 90%;
+        color: #979191;
+        max-height: 200px;
+        overflow: auto;
+    }
+
+
+    .jobs-results,
+    .school-results,
+    .major-results {
+        width: 500px;
+        max-width: 90%;
+        max-height: 100px;
+        min-height: 50px;
+        margin-bottom: 25px;
+        overflow: auto;
+    }
+
+    .jobs-list-result,
+    .school-list-result,
+    .major-list-result {
+        padding: 5px 20px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus{
+            background-color: #cccccc;
+            color: #ffffff;
+        }
+    }
+
+    .country-results-container {
+        position: absolute;
+        top: 95%;
+        background-color: #ffffff;
+        width: 500px;
+        max-width: 90%;
+        color: #979191;
+        max-height: 200px;
+        overflow: auto;
+    }
+
+    .country-results {
+        width: 500px;
+        max-width: 90%;
+        height: 160px;
+        overflow: auto;
+    }
+    .country-list-result {
+        padding: 5px 20px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus{
+            background-color: #cccccc;
+            color: #ffffff;
+        }
+    }
+
+    .major-result {
+        display: inline-block;
+        font-size: 13px;
+        margin-right: 10px;
+        margin-top: 8px;
+        background-color: #434548;
+        padding: 2px 10px;
+    }
+    .major-name {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .rmMajor{
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        vertical-align: middle;
+        line-height: 15px;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 100%;
+        background-color: #ffffff;
+        color: #515459;
+        cursor: pointer;
+    }
+
+
+    .no-docs{
+        margin: 60px auto;
+    }
+
+}
+.upload-profile-picture-modal {
+    text-align: center;
+
+    h4 {
+        margin-top: 1em;
+        color: black;
+    }
+
+    .secondary-header-text {
+        color: gray;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    .preview-image-source {
+        height: 144px;
+        width: 144px;
+        border-radius: 50%;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-color: #fff !important;
+        border: 3px solid lightgray;
+        margin: auto;
+    }
+
+    .upload-picture-button-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+
+        .upload-action-button {
+            margin-top: 2em;
+            cursor: pointer;
+            -webkit-transition: opacity 0.3s ease-in-out;
+            -o-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .upload-button {
+            display: inline-block;
+            padding: 0.5em 3em;
+            background: #2AC56C;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .cancel-button {
+            color: gray;
+            font-size: 10pt;
+        }
+    }
+}
+
+.external-link-modal {
+    text-align: center;
+    padding: 2em !important;
+
+    h4 {
+        margin-top: 1em;
+        color: black;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    .url-link-display {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #727272;
+        margin-bottom: 2em;
+    }
+
+    .external-link-buttons-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+
+        .confirm-button {
+            cursor: pointer;
+            -webkit-transition: opacity 0.3s ease-in-out;
+            -o-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+            background-color: #2ac56c;
+            color: #fff;
+            padding: 0.75em 0;
+            border-radius: 3px;
+            margin-bottom: 2em;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .cancel-button {
+            cursor: pointer;
+            -webkit-transition: opacity 0.3s ease-in-out;
+            -o-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+            color: #acacac;
+            text-decoration: underline;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.add-college-modal {
+    h4 {
+        color: black;
+    }
+
+    .college-search-autocomplete-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 1em;
+
+        .add-college-modal-secondary-modal {
+            color: #b2b3b3;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid black;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+            padding: 0.5em;
+        }
+
+        .college-search-input-container {
+            width: 90%;
+
+        }
+
+        .mini-spinner:before {
+            right: 2em;
+        }
+
+        .college-search-result {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            cursor: pointer;
+            padding: 0.5em;
+
+            img {
+                width: 25px;
+                height: 25px;
+                margin-right: 1em;
+                border-radius: 3px;
+                background-color: transparent;
+            }
+
+            .college-search-result-school-name {
+
+            }
+        }
+    }
+}
+
+/************ profile documents **************************************************************************/
+._profile_docs{
+    width: 100%;
+    position: absolute;
+    background-color: #3d3e41;
+    width: 100%;
+    min-height: 120%;
+    padding-right: 240px;
+    top: 0px;
+    color: #ffffff;
+    text-align: center;
+
+
+    .centering {
+        width: 90%;
+        margin: auto;
+        position: relative;
+    }
+
+    .big-header {
+        font-size: 23px;
+        margin: 30px auto 20px auto;
+    }
+
+
+    .no-docs {
+        margin: 60px auto;
+    }
+
+    .docs-details {
+        width: 600px;
+        max-width: 90%;
+        margin: auto;
+        color: #8e8d8b;
+    }
+
+    .docs-link {
+        display: inline-block;
+        margin: 5px 20px;
+        font-size: 18px;
+        border-bottom: 2px solid #26b24b;
+        opacity: .2;
+        cursor:pointer;
+
+        &.active{
+           opacity: 1;
+           -webkit-transition: .6s ease-in-out;
+           -o-transition: .6s ease-in-out;
+           transition: .6s ease-in-out;
+        }
+    }
+
+    .upload-btn-container{
+        width: 300px;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .checklist-btn {
+        position: relative;
+        margin: 20px auto;
+        background-color: #eeeeee;
+        color: #565656;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    span.check {
+        position: absolute;
+        right: 14px;
+        color: #48ca6b;
+        font-size: 18px;
+        top: 7px;
+    }
+
+    .doc-img{
+        width: 26px;
+        height: 33px;
+        background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/upload-icons_25x32.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+
+        &.transcript{
+            background-position: 0 0;
+        }
+        &.financial{
+            background-position: 0 -109px;
+        }
+        &.essay{
+            background-position: 0 -246px;
+        }
+        &.other{
+            background-position: 0 -320px;
+        }
+    }
+
+    .docs-container{
+        width: 550px;
+        max-width: 90%;
+        margin: 30px auto;
+    }
+
+    .transcript-result{
+
+        &.underline{
+            border-bottom: 1px solid #888888;
+        }
+
+
+        & > div {
+            display: inline-block;
+            font-size: 14px;
+            color: #eeeeee;
+            text-align: left;
+            margin: 10px;
+            vertical-align: middle;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            word-break: break-all;
+        }
+
+        .rm{
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .transcript-name-col {
+            width: 50%;
+        }
+
+        .transcript-name {
+            display: inline-block;
+            width: 80%;
+            height: 19px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            word-break: break-all;
+            margin-left: 7%;
+        }
+
+        .transcript-date{
+            width: 20%;
+            word-break: break-word;
+            text-align: center;
+        }
+        .transcript-rm{
+            width: 12%;
+            text-align: center;
+            word-break: break-word;
+        }
+    }
+
+    .upload-modal-image{
+        margin: 90px auto 0px auto;
+    }
+
+    .dic-img{
+        width: 26px;
+        height: 33px;
+        background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/upload-icons_25x32.png);
+        background-repeat: no-repeat;
+
+
+        &.transcript{
+            background-position: 0 0;
+        }
+    }
+
+
+}
+
+
+
+.disabled{
+    opacity: .3;
+}
+
+
+/****** Start Confirm Alert Styling******/
+.react-confirm-alert-blur {
+    -webkit-filter: url(#gaussian-blur);
+            filter: url(#gaussian-blur);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.react-confirm-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.3);
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+    animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+}
+
+.react-confirm-alert {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    padding: 2.5em 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+            box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+    color: #666;
+    margin-top: -10%;
+}
+
+.react-confirm-alert-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.react-confirm-alert>h1 {
+    margin-top: 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.react-confirm-alert>h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+
+.react-confirm-alert-button-group {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+}
+
+.react-confirm-alert-button-group>button {
+    outline: none;
+    background: #333;
+    border: none;
+    display: inline-block;
+    padding: 6px 18px;
+    color: #eee;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@-webkit-keyframes react-confirm-alert-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes react-confirm-alert-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/****** End Confirm Alert Styling******/
+
+input.error{
+    border: 2px solid #f15135 !important;
+}
+
+
+/***** START Small Loaders *****/
+.mini-loader{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border-top: 2px solid rgba(250,250,250,.6);
+    border-left: 2px solid rgba(250,250,250,.1);
+    border-bottom: 2px solid rgba(250,250,250,.1);
+    border-right: 2px solid rgba(250,250,250,.1);
+    -webkit-animation: spin ease;
+            animation: spin ease;
+    margin: auto;
+    position: relative;
+}
+
+@-webkit-keyframes spin{
+    0%{ -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+    100%{ -webkit-transform: rotateX(360deg); transform: rotateX(360deg); }
+
+}
+
+@keyframes spin{
+    0%{ -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+    100%{ -webkit-transform: rotateX(360deg); transform: rotateX(360deg); }
+
+}
+
+@-webkit-keyframes spinner {
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+.mini-spinner:before {
+    content: '';
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border-top: 2px solid #2ac56c;
+    border-right: 2px solid transparent;
+    -webkit-animation: spinner .6s linear infinite;
+            animation: spinner .6s linear infinite;
+}
+/***** END Small Loaders *****/
+
+
+/******** media queries *************/
+/************************************/
+
+@media all and (max-width: 1136px){
+    ._profile, ._profile_edit, ._profile_docs{
+        padding-right:  0px;
+    }
+}
+
+@media all and (max-width: 795px){
+    ._profile_edit .edit-prof-section .left, ._profile_edit .edit-prof-section .right{
+        width: 100%;
+    }
+}
+@media all and (max-width: 767px){
+    ._profile_docs {
+        position: relative;
+    }
+    .edit-profile-loader{
+        width: 100%;
+        padding: 50% 0;
+    }
+    .profile_edit_privacy_setting{
+        display: block;
+        .privacy_setting{
+            margin-left: 0 !important;
+            padding: 0 7px 0 0 !important;
+        }
+    }
+    .share_profile_incognito_banner{
+        .social_media_icons_container{
+            .social_media_icons{
+                .share_url_banner{
+                    display: none;
+                }
+                .share_on_social_tag{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 630px){
+    .add-college-overlay {
+        -webkit-box-align: start !important;
+            -ms-flex-align: start !important;
+                align-items: flex-start !important;
+    }
+
+    ._profile_edit {
+        .add-edu-school{
+            margin: 10px 0 30px;
+        }
+        .edit-skills-container {
+            ul {
+                .edit-skill-breadcrumb {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+            .edit-skills-top-container {
+                input {
+                    // width: 58%;
+                    flex: 1;
+                }
+            }
+
+            .edit-skill-details-container {
+                .edit-skill-details-input-container {
+                    flex-wrap: wrap;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .info-tooltip-container {
+            display: none;
+        }
+
+        .profile-skills-endorsements-container {
+            .single-skill-container {
+                .single-skill-name {
+                    width: 28%;
+                    flex-grow: 1;
+                }
+
+                .single-skill-details {
+                    width: auto;
+                }
+
+                .single-skill-endorsement-count {
+                    margin-right: 0;
+                }
+
+                .single-skill-endorsement-container {
+                    display: none;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 18%;
+
+                    .single-endorsement-avatar {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .single-skill-more-details-container {
+                width: 100%;
+            }
+        }
+
+        .edit-prof-section {
+            padding: 75px 50px;
+
+            padding-right: 1em !important;
+            padding-left: 1em !important;
+
+            /* Basic section BEGIN*/
+            &.basic-section {
+                .cancel-btn {
+                    margin-left: 0;
+                }
+            }
+
+            .left-side-user-info {
+                margin: 0;
+                margin-top: 15%;
+                width: 100%;
+
+            }
+
+            .right-side-user-info {
+                float: none !important;
+                width: 80% !important;
+            }
+            /* Basic section END*/
+
+            &.claim-to-fame {
+                .claim-to-fame-preview-container {
+                    display: block;
+
+                    .claim-to-fame-detail {
+                        // width: 80%;
+                        margin: 1em auto;
+                    }
+
+                    .claim-to-fame-video {
+                        width: 100%;
+                        margin: 0;
+                        display: -webkit-inline-box;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                    }
+                }
+
+                .claim-to-fame-edit-container {
+                    .video-link-input-container {
+                        display: block;
+
+                        .url-input-error {
+                            font-size: 9pt;
+                        }
+                    }
+                }
+            }
+
+            select, input, .major-results {
+                max-width: 100%;
+            }
+        }
+
+        .profile-projects-publications-container {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+
+            margin-left: 0;
+            .single-publication-container {
+                margin: 1em 0;
+            }
+        }
+
+        .profile-edit-header-banner-container {
+            background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/profile/profile-edit-header-banner-bg.png) 0 0;
+            background-size: cover;
+        }
+
+        .profile-recommendations-container {
+            display: block;
+
+            .single-recommendation-container {
+                width: 80%;
+                margin: 0.5em auto;
+            }
+        }
+
+        .people-also-viewed-container {
+            display: block;
+            margin-top: 2em;
+
+            .also-viewed-person {
+                width: 90%;
+                margin: 2em auto;
+            }
+
+        }
+
+    }
+
+    .external-link-modal {
+        .external-link-buttons-container {
+            width: 100%;
+        }
+    }
+}
+
+.__react_component_tooltip.show {
+    opacity: 1 !important;
+}
+
+/****** Start React Modal Styles ******/
+.ReactModal__Overlay {
+    opacity: 0;
+
+    &--after-open {
+      opacity: 1;
+      -webkit-transition: opacity 200ms ease-in-out;
+      -o-transition: opacity 200ms ease-in-out;
+      transition: opacity 200ms ease-in-out;
+    }
+
+    &--before-close {
+        opacity: 0;
+
+    }
+}
+/****** End React Modal Styles ******/
+
+@media all and (max-width: 605px){
+    ._profile_docs .transcript-result .transcript-name-col{
+        width: 45%;
+    }
+
+    ._profile_docs .transcript-result .transcript-date{
+        width: 21%;
+    }
+
+    ._profile_docs .docs-container{
+        width: 95%;
+        max-width: 100%;
+    }
+
+
+}
+
+@media all and (max-width: 519px){
+    ._profile_docs .transcript-result .transcript-name{
+        width: 68%;
+    }
+
+    ._profile_docs .transcript-result .transcript-date{
+        font-size: 10px;
+    }
+}
+
+/* Switch styles*/
+.switch {
+    border: 1px solid #ccc;
+    width: 41px;
+    height: 19px;
+    border-radius: 13px;
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0.8;
+}
+
+.switch-toggle {
+    border: 1px solid #757575;
+    -webkit-box-shadow: 1px 1px 1px #ccc;
+            box-shadow: 1px 1px 1px #ccc;
+    width: 19px;
+    height: 17px;
+    left: 0;
+    border-radius: 12px;
+    background: #fff;
+    position: relative;
+    -webkit-transition: left .2s ease-in-out;
+    -o-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out;
+}
+
+.switch.on {
+    background: #2ac56c;
+}
+
+.switch.on .switch-toggle {
+    left: 20px;
+}
+
+.switch.disabled {
+    cursor: not-allowed;
+}
+/* Switch library styles*/
+
+._profile .CircularProgressbar {
+    /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   *
+   * If you're not using "display: flex", you can remove this style.
+   */
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
+    height: 60px;
+    width: 60px;
+}
+
+._profile .CircularProgressbar .CircularProgressbar-path {
+    stroke: #2bc56d !important;
+    stroke-width: 8;
+    stroke-linecap: square;
+    -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+    -o-transition: stroke-dashoffset 0.5s ease 0s;
+    transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+._profile .CircularProgressbar .CircularProgressbar-trail {
+    stroke: #d6d6d6;
+    stroke-width: 8px;
+}
+
+._profile .CircularProgressbar .CircularProgressbar-text {
+    fill: #2bc56d !important;
+    font-size: 20px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}

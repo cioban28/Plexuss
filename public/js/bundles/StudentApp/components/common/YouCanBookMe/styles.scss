@@ -1,0 +1,28 @@
+// YouCanBookMe/styles.scss
+
+@import './../../../utils/_global';
+
+#_YouCanBookMe{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 102;
+
+	.modal{
+		@include fadeInUp(0.4s);
+		background-color: #fff;
+		@include bRadius(3px);
+		max-width: 900px;
+		height: 75%;
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		margin: auto;
+		overflow-y: auto;
+	}
+}
+
+@media only screen and (max-width: 40em){
+	#_YouCanBookMe .modal{
+		max-width: 100%;
+	}
+}

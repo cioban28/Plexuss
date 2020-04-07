@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AttachmentsModal modal button renders 1`] = `
+<div
+  class="_attachmentsButton action"
+>
+  <div
+    class="_picTextButton"
+  >
+    <div
+      class="btn-image"
+    >
+      <div
+        class="attch-icon"
+      />
+    </div>
+    <div
+      class="btn-text"
+    >
+      Attach Files
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AttachmentsModal modal button toggles modal 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(AttachmentButton)>
+    <AttachmentButton
+      dispatch={[Function]}
+      messages={Object {}}
+    >
+      <div
+        className="_attachmentsButton action"
+      >
+        <PicTextButton
+          callback={[Function]}
+          imageClass="attch-icon"
+          text="Attach Files"
+        >
+          <div
+            className="_picTextButton"
+            onClick={[Function]}
+          >
+            <div
+              className="btn-image"
+            >
+              <div
+                className="attch-icon"
+              />
+            </div>
+            <div
+              className="btn-text"
+            >
+              Attach Files
+            </div>
+          </div>
+        </PicTextButton>
+      </div>
+    </AttachmentButton>
+  </Connect(AttachmentButton)>
+</Provider>
+`;

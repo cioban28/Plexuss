@@ -1,0 +1,58 @@
+.home_loader{
+    background: transparent;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    margin: auto;
+    z-index: 1;
+}
+.post_loader{
+    display: inline-block;
+    width: 100%;
+    background: transparent;
+    div{
+        margin: auto;
+    }
+}
+.log_loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10000;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    .center_loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+}
+.sic-msg-loader{
+    background: transparent;
+    position: absolute;
+    left: 46%;
+    top: 40%;
+    margin: auto;
+    z-index: 1;
+}
+
+.msg-thread-loader{
+    background: transparent;
+    position: absolute;
+    left: 46%;
+    top: 40%;
+    margin: auto;
+    z-index: 1;
+}
+@media all and (max-width: 767px){
+    .home_loader{
+        left: 50%;
+    }
+}
+.msg-loader{
+    padding-top: 5px;
+    padding-left: 2px;
+}

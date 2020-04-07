@@ -1,0 +1,663 @@
+#comparison-main-div {
+  min-height: 100vh;
+  width: 80%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.select_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #FFF;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+}
+.slick-next, .slick-prev{
+  top: 10%;
+}
+.slick-prev {
+  left: 2px;
+}
+.slick-next {
+  right: 1px;
+}
+p { margin-bottom: 0.85rem }
+
+.odd-div {
+  background: #F5F5F5;
+}
+
+.margin-from-top {
+  margin-top: 60px;
+}
+
+.battle-heading{
+  background: #000000;
+  padding: 10px 5px;
+  border-radius: 6px 6px 0 0;
+  padding-left: 20px;
+  text-align: center;
+  padding-top: 15px;
+}
+.battle-mid-content{
+  border-radius: 0 0 6px 6px;
+}
+
+.border-right-gray {
+   border-right: solid 3px #f5f5f5;
+   height: 200px;
+}
+
+.border-bottom-gray {
+   border-bottom: solid 2px #f5f5f5;
+   height: 200px;
+}
+
+.br-white{
+   border-right: solid 3px #ffffff;
+   height: 51px;
+}
+
+.aid-section {
+  height: 20px;
+  border-right: solid 3px #ffffff;
+}
+
+.aid-sub-section {
+  border-right: 3px solid #fff;
+  height: 80px;
+  div {
+    padding: 5px 0px;
+  }
+}
+
+.green-btn {
+  background-color: #2AC56C;
+/* Firefox v1.0+ */
+/* Safari v3.0+ and by Chrome v0.2+ */
+/* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 200%;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
+}
+
+.title-text {
+  word-break: break-all;
+  font-weight: 700;
+  line-height: 120%;
+  color: #0085b2!important;
+  text-align: left;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.add-school-txt {
+  background-color: rgb(255,255,255) !important;
+  height: 38px !important;
+  border-color: rgb(185,186,187) !important;
+  border-width: 1px;
+  border-radius: 1px !important;
+  border-style: solid;
+  -webkit-box-shadow: inset 2px 4px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: inset 2px 4px 3px rgba(0,0,0,0.1) !important;
+}
+
+.gary-bck {
+  background: #eeeeee; padding:10px; margin-top:15px !important;
+}
+.reveal-modal {
+  z-index: 1010;
+}
+
+.floating-header {
+  position: fixed;
+  width: 803px;
+  padding: 0px;
+  min-height: 55px;
+  z-index: 3000;
+  display: none;
+  top: 0;
+  background-color: #0085B2;
+  opacity: 0.9;
+  font-size: 12px; color:#ffffff; font-weight:bold;
+}
+
+.comapreSchooltitleArea {
+    background-color: #0085B2;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    height: 70px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.owlTitleColumn {
+  overflow: hidden;
+}
+
+.area_for_fix {
+  position: absolute;
+  background-color: transparent;
+  width: 803px;
+  z-index: 1000;
+}
+
+.floating-header-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  width: 150px;
+  word-break: break-all;
+}
+
+.raking-div-number {
+  background-color: #26b24b;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #fff;
+  text-align: center;
+  width: 60px;
+}
+
+#comparison-main-div .compare-school-logo {
+  height: 60px;
+  width: 60px;
+  padding: 0px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 33%;
+
+}
+
+.removeschool {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+}
+
+#owl-compare.owl-buttons .owl-prev, #owl-compare .owl-buttons .owl-next{
+  position: absolute;
+  background: url(/images/colleges/compare/slide_nav.png) no-repeat;
+  width: 32px;
+  height: 30px;
+  font-size: 0px;
+  top: 68px;
+}
+
+#owl-compare .owl-buttons .owl-prev {
+  left:-7px;
+  background-position: 0 0!important
+}
+
+/* not Used*/
+#owl-compare .owl-buttons .owl-next {
+  right: -7px;
+  background-position: -40px 0!important
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  background: none;
+  border-radius: 1px;
+}
+
+
+#owl-compare .item {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.removeitem {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.add-btn {
+  text-align: unset;
+  margin: -2px 0px 0px 0px !important;
+  position: relative;
+
+}
+
+dialog,.reveal-modal {
+  height:auto;
+}
+
+.model-title-text {
+  font-size: 15px;
+  height: 40px;
+}
+
+.battlefont {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff
+}
+
+.selected-college-div {
+  background: #ffffff;
+  padding: 5px;
+}
+
+.school-logo-ul {
+  min-height: 216px;
+  padding: 0;
+  overflow: auto;
+}
+
+.school-logo-ul li {
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 0px 0px 5px;
+}
+
+.school-logo-ul li img {
+  width: 40px;
+  height: 40px
+}
+
+.school-li-bdr {
+  border: #797979 solid 2px
+}
+
+#stick-owl-compare .owl-item {
+  color: #ffffff;
+  font-size: 14px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.reveal-modal {
+  margin-top:50px;
+}
+
+#owl-compare .battleRecruitButton {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+#owl-compare .compareLogTopContainor {
+  height: 170px;
+}
+
+@media only screen and (max-width: 20em) {
+  #owl-compare .college-name {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 20.063em) {
+  #owl-compare .college-name {
+    font-size: 14px;
+    height: 54px;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+  }
+}
+
+#owl-compare .btn-rec-title {
+  margin: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#owl-compare .battleToolTip {
+  padding-top: 8px;
+}
+
+#owl-compare .desktopClickToadd {
+  padding-top: 50px;
+}
+
+#owl-compare .recruitment-btn-pending {
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 40em) {
+  .odd-div{ background:none;}.br-white{ height:auto}.aid-sub-section{height: auto;}
+
+  .border-right-gray
+  {
+    border:0;
+    height:auto;
+  }
+  .compare-school-logo
+  {
+    border:#D5D5D5 solid 1px;
+    width:75px;
+    height:75px;
+    border-radius:9px; padding:5px;
+    margin-bottom:10px;
+    margin-left: 33%;
+  }
+  .removeschool{top:30px; left:2px;}
+
+  .battle-mid-content{border-radius:9px; margin:5px 5px 60px 5px;}
+  .m-title-heading{ color:#797979; font-size:12px; font-weight:bold; text-align:center}
+  .compare-icon
+  {
+     left: 114px;
+     position: absolute;
+     top: -70px;
+   }
+   .raking-div-number{ font-size:12px;}
+
+   #comparison .reveal-modal{
+    padding: 0px;
+    width: 100%;
+   }
+
+   #comparison .ui-autocomplete{
+    left: 5% !important;
+    width: 90% !important;
+   }
+  /* .floating-header{ width:100%;}*/
+
+
+
+  /*.owl-item.active:first-child{ } */
+
+  .owl-item.active .br-white{border-left:none;}
+  .owl-item.active + .owl-item.active .br-white{ border-left: dotted 3px #797979;}
+  /*.owl-item.active .battle-icon{visibility:hidden;}*/
+  .owl-item.active + .owl-item.active .battle-icon{visibility:visible !important;}
+  .owl-item:first-child + .owl-item .battle-icon{visibility:hidden !important;}
+  .show-for-small.battle-icon {
+      visibility: hidden;
+      width: 40%;
+      margin: 0 auto;
+  }
+
+  .battle-icon
+  {
+    left: -28px;
+    position: absolute;
+    top: 10px;
+    width: 56px;
+    z-index: 34;
+  }
+
+  #owl-compare .owl-buttons .owl-prev
+  {left:-3px;}
+
+  #owl-compare .battleToolTip{
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+}
+@media only screen and (max-width: 500px) {
+  .slick-track {
+    .slick-active {
+      .mobile-battle {
+        visibility: visible;
+      }
+    }
+    .slick-current {
+      .mobile-battle {
+        visibility: hidden !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+  #owl-compare .compareLogTopContainor{
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  #owl-compare .compareLogTopContainor{
+    height: 152px;
+  }
+}
+
+/* centering add new button */
+.addSchool-btn-txt{
+  padding: 50px 0;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.displayBlock {
+  display: block !important;
+}
+
+.modalClass {
+  font-family: Open Sans,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  top: 100px;
+  width: 60%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1005;
+  background-color: white;
+  position: absolute;
+  border: solid 1px #666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.modalClass1 {
+  font-family: Open Sans,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  top: 100px;
+  width: 65%;
+  max-width: 62.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1005;
+  background-color: white;
+  position: absolute;
+  border: solid 1px #666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 1.875rem;
+  border-radius: 10px;
+}
+.close-modal {
+  margin: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  color: #000000 !important;
+  font-size: 40px !important;
+  padding: 0px !important;
+  line-height: 1;
+  font-weight: 5000;
+}
+
+.radius10{border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;}
+.pos-rel { width:95%;position:relative; }
+.pt10 { padding-top:10px; }
+.pt15 { padding-top:15px; }
+.pt25 { padding-top:25px; }
+.fs24 { font-size:24px; }
+.normal-text { font-weight: normal; }
+.fs15 { font-size:15px !important; }
+.fs10 { font-size:10px !important; }
+.fs12 { font-size:12px !important; }
+.fs20 { font-size:20px !important; }
+.fs18 { font-size:18px; }
+.pl20 { padding-left: 20px; }
+.f-bold { font-weight:bold; }
+.pl30 { padding-left:20px; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mb5 { margin-bottom: 5px; }
+.cursor {cursor:pointer !important; }
+.taLeft { text-align: 'left'; }
+.c-white { color: 'white' }
+
+#modal_autocomplete ul.ui-widget-content {
+  font-size: 12px;
+  color: #797979;
+  font-weight: bold;
+  z-index: 9999;
+  margin-top: 5px;
+  top: inherit !important;
+  left: inherit !important;
+  width: 517px;
+}
+
+.ui-menu .ui-menu-item {
+  background-color: #fff;
+  list-style: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1022px) {
+  #valign-middle {
+    display: block !important;
+  }
+
+  .battle-heading {
+    display: none !important;
+  }
+
+  .show-for-small {
+    display: block !important;
+  }
+
+  .hide-for-small {
+    display: none !important;
+  }
+
+  .battle-icon {
+    display: block !important;
+    width: 40%;
+    margin: 0 auto;
+    /*visibility: visible !important;*/
+  }
+
+  #addSchoolBoxCompareCol {
+    display: block !important;
+  }
+
+  .owl-controls {
+    display: block !important;
+  }
+
+  .show-for-medium-only {
+    display: block !important
+  }
+
+  .sos {
+    font-size: 11px;
+    color: #79796A !important
+  }
+  .comparison-bottom-margin{
+    margin-bottom: 25px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #comparison-main-div {
+    width: 100%;
+  }
+  .green-btn {
+    width: 250px;
+  }
+}
+.comparison-portion{
+  width: 100% !important;
+  margin-bottom: 50px;
+  .slick-disabled {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 768px) {
+  .comparison-portion{
+    width: 80% !important;
+    margin-bottom: 50px;
+  }
+}
+
+#comparison-main-div  .slick-slide slick-active slick-cloned{
+  width: auto !important;
+}
+#comparison-main-div .pos-rel .compareLogTopContainor img {
+  text-align: center;
+}
+
+#comparison-main-div .text-center {
+    text-align: center !important;
+}
+
+@media only screen and (max-width: 1023px){
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .show-for-large-only, .hide-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down {
+      display: inherit !important;
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+@media screen and (max-width: 700px) {
+  .modalClass{
+    width: 100%;
+  }
+  .modalClass1{
+    width: 100%;
+  }
+  #modal_autocomplete ul.ui-widget-content {
+   width: 100%; 
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #modal_autocomplete ul.ui-widget-content {
+   width: 100%;
+  }
+}

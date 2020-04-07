@@ -1,0 +1,225 @@
+.close-modal-cont {
+    z-index: 100;
+}
+.formBody, .formheader {
+    background-color: #f5f5f5;
+}
+.formheader {
+    border-top: 8px solid #000;
+    width: 100%;
+    height: 55px;
+    position: relative;;
+}
+.formshield {
+    background-color: #f5f5f5;
+    background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/frontpage/plexussLogoLetterBlack.png);
+    background-position: 53% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+    height: 125px;
+    left: 50%;
+    margin: 0 auto 0 -62px;
+    position: absolute;
+    top: -70px;
+    width: 125px;
+    z-index: 2;
+}
+.formBody {
+h1 {
+    font-family: "Open Sans";
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+input[type=email], input[type=password], input[type=text] {
+    border: 1px solid #b9babb;
+    border-radius: 5px;
+}
+}
+.signup-body {
+    padding: 20px;
+    .birthday-input {
+        margin-top: 1rem;
+    }
+    input {
+        font-family: "Open sans" !important;
+        font-size: .875rem !important;
+        margin: 1rem 0 0 !important;
+    }
+    input[type=text] {
+        margin-top: 0px !important;
+    }
+    .checkbox-margin {
+        margin-right: 0.5rem !important;
+    }
+    .formDateWrapper {
+        background-color: #fff;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+        box-sizing: border-box;
+        color: rgba(0,0,0,.75);
+        display: block;
+        font-family: inherit;
+        font-size: .875rem;
+        height: 2.3125rem;
+        margin: 0 0 10px;
+        padding: .5rem;
+        transition: box-shadow .45s ease 0s,border-color .45s ease-in-out 0s;
+        width: 100%;
+        border: 1px solid #b9babb;
+        border-radius: 6px;
+        input {
+            background: none repeat scroll 0 0 transparent;
+            border: none!important;
+            box-shadow: none!important;
+            height: 20px!important;
+            padding-bottom: 0;
+            padding-top: 0;
+            text-align: center;
+            line-height: inherit;
+        }
+    }
+    .signupButton ,.signupFB, .signupGoogle, .signupLinkedIn {
+        border-radius: 6px;
+    }
+    .name-input {
+        border-radius: 6px !important;
+    }
+    .signupButton:hover{
+        background-color: #ff5c26 !important;
+    }
+    .signupButton {
+        width: 100%;
+        color: #fff;
+        background-color: #ff5c26 !important;
+        height: 40px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 25px;
+            height: 20px;
+        }
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            margin: 0px;
+            margin-right: 5px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #fff transparent transparent transparent;
+        }
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    .signup-group {
+        display: flex;
+        justify-content: center;
+    }
+    .facebook-white {
+        height: 22.24px;
+    }
+    .facebook-white, .google-white, .linkedin-white {
+        padding-right: 5px;
+    }
+    .signupFB, .signupGoogle, .signupLinkedIn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        text-align: center;
+        width: 100%;
+    }
+    .signupFB {
+        background-color: #38569a;
+        color: #fff;
+        margin: 0px 10px 0px 0px;
+    }
+    .signupGoogle {
+        background-color: #FFFFFF;
+        color: #757575;
+        margin: 0px 10px 0px 0px;
+    }
+    .signupLinkedIn {
+        background-color: #38569a;
+        color: #fff;
+        margin: 0px;
+    }
+    .optinmessage {
+        font-size: 11px;
+        color: #79796a;
+        margin-bottom: 13px;
+        margin-top: 10px;
+    }
+    .forgottxt a, .haveAcct {
+        text-decoration: underline;
+        color: #79796a;
+    }
+    .haveAcct {
+        font-size: 12px;
+    }
+    .orLine, .ortxt {
+        margin: 10px 0 20px;
+    }
+    .orLine {
+        border-bottom: 1px solid gray;
+        height: 10px;
+    }
+    .input-error {
+        background-color: #FFEAC8 !important;
+        background-image: url(/images/formError.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        border: 1px solid #FF7F00;
+        box-shadow: none;
+        color: #000000;
+    }
+    .error {
+        background-color: inherit !important;
+        color: #FF7F00 !important;
+        font-size: 10px !important;
+        text-align: left;
+        margin: 0px !important;
+        padding: 5px 10px !important;
+    }
+
+    .signup-error {
+        font-size: 20px !important;
+        text-align: center;
+        font-style: normal !important;
+    }
+}
+
+@media all and (max-width: 767px){
+    .signup-body {
+        .sign-large-4 {
+            width: 30%;
+        }
+        .ortxt {
+            width: 40%;
+        }
+    }
+}

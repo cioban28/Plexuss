@@ -1,0 +1,43 @@
+// /cms/styles.scss
+
+@import './_global.scss';
+
+#main-content-management-container{
+	position: absolute;
+	top: 90px; right: 0; left: 0; bottom: 0;
+
+	&.global_alert_on{
+		position: absolute;
+		top: 129px; right: 0; left: 0; bottom: 0;
+	}
+
+	&.with-daily-chat-bar{ top: 126px; }
+
+	// > *:not(ul){ @include fadeInUp(0.25s); }
+
+	.cms-tab-list{
+		padding: 10px 0 10px 23px;
+		border-bottom: 1px solid #EDEDED;
+		background-color: $lightgray;
+
+		.tab{
+			color: #797979;
+			margin: 0 20px 0 0;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+
+			.active{ color: $green; }
+		}
+
+		.tabLink{
+			color: #797979;
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+
+	.tools-section{
+		@include fadeInUp(0.25s);
+	}
+}

@@ -1,0 +1,40 @@
+@import './../css/_globalUtil';
+
+
+#_LiveChatBtn{
+	
+	&.btn-container{
+		position: fixed;
+		display: inline-block;
+		bottom: 10px;
+		right: 17px;
+		box-shadow: 1px 5px 10px rgba(0,0,0,.6); 
+		background-color: #fff;
+		color: #2ba6cb;
+		@include bRadius(5px);
+		height: 30px;
+		width: auto;
+		font-size: 14px;
+		padding: 5px 10px;
+
+		img{
+			max-height: 17px;
+			width: auto;
+			margin-top: -3px;
+			margin-right: 10px;
+		}
+
+	}	
+}
+
+
+@media all and (max-width: 640px){
+	#_LiveChatBtn{
+
+		&.btn-container{
+			position: relative;
+			right: initial;
+			bottom: initial;
+		}
+	}
+}

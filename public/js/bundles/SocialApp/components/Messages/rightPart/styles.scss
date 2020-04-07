@@ -1,0 +1,114 @@
+.top_bar{
+    margin-bottom: 10px;
+    background: #fff;
+    display: flex;
+    padding: 30px;
+    min-height: 130px;
+    .to_new_msg{
+        display: inline-flex;
+        position: absolute;
+        width: 63%;
+        height: 40px;
+        margin: 1px 0;
+        border-bottom: 1px solid #ddd;
+        align-items: center;
+        padding-left: 5px;
+        padding-bottom: 1px;
+        .react_select{
+          border: none;
+          height: 40px;
+          .css-2o5izw{
+            height: 40px;
+            padding: 0;
+            border: none;
+            box-shadow: unset;
+            .css-1wy0on6{
+              display: none;
+            }
+            .css-1hwfws3{
+              height: 40px;
+              border: none;
+              box-shadow: unset;
+              .css-1492t68{
+                display: none;
+                border: none;
+              }
+            }
+          }
+        }
+        .css-10nd86i{
+          height: 40px;
+          width: 100%;
+          margin-left: 10px;
+          .css-vj8t7z{
+            height: 40px;
+            border: none;
+            box-shadow: unset;
+            .css-1wy0on6{
+              display: none;
+            }
+            .css-1hwfws3{
+              height: 40px;
+              .css-1492t68{
+                display: none;
+              }
+            }
+          }
+        }
+    }
+    ._grand_parent{
+        display: inline-flex;
+        width: 100%;
+        ._tooltip_for_profile{
+        }
+    }
+    .image_parent{
+        width: 70px;
+        height: 70px;
+        margin-right: 15px;
+        img{
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .user_info_parent{
+        font-size: 16px;
+        color: #202020;
+        display: flex;
+        align-items: center;
+        .name{
+            font-weight: 700;
+            width: 100% !important;
+        }
+        .school{
+            font-weight: 600;
+        }
+        .status{
+            font-weight: 400;
+        }
+    }
+}
+@media all and (max-width: 767px) {
+    .top_bar {
+      margin-top: 44px;
+      padding: 15px 15px 15px;
+      min-height: auto;
+      margin-bottom: 0;
+      box-shadow: inset 0px -4px 4px 0px #ccc;
+        ._grand_parent{
+          padding-left: 25px;
+          align-items: center;
+          ._tooltip_for_profile{
+          }
+          .__react_component_tooltip.show{
+            
+            border: 1px solid #ccc;
+          }
+        }
+        .user_info_parent .name{
+          display: block;
+        }
+    }
+}

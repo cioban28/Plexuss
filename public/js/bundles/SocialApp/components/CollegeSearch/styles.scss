@@ -1,0 +1,235 @@
+.search-headning-div {
+  position: relative;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #000000;
+  padding: 20px 25px;
+  color: #ffffff;
+}
+
+.fs22 {
+  font-size: 22px;
+}
+
+.c98 {
+  color: #989898;
+}
+
+.search-content-div {
+  min-height: 200px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #ffffff;
+  padding: 20px 15px 15px 15px;
+  color: #000000;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.college_logo {
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 70px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.search-content-div {
+  min-height: 200px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #ffffff;
+  padding: 20px 15px 15px 15px;
+  color: #000000;
+}
+
+p, dfn, aside, div, li, a {
+  font-style: normal;
+}
+
+.c-blue {
+  color: #0085B2;
+}
+
+.flag.flag-ca {
+  background-position: -48px -22px;
+}
+
+.d-block {
+  display: block;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.c79 {
+  color: #797979;
+}
+
+.l-hght18 {
+  line-height: 18px;
+}
+
+.fs12 {
+  font-size: 12px;
+}
+
+.quick-linker {
+}
+
+.expand-toggle-span {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #797979;
+  border-bottom: 0;
+  position: absolute;
+}
+
+
+.college-search-content-wrapper{
+  width: 80%;
+}
+
+@media (max-width: 768px){
+  .college-search-content-wrapper {
+    width: 100%
+  }
+}
+
+.search-content-ul{
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  list-style: "none"
+}
+
+ul.pagination {
+  float: left;
+  min-height: 1.5rem;
+  margin-left: -0.3125rem;
+  padding-top: 5%;
+}
+
+.set-cursor{
+  cursor: pointer;
+}
+
+.margin-adjustment{
+  margin-top: 60px !important;
+}
+
+@media (max-width: 768px){
+  .margin-adjustment{
+    margin-top: 19% !important;
+  }
+  .search-content-ul {
+    margin-bottom: 60px;
+  }
+}
+
+.college-by-state-headline {
+  color: #fff;
+  font-style: 'Open Sans';
+}
+
+.state-description-container {
+  position: relative;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.state-description-container .description-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 150px;
+  overflow: hidden;
+}
+
+.flag-image-college-list {
+  height: 100px;
+  width: 150px;
+  margin-right: 1em;
+}
+
+.state-description-container .read-more-button {
+  cursor: pointer;
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #7baeda;
+}
+
+.read-more-height{
+  height: auto !important;
+}
+
+@media only screen and (max-width: 40em){
+  .state-description-container .description-content-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 300px;
+  }
+}
+
+.description-box-margin{
+  margin-bottom: 5%
+}
+
+
+.pagination li:not([disabled]):hover{
+  background-color: orangered !important
+}
+
+.pagination li:last-child:hover {
+  background-color: orangered !important
+}
+
+.results-background-image{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}

@@ -1,0 +1,1067 @@
+.recruitment-modal {
+  font-family: Open Sans,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  top: 100px;
+  width: 50%;
+  max-width: 62.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1005;
+  background-color: white;
+  position: absolute;
+  border: solid 1px #666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 1.875rem;
+  border-radius: 10px;
+}
+.college-loader {
+  position: absolute;
+  left: 40%;
+  top: 48%;
+  img {
+    width: 55px;
+  }
+}
+.sign-modal {
+  width: 30%;
+  position: absolute;
+  z-index: 1005;
+  max-width: 62.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-family: Open Sans,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  top: 100px;
+}
+.sign-modal:focus {
+  outline: none;
+}
+#social-college-main-cont {
+  width: 100%;
+  font-family: 'Open Sans';
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000;
+  }
+
+  .row {
+    max-width: 100% !important;
+    margin: 0;
+  }
+
+  .college-cont {
+    width: 80%;
+    margin-top: 60px;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    .mobile-engagement-bar {
+      display: none;
+    }
+
+    .college-header {
+      background: #fff;
+      border-radius: 6px;
+
+      .college-ranking-cont {
+        float: right;
+
+        span {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 26px;
+          text-align: center;
+          padding: 3px 5px;
+          background: #26b24b;
+          border-radius: 0 4px 0 9px;
+        }
+      }
+
+      .header-content {
+        padding: 2% 5% 4% 4%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex !important;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+
+        .college-logo {
+          width: 15%;
+        }
+
+        .college-info {
+           text-align: right;
+
+          .college-name {
+
+            h2 {
+              margin-left: 7px;
+              display: inline-block;
+              font-size: 25px;
+            }
+          }
+        }
+
+        .online-school {
+          font-size: 16px;
+          color: #2ba6cb;
+          font-weight: bold;
+        }
+
+        .college-address {
+          font-size: 15px;
+          color: #000;
+        }
+      }
+
+      .college-nav-cont {
+        background: #000;
+        color: #fff;
+        border-radius: 0 0 6px 6px;
+
+        .college-nav-list, .college-mobile-nav .mobile-college-nav-list {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          list-style: none;
+          padding: 0 3%;
+          margin: 0 !important;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+
+          .college-nav-list-item {
+            padding: 10px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+
+            .dropdown {
+              position: relative;
+
+              &:hover {
+                .dropdown-content {
+                  border: none !important;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-orient: vertical;
+                  -webkit-box-direction: normal;
+                      -ms-flex-direction: column;
+                          flex-direction: column;
+                }
+              }
+
+              .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                background: #000;
+                margin: 0;
+
+                .dropdown-list-item {
+                  padding: 10px !important;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: center;
+                      -ms-flex-pack: center;
+                          justify-content: center;
+                }
+              }
+            }
+
+            a {
+              font-size: 15px;
+              color: #fff;
+              font-weight: bold;
+              padding: 0;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+
+              &:hover {
+                color: #2AC56C;
+                background: unset;
+
+                .icon-overview {
+                  background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/overview-hover.png');
+                }
+
+                .icon-stats {
+                  background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/stats-hover.png');
+                }
+
+                .icon-ranking {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/ranking-hover.png');
+                }
+
+                .icon-tuition {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/tuition-hover.png');
+                }
+
+                .icon-news {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/news-hover.png');
+                }
+
+                .icon-admissions {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/admissions-hover.png');
+                }
+
+                .icon-enrollment {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/enrollment-hover.png');
+                }
+
+                .icon-financial-aid {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/financial-hover.png');
+                }
+
+                .icon-chat {
+                   background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/chat-hover.png');
+                }
+              }
+
+              img {
+                width: 20px;
+                margin-right: 5px;
+              }
+
+              .icon {
+                display: inline-block;
+                height: 19px;
+                width: 19px;
+                margin-right: 5px;
+                background-size: 19px 19px;
+              }
+
+              .icon-overview {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/overview.png');
+              }
+
+              .icon-stats {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/stats.png');
+              }
+
+              .icon-ranking {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/ranking.png');
+              }
+
+              .icon-tuition {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/tuition.png');
+              }
+
+              .icon-news {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/news.png');
+              }
+
+              .icon-admissions {
+                 background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/admissions.png');
+              }
+
+              .icon-enrollment {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/enrollment.png');
+              }
+
+              .icon-financial-aid {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/financial.png');
+              }
+
+              .icon-chat {
+                background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/chat.png');
+              }
+
+              .caret {
+                font-family: 'FontAwesome' !important;
+                margin-left: 9px;
+              }
+            }
+          }
+        }
+
+        .college-mobile-nav {
+          display: none;
+
+          .mobile-college-nav-list {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .college-body {
+    margin: 15px 0;
+
+    .college-slider-cont {
+      margin-bottom: 25px;
+      position: relative;
+
+      .school-info-mobile {
+        display: none;
+      }
+      .slider-arrow {
+        position: absolute;
+        top: 45%;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+
+      .arrow-prev {
+        left: -36px;
+        z-index: 1;
+      }
+
+      .arrow-next {
+        right: -36px;
+      }
+
+      .slick-slide {
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .content-cont {
+      background: #fff;
+      border-radius: 10px;
+      padding: 4%;
+    }
+  }
+
+  #overview-bottom-3-boxes {
+    margin-bottom: 15%;
+
+    .box-3-top-header {
+      background-color: #0000009c;
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .box-3-infobox {
+      background-color: #fff;
+      color: #797979;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 20px 20px 0;
+      border-radius: 0 0 5px 5px;
+
+      .value {
+        font-size: 19px;
+        padding-bottom: 20px;
+        color: #000;
+      }
+
+      .col-overview-link-hover {
+        font-size: 16px;
+        padding-bottom: 20px;
+        color: #2AC56C;
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .engagement-bar-cont {
+    position: fixed;
+    bottom: 50px;
+    width: 80%;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    .engagement-bar {
+      background: rgba(0, 0, 0, 0.1);
+      display: inherit;
+      padding: 20px 25px;
+      bottom: 50px;
+      border-radius: 5px;
+
+      .star-img {
+        margin-right: 40px;
+        cursor: pointer;
+      }
+
+      .action-buttons {
+         display: inherit;
+
+        button {
+          margin: 0px;
+          border-radius: 11px;
+          font-size: 15px;
+          font-weight: bold;
+          padding: 11px 22px;
+          background: #2ba6cb;
+          min-width: 200px;
+          color: #fff;
+          white-space: nowrap;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+        }
+
+        img {
+          width: 20px;
+          height: 17px;
+          margin-right: 5px;
+        }
+
+        .apply-now-btn {
+          margin-left: 20px;
+        }
+
+        .get-recruited-btn {
+          background: #2AC56C;
+          display: inline-block;
+        }
+
+        .already-recruited-btn {
+          background: #000;
+          cursor: auto;
+        }
+      }
+    }
+  }
+  .engagement-bar-collapsed {
+    background: #fff;
+    position: fixed;
+    left: 1%;
+    bottom: 50px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    z-index: 999;
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 1px 1px #ccc;
+            box-shadow: 0 1px 1px 1px #ccc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 1430px) {
+  .recruitment-modal {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1330px) {
+  .sign-modal {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1214px) {
+  .recruitment-modal {
+    width: 70%;
+  }
+}
+
+@media(max-width: 1100px) {
+  #social-college-main-cont {
+    .college-cont {
+      .college-header {
+        .header-content {
+          display: none !important;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+
+          .college-logo {
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 5%;
+          }
+
+          .college-info {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  .sign-modal {
+    width: 50%;
+  }
+  #social-college-main-cont {
+    .college-cont {
+      .college-header{
+        .college-nav-cont {
+          .college-mobile-nav {
+            display: block;
+
+            .mobile-nav-toggle {
+              padding: 11px;
+              font-size: 16px;
+              font-weight: bold;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between;
+              span {
+                display: block;
+              }
+              .toggle-text {
+                cursor: pointer;
+                i {
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+          .college-nav-list {
+            display: none;
+          }
+        }
+      }
+    }
+    .college-body {
+      .college-slider-cont {
+        .slider-arrow {
+          width: 55px;
+          height: 55px;
+
+          img {
+            width: 10px;
+          }
+        }
+        .arrow-prev {
+          left: -28px;
+        }
+        .arrow-next {
+          right: -28px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1022px) {
+  #social-college-main-cont {
+    .college-body {
+      .college-slider-cont {
+        .no-padding-left, .no-padding-right, .no-padding-middle {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.overview-text-area {
+    margin-bottom: 5% !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+@media(max-width: 767px) {
+  .sign-modal {
+    width: 80%;
+  }
+  .college-loader {
+    left: 45%;
+  }
+  #social-college-main-cont {
+    .college-cont {
+      width: 100%;
+      margin-top: 15%;
+      padding: 0 10px;
+      .college-header .college-nav-cont .college-mobile-nav .mobile-nav-toggle {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        .toggle-text {
+          margin-top: 10px;
+        }
+      }
+      .college-nav-cont {
+        display: inherit;
+
+        .college-mobile-nav {
+          background: #000;
+          z-index: 999;
+          top: 0;
+          display: inline-block;
+          position: sticky;
+          position: -webkit-sticky;
+          padding-bottom: 0;
+          margin-bottom: -68px;
+        }
+        .my-sticky{
+          top: 0;
+          left: 0;
+          width: 100%;
+          position: fixed !important;
+          z-index: 1015;
+          padding: 0 10px;
+        }
+        .college-mobile-nav > * {
+           -webkit-transform: translateZ(0);
+        }
+      }
+      .college-header {
+        display: initial;
+        .college-ranking-cont {
+          text-align: right;
+          float: none;
+        }
+      }
+
+      .mobile-engagement-bar {
+        margin-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+
+        .get-recruited-btn {
+          background: #2AC56C;
+          margin-bottom: 10px;
+        }
+
+        .already-recruited-btn {
+          background: #000;
+          margin-bottom: 10px;
+        }
+
+        button {
+          background: #2ba6cb;
+          font-size: 17px;
+          color: #fff;
+          font-weight: bold;
+          border-radius: 10px;
+          display: inline-block;
+
+          img {
+            width: 25px;
+            height: 25px;
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+    .college-body {
+      .college-slider-cont {
+        .school-info-mobile {
+          background: #fff;
+          border-radius: 6px;
+          text-align: center;
+          padding: 40px 40px 1px;
+          margin: 15px 0;
+          display: block;
+
+          .school-ranking {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 5px 10px;
+            background: #26b24b;
+            border-radius: 0 6px 0px 6px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .school-logo {
+            margin-bottom: 10px;
+          }
+          .school-title {
+            font-size: 16px;
+            margin-bottom: 2px;
+
+            .country-flag {
+              margin-right: 4px;
+            }
+          }
+          .school-address {
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          .school-phone {
+            margin-bottom: 15px;
+            font-size: 14px;
+          }
+          .online-school {
+            font-size: 12px;
+            color: #187d90;
+          }
+        }
+        .arrow-prev {
+          left: 0;
+        }
+        .arrow-next {
+          right: 0;
+        }
+      }
+    }
+    .engagement-bar-cont, .engagement-bar-collapsed {
+      display: none;
+    }
+    .college-slider-cont {
+      .slider-arrow-style {
+        padding: 8px 0 !important;
+      }
+      .slider-arrow {
+        top: 36%;
+        padding: 18px 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+      .arrow-next {
+        right: -4%;
+      }
+      .arrow-prev {
+        left: -4%;
+      }
+    }
+  }
+}
+
+@media(max-width: 450px) {
+  #social-college-main-cont {
+    .college-body {
+      .college-slider-cont {
+        .slider-arrow {
+          top: 36%;
+        }
+      }
+    }
+  }
+}
+
+.active-link {
+  color: #2AC56C !important;
+  font-size: 12px;
+
+ .icon-overview {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/overview-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-stats {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/stats-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-ranking {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/ranking-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-tuition {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/tuition-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-news {
+     background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/news-hover.png') !important;
+     background-size: 19px 19px;
+  }
+
+  .icon-admissions {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/admissions-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-enrollment {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/enrollment-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-financial-aid {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/financial-hover.png') !important;
+    background-size: 19px 19px;
+  }
+
+  .icon-chat {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/chat-hover.png') !important;
+    background-size: 19px 19px;
+  }
+}
+
+.mobile-active-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  span {
+    margin-right: 5px;
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media(max-width: 500px) {
+  .recruitment-modal {
+    width: 90%;
+  }
+}
+
+@media(max-width: 767px) {
+  .college-content-small{
+    margin-top: 10% !important;
+  }
+  .background-for-small{
+    background: black;
+  }
+  .div-gray-background{
+    background: #202020 !important;
+  }
+}
+
+.slider-icon {
+  .icon {
+    display: inline-block;
+    height: 19px;
+    width: 19px;
+    margin-right: 5px;
+    background-size: 19px 19px;
+    margin-left: 11%;
+  }
+
+  .icon-overview {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/overview.png');
+  }
+
+  .icon-stats {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/stats.png');
+  }
+
+  .icon-ranking {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/ranking.png');
+  }
+
+  .icon-tuition {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/tuition.png');
+  }
+
+  .icon-news {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/news.png');
+  }
+
+  .icon-admissions {
+     background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/admissions.png');
+  }
+
+  .icon-enrollment {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/enrollment.png');
+  }
+
+  .icon-financial-aid {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/financial.png');
+  }
+
+  .icon-chat {
+    background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/social-assets/college/chat.png');
+  }
+
+  .caret {
+    font-family: 'FontAwesome' !important;
+    margin-left: 9px;
+  }
+}
+
+.slider-icon .mobile-color-white {
+  color: white;
+  font-size: 12px;
+}
+
+.slider-icon{
+
+ .slider-prev{
+    left: 2% !important;
+    z-index: 999;
+    position: absolute;
+    display: inline-flex;
+    top: 21px !important;
+  }
+  .slider-next{
+    right: 1% !important;
+    z-index: 999;
+    position: absolute;
+    display: inline-flex;
+    top: 21px !important;
+  }
+}
+#colleges-star-id {
+  display: none !important;
+}
+#recruited-modal {
+  display: none !important;
+}
+
+//styling for star and modal
+@media(max-width: 767px) {
+  #colleges-body .college-body-margin{
+    margin-top: 85px !important;
+  }
+
+  // modal styling starts here
+  #colleges-star-id {
+    display: inherit !important;
+    .recruited-star-div {
+      position: fixed;
+      background: white;
+      z-index: 999;
+      right: 0;
+      width: 55px;
+      height: 42px;
+      border-radius: 10px 1px 1px 10px;
+      margin-top: 102px;
+      box-shadow: 0px 0px 3px 0px;
+
+      .fa-star-styling {
+        color: #A9A9A9;
+        font-size: 30px;
+        padding: 7px 7px 7px 12px;
+      }
+    }
+  }
+  #recruited-modal {
+    display: initial !important;
+  }
+  .recruited-modal-styling{
+    position: fixed;
+    background: rgba(16, 16, 16, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    .modal-styling {
+      background: #fff;
+      margin: 50% 8% 0;
+      border-radius: 6px;
+      padding-top: 62px;
+      text-align: center;
+
+      .college-logo-container {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 100%;
+        margin: -110px 30% 0;
+        position: absolute;
+        text-align: center;
+        padding-top: 5px;
+        overflow: hidden;
+
+        .college-logo {
+          width: 75px;
+          height: 75px;
+        }
+      }
+      .recruited-modal-buttons-div {
+        width: 85%;
+        margin: 0 auto;
+
+        .get-recruited-btn-new-styling{
+          font-size: 17px;
+          height: 45px;
+          padding-top: 10px;
+        }
+        .already-recruited-btn-new-styling{
+          font-size: 15px !important;
+        }
+        .image-new-styling{
+          height: 20px;
+          width: 25px;
+        }
+      }
+      .close-button-style {
+        background: #fff;
+        font-family: "Open Sans";
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}

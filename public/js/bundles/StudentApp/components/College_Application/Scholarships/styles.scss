@@ -1,0 +1,876 @@
+@import './../../../utils/_global';
+
+/*******************************************************************************************************************************************/
+/************************* scholarships ****************************************************************************************************/
+._Scholarships{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+
+
+    .sch-header-title{
+        font-size: 25px;
+        margin: 10px 0px 20px 0px;
+    }
+
+    .scholarships-container{
+        padding: 30px 60px 30px 30px;
+    }
+
+    /******* filter box **********/
+    .sch-filter-container{
+        float: left;
+        width: 275px;
+        padding: 35px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #101010;
+        background-color: rgba(5,5,5,.9);
+        color: #eeeeee;
+    }
+
+    .sch-filter-title{
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+    .sch-filter-amt-title{
+        padding-left: 71px;
+        margin-top: 50px;
+        font-size: 14px;
+    }
+
+    .sch-amounts-filters{
+        padding-left: 71px;
+        color: #999999;
+        font-size: 13px;
+        margin-top: 25px;
+    }
+
+    .sch-amounts-filters > div{
+        height: 37px;
+    } 
+
+    .sch-amounts-filters > div a {
+        /*margin: 20px 0px;*/
+        color: #999999;
+        cursor: pointer;
+    }
+
+    .sch-amounts-filters > div a.active{
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+
+    #clearSchFilter{
+        position: relative;
+        margin: 25px auto 10px auto;
+        width: 68px;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    #clearSchFilter a{
+        font-size: 13px;
+        padding: 0px 1px;
+        color: #cccccc;
+    }
+
+
+    .fadeIn{
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn{
+        0%{ opacity: 0; }
+        100%{ opacity: 1; }
+    }
+
+    .loader{
+        width: 45px;
+        height: 45px;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        border: 3px solid rgba(0,0,0,.1);
+        border-top: 3px solid rgba(10,10,10,.5);
+        animation: spin 2s infinite;
+        position: relative;
+        margin: 90px auto;
+    }
+
+    @keyframes spin{
+        0%{ transform: rotateZ(0deg); }
+        100%{ transform: rotateZ(360deg);}
+    }
+
+    /***********/
+
+
+
+
+
+
+    /********** right side content ************************************/
+    /******************************************************************/
+    .sch-content-container{
+        width: auto;
+        padding-left: 310px;
+    }
+
+    .college-pages-navbar{
+        margin: 0px 0px 20px 0px !important; /* override rules in default.css */
+    }
+
+    .disabled{
+        opacity: .5;
+        cursor: not-allowed !important;
+    }
+
+    .howto-box{
+        color: #aaaaaa;
+        background-color: #2b2b35;
+        padding: 20px;
+        font-size: 14px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        min-height: 72px;
+    }
+
+    .howto-left{
+        padding-right: 200px;
+    }
+    .howto-right{
+        float: right;
+        width: 105px;
+    }
+
+    .sch-next-btn{
+        color: #ffffff;
+        background-color: #2ac56c;
+        padding: 5px 35px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+        display: inline-block;
+        cursor: pointer;
+
+    }
+
+
+
+    /********* table ***********/
+    .sch-table-container{
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .sch-col{
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+
+    .sch-col-name{
+        width: 45%;
+    }
+    .sch-col-amount{
+        width: 15%;
+    }
+    .sch-col-due{
+        width: 20%;
+    }
+    .sch-col-add{
+        width: 10%;
+    }
+    .sch-col-usd{
+        width: 10%;
+    }
+
+    .sch-table-headers{
+        padding: 10px 18px 10px 25px;
+        font-size: 13px;
+        background-color: #202025;
+        color: #ffffff;
+    }
+
+
+    .sch-table-content-box{
+        height: 400px;
+        /*height: calc(100% - 260px);*/
+        background: #ffffff;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 10px 3px 10px 25px;
+
+        
+
+    }
+
+    .sch-table-content-box::-webkit-scrollbar{
+        width: 18px;
+    }   
+
+    .sch-table-content-box::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    .sch-table-content-box::-webkit-scrollbar-thumb{
+        background: #cccccc;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 5px solid #ffffff;
+    }
+
+    .sch-table-result-wrapper{
+        border-bottom: 1px solid #d6cfcd;
+        padding: 20px 0px;
+    }
+
+    .sch-name{
+        font-size: 15px;
+        font-weight: 600;
+        color: #202020;
+        cursor: pointer;
+
+        &.sch-linkout{
+            font-size: 15px;
+            font-weight: 600;
+            color: #2ba6cb;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .sch-provider{
+        font-size: 11px;
+        color: #797979;
+        margin-top: 1px;
+    }
+    .sch-amount{
+        color: #2ac56c;
+        font-size: 17px;
+    }
+
+    .sch-due{
+        font-size: 14px;
+        color: #797979;
+    }
+    .sch-add-btn{
+        color: #ffffff;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        width: 65px;
+        height: 28px;
+        line-height: 28px;
+        vertical-align: middle;
+        font-size: 14px;
+        max-width: 95%;
+        cursor: pointer;
+        text-align: center;
+
+        /* portal page's css needs to be overwritten for scholarship section */
+        font-weight: 400;
+        padding: 0px;
+    }
+
+    .sch-add-btn.no{
+        background-color: #c1c3c7;
+        transition: .3s ease-in-out;
+    }
+
+    .sch-add-btn.yes{
+        background-color: #2ac56c;
+        transition: .3s ease-in-out;
+
+    } 
+    .sch-add-btn.pending{
+        background-color: #00bcd4;
+        transition: .3s ease-in-out;
+    }
+    .sch-pending-msg{
+        color: #ff2600;
+        font-size: 13px;
+        margin: 10px 0px 0px 0px;
+    }
+  
+
+
+
+    .sch-usd{
+        color: #797979;
+    }
+
+
+    .sch-view-details{
+        color: #b2b0bd;
+        font-size: 13px;
+        margin-top: 15px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+    .sch-details-arrow.down{
+        border: 4px solid transparent;
+        border-top: 6px solid #b2b0bd;
+        position: relative;
+        display: inline-block;
+        width: 0px;
+        margin-left: 5px;
+        top: 1px;
+        cursor: pointer;
+    }
+
+    .sch-details-arrow.up{
+        border: 4px solid transparent;
+        border-bottom: 6px solid #b2b0bd;
+        position: relative;
+        display: inline-block;
+        width: 0px;
+        margin-left: 5px;
+        top: -2px;
+        cursor: pointer;
+    }
+
+    .sch-result-details-cont {
+        padding: 15px 0px;
+        font-size: 13px;
+        /*display: none;*/
+    }
+
+    .sch-result-details-cont ul li{
+        font-size: 13px;
+    }
+
+    .sch-result-details-cont ul li:before{
+        content: '.';
+        position: relative;
+        top: -2px;
+        margin-right: 7px;
+        font-weight: 700;
+        color: #83819a;
+        font-size: 22px;
+        line-height: 19px;
+    }
+
+
+    .sch-desc-title {
+        color: #202020;
+        font-weight: 600;
+        padding: 13px 0px 0px 0px;
+    }
+    .sch-desc{
+        line-height: 1.9em;
+        width: 90%;
+        color: #5a5353;
+    }
+
+    .sch-drop-down-arrow{
+        border: 4px solid transparent;
+        border-top: 6px solid #ffffff;
+        position: relative;
+        display: inline-block;
+        margin-right: 5px;
+        top: 2px;
+        cursor: pointer;
+    }
+
+    .sch-usd-img {
+        font-size: 19px;
+        line-height: 13px;
+        padding: 0px 7px;
+    }
+
+    .sch-sort-arrows{
+        display: inline-block;
+        margin-right: 2px;
+    }
+    .sch-sort-up{
+        border: 4px solid transparent;
+        border-bottom: 6px solid #ffffff;
+        position: relative;
+        display: inline-block;
+        top: -7px;
+        cursor: pointer;
+    }
+    .sch-sort-up:hover,
+    .sch-sort-up:active,
+    .sch-sort-up:focus{
+        border-bottom: 6px solid #cccccc;
+    }
+
+
+    .sch-sort-down{
+        border: 4px solid transparent;
+        border-top: 6px solid #ffffff;
+        position: relative;
+        display: inline-block;
+        top: 9px;
+        left: -8px;
+        cursor: pointer;
+    }
+    .sch-sort-down:hover,
+    .sch-sort-down:active,
+    .sch-sort-down:focus{
+        border-top: 6px solid #cccccc;
+    }
+
+
+    .sch-usd-dropdown-btn{
+        position: relative;
+        overflow: initial;
+    }
+
+
+    .sch-usd-dropdown {
+        position: absolute;
+        background: #202020;
+        right: 0px;
+        top: 29px;  /* hard code based on padding */
+        width: 100%;
+        z-index: 100;
+        height: 215px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: none;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+
+
+    .sch-usd-dropdown::-webkit-scrollbar{
+        width: 15px;
+    }   
+
+    .sch-usd-dropdown::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    .sch-usd-dropdown::-webkit-scrollbar-thumb{
+        background: #797979;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 5px solid  #202020;
+    }
+
+    .sch-usd-dropdown > div{
+        padding: 8px 12px;
+        cursor: pointer;
+    } 
+
+    .sch-usd-dropdown > div:hover,
+    .sch-usd-dropdown > div:active,
+    .sch-usd-dropdown > div:focus{
+        color: #797979;
+        transition: .6s ease-in-out;
+    }
+
+    .sch-due-mobile{
+        display: none;
+    }
+
+
+    .no-sch-msg{
+        color: #999999;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .mid-head {
+        font-size: 23px !important;
+        margin-top: 70px;
+    }
+
+    .affirm-msg {
+        font-size: 15px;
+        margin-top: 6px;
+        margin-bottom: 25px;
+        color: #dddddd;
+    }
+
+    .checkbox a {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .sign label {
+        font-weight: 600;
+        margin: 15px 0px 30px 0px;
+    }
+
+    .sign .sign-date > div:first-child{
+        font-weight: 600;
+        font-size: 14px;
+        position: relative;
+        top: 5px;
+    }
+
+    .sign #signature{
+        margin-top: 10px;
+    }
+
+    button.save {
+        background-color: #2ac56c;
+        padding: 10px 25px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        margin-top: 30px;
+    }
+}
+
+/*********** end right side *****************************************************/
+/********************************************************************************/
+
+
+._ScholarshipsSelect {
+    @include fadeInUp(0.3s);
+    // .sch-col-name {
+    //     width: 34%;
+    // }
+
+    .sch-col-add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #c1c3c7;
+        color: #fff;
+        width: 4em;
+        height: 1.75em;
+        font-size: 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        -webkit-transition: opacity 0.3s ease-in;
+        -moz-transition: opacity 0.3s ease-in;
+        -o-transition: opacity 0.3s ease-in;
+        -ms-transition: opacity 0.3s ease-in;
+        transition: opacity 0.3s ease-in;
+
+        &.yes {
+            background-color: #2ac56c;
+        }
+
+        &.disabled {
+            opacity: 0.5;
+        }
+
+    }
+    
+    .select-scholarships-header-border {
+        display: flex;
+        align-items: center;
+        background-color: #2b2b35;
+        padding: 2em;
+        justify-content: space-between;
+
+        .header-border-leftside {
+            display: flex;
+            align-items: center;
+
+            .select-count {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 3px;
+                background-color: #fff;
+                color: #000;
+                font-size: 27px;
+            }
+
+            .header-border-text {
+                margin-left: 1em;
+                color: #aaaaaa;
+                font-size: 14px;
+            }
+        }   
+
+        .header-border-rightside {
+            display: flex;
+            align-items: center;
+
+            .scholarship-skip-button {
+                color: #f5f5f5;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .scholarship-next-button {
+                margin-left: 2em;
+                background-color: #2ac56c;
+                padding: 0.7em 2.25em;
+                font-size: 16px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                -webkit-transition: opacity 0.3s ease-in;
+                -moz-transition: opacity 0.3s ease-in;
+                -o-transition: opacity 0.3s ease-in;
+                -ms-transition: opacity 0.3s ease-in;
+                transition: opacity 0.3s ease-in;
+                cursor: pointer;
+                text-align: center;
+
+
+                &.disabled {
+                    opacity: 0.5;
+                }
+
+            }
+        }
+    }
+
+    .save-button-container {
+        display: flex;
+        margin-top: 1em;
+        justify-content: flex-end;
+
+        .next-button {
+            background-color: #2ac56c;
+            padding: 0.7em 2.25em;
+            font-size: 16px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-transition: opacity 0.3s ease-in;
+            -moz-transition: opacity 0.3s ease-in;
+            -o-transition: opacity 0.3s ease-in;
+            -ms-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+
+
+._ScholarshipsThanks{
+    padding: 50px;
+
+
+    .congrats-title {
+        font-size: 25px;
+        margin: 20px 0px;
+    }
+
+    .congrats-msg {
+        max-width: 90%;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .portal-btn{
+        display: inline-block;
+        color: #ffffff;
+        background-color: #2ac56c;
+        padding: 8px 25px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+
+    .app-btn{
+        display: inline-block;
+        color: #2ac56c;
+        background-color: #ffffff;
+        padding: 8px 25px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+}
+
+
+.signupModal-cont{
+    top: 150px !important;
+}
+
+
+@media all and (max-width: 1320px){
+    .sch-usd, .sch-usd-dropdown-btn {
+        text-align: center;
+    }
+
+    span.sch-usd-txt {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1075px){
+    .sch-usd, .sch-usd-dropdown-btn{
+        text-align: right;
+    }
+
+    .scholarships-container {
+        padding: 30px;
+    }
+}
+
+
+@media all and (max-width: 970px){
+    .sch-col-usd {
+        width: 0px;
+        display: none;
+    }
+
+    .sch-col-name {
+        width: 69%;
+    }
+
+    .sch-col-amount{
+        width: 20%;
+    }
+
+    .sch-col-due {
+        width: 0px;
+        display: none;
+    }
+    .sch-due-mobile{
+        display: block;
+    }
+
+    .sch-add-btn{
+        font-size: 11px;
+    }
+}
+
+
+@media all and (max-width: 835px){
+    .sch-filter-container{
+        display: none;
+    }
+    .sch-content-container{
+        padding-left: 0px;
+    }
+}
+
+@media all and (max-width: 525px){
+    .scholarships-container{
+        padding: 0px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .howto-box, .page-listed, .college-nav-options a, .college-pages-navbar-mobile{
+        display: none !important;
+    }
+
+    .scholarships-container{
+        margin-top: -35px;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+
+    .sch-table-content-box{
+        overflow-y: auto;
+        height: auto;
+        min-height: 100%;
+        padding: 0px;
+    }
+    .sch-bottom-next-cont{
+        display: none;
+    }
+    .sch-table-result-wrapper {
+        padding: 18px 10px;
+    }
+
+    .sch-sort-up{
+        border-bottom: 6px solid #797979;
+    }
+    .sch-sort-down{
+        border-top: 6px solid #797979;
+    }
+    
+    .sch-table-headers{
+        padding: 11px 5px;
+        color: #797979;
+        background-color: #f5f5f5;
+        border-top: 1px solid #dad3d3;
+    }
+
+    .sch-sort-down{
+        top: 9px;
+    }
+
+    .sch-col-amount{
+        width: 27% !important;
+    }
+    .sch-col-add{
+        width: 13%;
+    }
+    .sch-col-name{
+        width: 63%;
+    }
+    .sch-name{
+        padding-right: 20px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .sch-provider{
+        display: none;
+    }
+    .sch-amount{
+        font-size: 14px;
+    }
+    .sch-col {
+        font-size: 11px;
+    }
+    .sch-view-details, .sch-details-arrow.up ,.sch-details-arrow.down{
+        display: none;
+    }
+
+    ._ScholarshipsSelect {
+        .select-scholarships-header-border {
+            padding: 1em;
+
+            .header-border-leftside {
+                .header-border-text {
+                    display: none;
+                }
+            }
+            .header-border-rightside {
+                .scholarship-next-button {
+                    margin-left: 1em;
+                }
+            }
+        }   
+    }
+
+
+
+    
+
+
+
+}
+
+/********************** end scholarships ***********************************************************************************/
+/***************************************************************************************************************************/

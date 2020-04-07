@@ -1,0 +1,121 @@
+#sales-pixel-tracking-test {
+    background-color: #f0f0f0;
+}
+
+.log-table-header {
+    text-align: center;
+}
+
+.pixel-testing-logs-table {
+    margin-top: 2em;
+
+    .pixel-tracking-table-header {
+        background-color: black;
+
+        th {
+            color: #fff;
+        }
+    }
+}
+
+.pixel-tracking-test-container {
+    .pixel-tracking-page-header {
+        display: flex;
+        align-items: center;
+        background-color: #333333;
+
+        h3 {
+            color: #CECECE;
+            padding: 1em;
+            margin: 0;
+        }
+
+        .check-logs-button {
+            padding: 0.5em;
+            margin-left: 1em;
+            background-color: #2ac56c;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+
+            transition: opacity 0.25s ease-in;
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+    }
+
+    .pixel-tracking-table {
+        width: 100%;
+        border: 0;
+        
+        tr:not(:first-child) {
+            border-bottom: 2px solid #E8E8E8;
+        }
+
+        tr:nth-child(even) {
+            background-color: #F0F0F0;
+        }
+
+        td, th {
+            padding-left: 2em;
+        }
+    }
+
+    .pixel-tracking-table-header {
+        background-color: black;
+
+        th {
+            color: #fff;
+            width: 25%;
+        }
+    }
+
+    .single-pixel-container {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        .navigate-button {
+            padding: 0.5em 1em;
+            border-radius: 3px;
+            background-color: #2ac56c;
+            color: #fff;
+            width: 10em;
+            text-align: center;
+            cursor: pointer;
+            font-size: 12pt;
+            transition: opacity 0.25s ease-in;
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+
+        .check-button {
+            padding: 0.5em 1em;
+            border-radius: 3px;
+            background-color: orange;
+            color: #fff;
+            width: 10em;
+            text-align: center;
+            cursor: pointer;
+            font-size: 12pt;
+            transition: opacity 0.25s ease-in;
+
+            &:hover:not(.disabled) {
+                opacity: 0.85;
+            }
+
+            &.disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+
+            .check-tooltip {
+                padding: 1em;
+            }
+        }
+    }
+}

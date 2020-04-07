@@ -1,0 +1,107 @@
+.feature_caresel {
+    padding-bottom: 70px;
+}
+.feature_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.title_feature {
+    width: 20%;
+    font-size: 20px;
+    margin: 20px 31px;
+    padding: 4px;
+    font-style: italic;
+    text-align: left;
+}
+
+.colleges_feature {
+    margin: 0px 35px;
+    background: white;
+}
+
+#plex-feature{
+    #sprite-one {
+        left: 0;
+        width: 240px;
+        background-position: 0 0;
+    }
+    #sprite-one:hover {
+        left: 0;
+        background-position: 0 -141px;
+    }
+    #sprite-two {
+        left: 20px;
+        width: 240px;
+        background-position: -270px 0;
+    }
+    #sprite-two:hover {
+        left: 20px;
+        background-position: -270px -141px;
+    }
+    #sprite-three {
+        left: 0;
+        width: 290px;
+        background-position: -536px 0;
+    }
+    #sprite-three:hover {
+        left: 0;
+        background-position: -536px -141px;
+    }
+    #sprite-four {
+        left: 0;
+        width: 260px;
+        background-position: -826px 0;
+    }
+    #sprite-four:hover {
+        left: 0;
+        background-position: -826px -141px;
+    }
+    #sprite-five {
+        left: 10px;
+        width: 230px;
+        background-position: -1100px 0;
+    }
+    #sprite-five:hover {
+        left: 10px;
+        background-position: -1100px -141px;
+    }
+    #sprite-six {
+        left: 0;
+        width: 280px;
+        background-position: -1300px 0;
+    }
+    #sprite-six:hover {
+        left: 0;
+        background-position: -1300px -141px;
+    }
+    #sprite-seven {
+        left: 30px;
+        width: 160px;
+        background-position: -1580px 0;
+    }
+    #sprite-seven:hover {
+        left: 30px;
+        background-position: -1580px -141px;
+    }
+    .sprite, a{
+        height: 150px;
+        display: block;
+    }
+    .sprite {
+        margin: 0;
+        padding: 0;
+        top: 0;
+        background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/frontpage/featured_sprite_sheet.jpg);
+    }
+}
+
+@media all and (max-width: 767px){
+    .feature_title {
+        justify-content: center;
+    }
+    .title_feature {
+        width: auto;
+        margin: 20px 0px;
+    }
+}

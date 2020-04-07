@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextButton button has active class when active prop passed 1`] = `
+<div
+  className="active"
+  onClick={undefined}
+>
+  Facebook
+</div>
+`;
+
+exports[`TextButton button not active 1`] = `
+<div
+  className=""
+  onClick={undefined}
+>
+  Facebook
+</div>
+`;

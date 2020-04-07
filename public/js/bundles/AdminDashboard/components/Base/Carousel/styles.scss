@@ -1,0 +1,59 @@
+$mainColor: #797979;
+
+#_indexedCarousel{
+
+	.numberIndicator{
+		display: inline-block;
+		position: absolute;
+		background-color: rgba(255,255,255,1);
+		color: #636363;
+		z-index: 100;
+	}
+
+	.numberNav{
+		cursor: pointer;
+		font-weight: 600;
+	}
+
+	.indicatorNumbers{
+		display: inline-block;
+		text-align: center;
+		padding: 0px 5px 0px 5px;
+		width: 35px;
+	}
+
+	.dismiss-btn{
+			position: absolute;
+			cursor: pointer;
+			text-decoration: underline;
+			color: $mainColor;
+			z-index: 100;
+
+			&:hover{
+				color: #696969;
+			}
+		}
+
+	.x-close-btn{
+		position: absolute;
+		cursor: pointer;
+		color: $mainColor;
+		font-size: 25px;
+		font-weight: 600;
+		z-index: 100;
+	}
+
+	.open-carousel-container{
+		margin-top: 12px;
+	    padding: 20px;
+	    width: 100%;
+	    text-align: right;
+	}
+	.open-carousel-btn{
+		cursor: pointer;
+		text-decoration: underline;
+		font-weight: 600;
+		font-size: 12px;
+	}
+}
+

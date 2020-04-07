@@ -1,0 +1,965 @@
+
+#_College_Application .bottom-bar{
+	max-width: none;
+	width: 100%;
+	background-color: white;
+	float: left;
+	margin-left: 0,
+}
+
+#_College_Application .bottom-bar-left-half{
+  padding: 1%;
+  color: black;
+  float: left;
+  vertical-align: middle;
+  margin-top: 1%;
+}
+
+#_College_Application .application-container{
+  max-width: none;
+  padding: 0
+
+}
+
+#_College_Application .college-social-search-bar{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#_College_Application ._profile_docs{
+  padding: 0;
+  padding-bottom: 5%;
+}
+
+
+#_College_Application .grey-save-btn{
+  background-color: #777 !important;
+}
+
+#_College_Application .save{
+  background-color: green;
+  border-radius: 7px !important;
+}
+
+#_College_Application .search-icon{
+  color: black;
+}
+
+
+#_College_Application .app-form-container{
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-bottom: 12%;
+  width: 50%;
+}
+
+#_College_Application .starting-when-form-container{
+  margin-bottom: 30%;
+}
+
+
+#_College_Application .bottom-bar-image-styling{
+  margin-top: 2%;
+  height: 37px;
+  width: 37px;
+  border-radius: 49px;
+  float: left;
+  margin-left: 4%;
+  opacity: 100%;
+}
+
+#_College_Application .bottom-bar-para-first-line{
+  margin-bottom: 0px;
+  color: red !important;
+}
+
+
+#_College_Application .bottom-bar-para-second-line{
+  color: black !important;
+}
+
+#_College_Application .bottom-bar-save-button-container{
+  float: right;
+}
+//Starting When
+#_College_Application .new-starting-when-wrapper{
+  max-width: none;
+}
+
+@media (max-width: 767px){
+  #_College_Application{
+    margin: 16% 0px 0px 0px;
+  }
+
+  #_College_Application .app-form-container{
+    margin-bottom: 13%;
+    width: 100%;
+  }
+  // #_SocialApp_Component{
+  //   padding-bottom: 20% !important;
+  // }
+  #_SocialApp_Component .save-btn-styling-for-mobile{
+    text-align: center;
+    display: block !important;
+  }
+
+  #_College_Application .head-line-height{
+    line-height: 1.5;
+  }
+  
+  #_College_Application .head-line-height{
+    line-height: 1.5;
+  }
+
+  #_College_Application .para-line-height{
+    line-height: 1.6;
+  }
+  
+  #_College_Application label{
+    font-size: 1rem;
+  }
+}
+
+#_SocialApp_Component .country_flag {
+  width: 16px !important;
+}
+
+@media only screen and (max-width: 767px){
+
+  #_SocialApp_Component .gpa-container {
+    margin-bottom: 30% !important;  
+  }
+
+}
+
+
+@media only screen and (max-width: 767px){
+
+  #_SocialApp_Component .scores-container {
+    margin-bottom: 30% !important;
+  }
+
+}
+@media only screen and (min-width: 767px ) {
+  .mobile-gpa-save-btn {
+    display: none !important;
+  }
+}
+
+.spacing-bottom-bar {
+  margin-top: 10%;
+}
+
+#_SocialApp_Component .gpa-page-bottombar{
+  width: 100% !important;
+}
+
+#_SocialApp_Component .application-container.full{
+  width: 100% !important;
+}
+
+
+#_SocialApp_Component .next-button {
+  width: auto !important;
+}
+
+
+#_SocialApp_Component ._ScholarshipsSelect {
+  margin-top: 5%;
+}
+
+#_SocialApp_Component .pd-bottom-16 {
+  padding-bottom: 16%;
+}
+
+@media only screen and (max-width: 767px){
+
+  #_SocialApp_Component ._ScholarshipsSelect {
+    margin-bottom: 30% !important;
+  }
+  #_SocialApp_Component ._Scholarships .sch-name {
+    font-weight: 600 !important;
+  }
+
+}
+
+@media only screen and (min-width: 767px){
+
+  #_SocialApp_Component ._ScholarshipsSelect .sch-col-add {
+    width: 5em;
+  }
+
+}
+#_SocialApp_Component .no, .yes {
+    font-weight: 400 !important;
+}
+@media only screen and (max-width: 40em){
+
+  #_SocialApp_Component .no, .yes {
+    margin-top: 0px !important;
+  }
+}
+
+#_SocialApp_Component .sch-view-details {
+  font-weight: 400 !important;
+}
+
+@media (max-width: 767px) and (min-width: 319px){
+
+  #_SocialApp_Component .sch-view-details {
+      display: inline-block !important;
+      border: 0 !important;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 319px){
+  #_SocialApp_Component .sch-amount {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 319px){
+  #_SocialApp_Component .sch-name {
+    font-size: 15px !important;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 319px){
+  #_SocialApp_Component .sch-table-container .sch-table-headers .sch-col-amount {
+    font-size: 11px !important;
+  }
+}
+
+
+@media only screen and (max-width: 1024px){
+
+  #_SocialApp_Component .save-button-container {
+    padding-left: 74.6% !important;
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+  #_SocialApp_Component .save-button-container {
+    padding-left: 66% !important;
+  }
+}
+
+@media only screen and (max-width: 420px){
+
+  #_SocialApp_Component .save-button-container {
+    padding-left: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 375px){
+
+  #_SocialApp_Component .save-button-container {
+    padding-left: 45% !important;
+  }
+}
+
+@media only screen and (max-width: 360px){
+
+  #_SocialApp_Component .save-button-container {
+    padding-left: 43% !important;
+  }
+}
+
+@media only screen and (max-width: 320px){
+
+  #_SocialApp_Component .save-button-container {
+    padding-left: 35% !important;
+  }
+}
+
+/*OneApp - Financial*/
+#_SocialApp_Component .financial_container {
+  margin: 5%;
+}
+
+@media only screen and (max-width: 767px){
+
+  #_SocialApp_Component .financial_container {
+    margin-bottom: 30% !important;
+  }
+
+  #_SocialApp_Component .save-btn-styling-for-mobile {
+    display: block !important;
+  }
+
+  #_SocialApp_Component .app-form-container{
+    margin-left: 0;
+  }
+}
+
+#_SocialApp_Component .sch-col .sch-col-add .yes {
+  padding: 0px !important;
+}
+
+
+#_SocialApp_Component .app-form-container {
+  margin-bottom: 13%;
+}
+
+#_SocialApp_Component .scores-right-side {
+  margin: 3%;
+}
+
+#_SocialApp_Component .scores-page-bottom-bar {
+  width: 170%;
+}
+
+#_SocialApp_Component .scores-page-no-self-report {
+  margin-top: 60%;
+}
+
+#_SocialApp_Component .select-college-container {
+  margin: 5%;
+  padding-right: 5%;
+}
+
+@media only screen and (max-width: 767px){
+
+  #_SocialApp_Component .select-college-container {
+    margin-bottom: 30% !important;
+  }
+}
+
+#_SocialApp_Component .arrow{
+  border-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  position: unset !important;
+  top: 0px !important;
+}
+
+#_SocialApp_Component .skip-btn{
+  cursor: pointer;
+  padding: 0 6%;
+}
+
+@media screen and (max-width: 767px){
+  #_SocialApp_Component #_sortingBar .col-3 .sort-arrows+.name {
+    display: block !important;
+  }
+
+  #_SocialApp_Component #_College_Application .application-container.select-college-container .facebook-share-container .facebook-share-button {
+    width: 14em;
+  }
+}
+
+@media only screen and (max-width: 40em){
+
+  #_SocialApp_Component #_sortingBar>.sort-bar>.col.forMobile.w25 {
+      width: 25%;
+      float: right;
+  }
+}
+.bottom-bar-left-half{
+  padding: 1%;
+  color: black;
+  float: left;
+  vertical-align: middle;
+  margin: 1% 0;
+}
+
+.bottom-bar{
+	max-width: none;
+	width: 80%;
+	background-color: white;
+	float: left;
+  margin-left: 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom-bar-image-styling{
+  margin-top: 2%;
+  height: 37px;
+  width: 37px;
+  border-radius: 49px;
+  float: left;
+  margin-left: 4%;
+  opacity: 100%;
+}
+
+.bottom-bar-para-first-line{
+  margin-bottom: 0px;
+  color: red !important;
+}
+
+
+.bottom-bar-para-second-line{
+  color: black !important;
+  cursor: pointer;
+  &:hover{
+    color: #2ac56c !important;
+    text-decoration: underline;
+    text-decoration-color: #2ac56c;
+  }
+}
+
+.bottom-bar-save-button-container{
+  float: right;
+}
+
+.bottom-bar-save-btn{
+  color: #fff;
+  margin: 15px 0 0;
+  background: #2ac56c !important;
+  border-radius: 7px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  width: 150px;
+  outline: none;
+}
+
+.bottom-bar-save-btn:hover{
+  background: #2ac56c;
+}
+.bottom-bar-save-btn:button:focus{
+  background: #2ac56c;
+}
+
+#common_bottom_bar button[disabled]{
+  background: #26b24b;
+}
+
+
+/*select colleges*/
+#_SocialApp_Component #select-colleges-social .all-content{
+  margin: 5% ;
+}
+
+#_SocialApp_Component #select-colleges-social .heading-span{
+  color: #fff;
+}
+
+#_SocialApp_Component #select-colleges-social .heading-select-clgs{
+  padding: 0 21px 0 0;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+#_SocialApp_Component #select-colleges-social .heading-content{
+  font-size: 18px;
+}
+
+#_SocialApp_Component #select-colleges-social .search-bar-dropdown{
+  margin-top: 35px;
+  height: 40.77px;
+}
+
+#_SocialApp_Component #select-colleges-social .search-bar{
+  background: #fff;
+  width: 455px;
+  color: #454545;
+  border-radius: 4px;
+  height: 40.77px;
+  float: left;
+}
+
+#_SocialApp_Component #select-colleges-social .search-bar-span{
+  color: #454545;
+  font-size: 15px;
+}
+
+#_SocialApp_Component #select-colleges-social .search-bar .search-icon{
+  font-size: 17.57px;
+  margin-top: 11px;
+  margin-left: 14px;
+}
+
+#_SocialApp_Component #select-colleges-social .search-bar .search-span{
+  margin-top: 10px;
+  margin-left: 9px;
+}
+
+#_SocialApp_Component #select-colleges-social .dropdown-select-clgs{
+  background: #fff;
+  width: 249px;
+  color: #454545;
+  border-radius: 4px;
+  height: 40.77px;
+  float: right;
+}
+
+#_SocialApp_Component #select-colleges-social .dropdown-select-tag{
+  background: transparent;
+  color: red;
+  font-size: 13px;
+  text-align: left;
+  padding: 5%;
+  padding-left: 9%;
+}
+
+#_SocialApp_Component #select-colleges-social .colleges-table {
+  margin-top: 40px;
+  padding-bottom: 11%;
+}
+
+/*select colleges table*/
+#_SocialApp_Component #select-colleges-social #_sortingBar {
+    background-color: #000;
+    color: #fff;
+    max-width: 100%;
+    font-size: 14px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-bar > .col.col-1 {
+    width: 8.33333%;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-bar > .col {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px 0;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-bar > .col.col-1.rank {
+    text-align: center;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-bar > .col > .inner-col {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    max-width: 100%;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 20px;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .arrow.up {
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .arrow.down {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-arrows + .name {
+    cursor: pointer;
+    visibility: visible;
+}
+
+
+
+
+#_SocialApp_Component #select-colleges-social .select-college-list {
+    max-height: 30em;
+    overflow: auto
+    }
+
+#_SocialApp_Component #select-colleges-social .school-item {
+    border-bottom: 1px solid #797979;
+    max-width: 100%;
+    background-color: #fff;
+    animation: _fadeInRight 0.3s;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item > .col.col-1 {
+    width: 8.33333%;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item > .col.col-3 {
+    width: 25%;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item > .col {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px 0;
+    color: #202020;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item > .col.col-1.rank {
+  text-align: center;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item .name {
+    text-align: left;
+    position: relative;
+    padding: 10px 0 15px 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#_SocialApp_Component #select-colleges-social .logo {
+    font-size: 2.125rem;
+    padding: 0;
+    margin: 7px 0 0;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item .name .logo {
+    background-color: #fff;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#_SocialApp_Component #select-colleges-social .school-item .name a {
+    color: #202020;
+}
+
+#_SocialApp_Component #select-colleges-social a {
+    color: #2ba6cb;
+    text-decoration: none;
+    line-height: inherit;
+}
+
+#_SocialApp_Component #select-colleges-social #_common_tooltip {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    font-size: 8px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    cursor: help;
+}
+
+#_SocialApp_Component #select-colleges-social #_common_tooltip.state {
+    color: #000;
+    display: initial;
+    border: none;
+    border-radius: initial;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    border-bottom: 1px dashed #000;
+}
+
+/*My Application*/
+
+/*#_SocialApp_Component #selected-colleges-social .selected{
+  margin: 5% ;
+}*/
+
+/*#_SocialApp_Component #selected-colleges-social .heading-span{
+  color: #fff;
+}*/
+
+#_SocialApp_Component #select-colleges-social .heading-application{
+  padding: 0 21px 0 0;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 767px){
+  #_SocialApp_Component #select-colleges-social .heading-application{
+    font-size: 16px;
+  }
+}
+
+#_SocialApp_Component #select-colleges-social .heading-more-colleges{
+  font-size: 16px;
+  text-decoration: underline;
+  float: right;
+  color: #fff;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+  #_SocialApp_Component #select-colleges-social .heading-more-colleges-btn{
+    float: right;
+    background: #2AC56C;
+    padding: 4px 4px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+  }
+  #_SocialApp_Component #select-colleges-social .main_container_div{
+    background: #fff;
+    border-radius: 5px 5px 5px 5px;
+  }
+  #_SocialApp_Component #select-colleges-social .main_container_inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  #_SocialApp_Component #select-colleges-social .left_div{
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 75%;
+  }
+  #_SocialApp_Component #select-colleges-social .left_college_div{
+    width: 58% !important;
+  }
+  #_SocialApp_Component #select-colleges-social .ranking_value{
+    background: #2AC56C;
+    border-radius: 5px;
+    display: inline;
+    padding: 7px;
+  }
+  #_SocialApp_Component #select-colleges-social .college_image{
+    display: inline;
+  }
+  #_SocialApp_Component #select-colleges-social .college_image img{
+    width: 60px;
+    padding-left: 1rem;
+    height: 30px;
+    margin-top: 5px;
+  }
+  #_SocialApp_Component #select-colleges-social .college_link{
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    padding-top: 4%;
+  }
+  #_SocialApp_Component #select-colleges-social .college_link a{
+    color: #000;
+  }
+  #_SocialApp_Component #select-colleges-social .college_location{
+    color: gray;
+    margin-top: 3%;
+    padding-left: 2%;
+  }
+  #_SocialApp_Component #select-colleges-social .right_div{
+    margin-top: 10%;
+    margin-right: 15px;
+    width: 25%;
+  }
+  #_SocialApp_Component #select-colleges-social .right_college_div{
+    width: 42% !important;
+  }
+  #_SocialApp_Component #select-colleges-social .app_cost{
+    color: black;
+    font-size: 11px;
+    text-align: right;
+  }
+  #_SocialApp_Component #select-colleges-social .app_cost_value{
+    color: #2AC56C;
+    font-weight: 700;
+    text-align: right;
+    font-size: 20px;
+  }
+  #_SocialApp_Component #select-colleges-social .apply_btn{
+    border-radius: 5px;
+    background: #00A3D9;
+    text-align: center;
+    padding: 5%;
+    width: 85px;
+    margin-top: 15%;
+    font-weight: 600;
+  }
+  #_SocialApp_Component #select-colleges-social .college_remove{
+    text-align: center;
+    padding: 3%;
+    font-size: 14px;
+  }
+  #_SocialApp_Component #select-colleges-social .college_remove_span{
+    color: gray;
+    text-align: center;
+  }
+  #_SocialApp_Component #select-colleges-social .add_college_btn{
+    border-radius: 5px;
+    background: #26b24b !important;
+    text-align: center;
+    padding: 5%;
+    width: 135px;
+    margin-top: 20%;
+    font-weight: 600;
+    margin-bottom: 5%;
+  }
+  #_SocialApp_Component #select-colleges-social .colleges-table{
+    padding-bottom: 0;
+  }
+
+}
+
+
+#_SocialApp_Component #select-colleges-social .clg-col-add.yes {
+    background-color: #2ac56c;
+}
+
+#_SocialApp_Component #select-colleges-social .clg-col-add {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #c1c3c7;
+    color: #fff;
+    width: 4em;
+    height: 1.75em;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in;
+}
+
+#_SocialApp_Component #select-colleges-social.clg-col {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+#_SocialApp_Component #select-colleges-social .apply-col-add.apply {
+    background-color: #00A3D9;
+}
+
+#_SocialApp_Component #select-colleges-social .apply-col-add {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #c1c3c7;
+    color: #fff;
+    width: 6em;
+    height: 1.85em;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in;
+}
+
+#_SocialApp_Component #select-colleges-social.apply-col {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.selected-colleges-count {
+  width: 419px;
+  height: 440px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  padding: 0.20% 5% 0.20% 5%;
+  background: #FF7270;
+}
+
+.my-selected-colleges:hover .my-selected-colleges-tooltip {
+  visibility: visible;
+}
+
+.my-selected-colleges-tooltip{
+  visibility: hidden;
+  width: 800px;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.added-college-color{
+  background: #797979;
+}
+
+
+.uploads_page_styling ._profile_docs {
+  padding-bottom: 15% !important;
+}
+
+
+#_SocialApp_Component ._pvsponsor_will_pay_phone_0 {
+  display: inline-block;
+}
+
+#_SocialApp_Component #select-colleges-social #_sortingBar .sort-bar > .col > .inner-col {
+  padding: 0px 13px;
+}
+
+#_SocialApp_Component .school-item > .col.col-2 {
+  width: 15.66667%;
+}
+
+
+
+#social-dashboard .ReactModal__Content {
+  overflow-y: hidden ;
+  overflow: hidden;
+}
+
+
+#style-2::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+  width: 9px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+
+.modal-close {
+
+border-radius: 21px;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    left: 87%;
+    top: 21px;
+}
+
+#style-2 {
+  overflow-x: hidden;
+}
+@media all and (max-width: 767px){
+  ._ScholarshipsSelect .sch-col-add.yes {
+    margin: 5px 0px !important;
+  }
+}

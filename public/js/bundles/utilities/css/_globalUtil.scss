@@ -1,0 +1,193 @@
+// utils/_global.scss
+$gray: #797979;
+$darkgray: #444;
+$lightgray: #f3f3f3;
+$green: #26b24b;
+$newgreen: #2AC56C;
+$orange: #FF5C26;
+$darkorange: #ab4324;
+$lightorange: #f97c53;
+$blue: #049AC5;
+$linkblue: #2ba6cb;
+$error: #d90000;
+$test: 1px solid red;
+$deptBg: #fff;
+$majorBg: #eee;
+$sic_width: 240px;
+$sic_color: #2e2e2e;
+$sic_color2: #555;
+$matteblack: #202020;
+
+@mixin bRadius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin tab($radius){
+	-webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -ms-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -ms-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+
+@mixin noUserSelect(){
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}
+
+@mixin ellipses(){
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin test($color){
+	border: 1px solid $color;
+}
+
+@mixin noBtnOutline(){
+	outline: none;
+}
+
+@mixin activeBtnClick(){
+	box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+@mixin fadeIn($time){
+	animation: fadeIn $time;
+
+	@keyframes fadeIn {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+}
+
+@mixin fadeInUp($time){
+	animation: _fadeInUp $time;
+
+	@keyframes _fadeInUp {
+		0% {
+			opacity: 0;
+			transform: translate3d(0, 100%, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}
+
+@mixin fadeInDown($time){
+	animation: _fadeInDown $time;
+
+	@keyframes _fadeInDown {
+		0% {
+			opacity: 0;
+			transform: translate3d(0, -100%, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}
+
+@mixin fadeInLeft($time){
+	animation: _fadeInRight $time;
+
+	@keyframes _fadeInRight {
+		0% {
+			opacity: 0;
+			transform: translate3d(100%, 0, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}	
+}
+
+@mixin fadeInRight($time){
+	animation: _fadeInLeft $time;
+
+	@keyframes _fadeInLeft {
+		0% {
+			opacity: 0;
+			transform: translate3d(-100%, 0, 0);
+		}
+
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}	
+}
+
+@mixin arrow($size, $color){
+	width: 0; 
+	height: 0; 
+	border-top: $size solid transparent;
+	border-bottom: $size solid transparent;
+	border-left: $size solid $color;
+}
+
+@mixin upArrow($size, $color){
+	@include arrow($size, $color);
+	transform: rotate(270deg);
+}
+
+@mixin downArrow($size, $color){
+	@include arrow($size, $color);
+	transform: rotate(90deg);
+}
+
+@mixin swingPre(){
+	opacity: 0;
+	perspective: 100px;
+	transform: rotateX(-90deg);
+	transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+@mixin swingSidePre(){
+	opacity: 0;
+	perspective: 100px;
+	transform: rotateY(-90deg);
+	transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+@mixin swingPost(){
+	opacity: 1;
+	transform: none;
+	transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.stylish-scrollbar-mini{
+	&::-webkit-scrollbar{
+		width: 5px;
+	}
+	&::-webkit-scrollbar::-webkit-scrollbar-button{
+		background-color: #eee;
+		height: 0;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: rgba(0,0,0,0.2);
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: rgba(0,0,0,0.6);
+	}
+}
+
+#topAlertContainer{ margin: 0; }

@@ -1,0 +1,211 @@
+.gdpr-cookies-notification {
+    display: flex !important;
+}
+.front-page {
+    width: 80%;
+    text-align: center;
+    background: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/images/backgroundimages/plexuss-students-main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    .front-text, .sign-up, .facebook-sign-up, .mbl_front_text {
+        margin: auto;
+        color: white;
+    }
+    .front-text {
+        margin-top:22%;
+        width: 95%;
+        .big-text {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .small-text {
+            font-size: 30px;
+            font-style: italic;
+        }
+    }
+    .mbl_front_text {
+        display: none;
+    }
+    .img-show {
+        width: 100%;
+        margin-top: -150px;
+    }
+    .signup-with {
+        display: flex;
+        justify-content: center;
+    }
+    .google-sign-up {
+        width: 190px;
+        border: solid 1px #FFF;
+        background-color: #FFF;
+        color: #757575;
+        // margin: 0px 25px 0px 0px;
+        margin: 0px;
+    }
+    .linkedin-sign-up {
+        width: 120px;
+        border: solid 1px #0077B5;
+        background-color: #0077B5;
+        color: #FFF;
+        margin: 0px;
+    }
+    .sign-up, .facebook-sign-up, .google-sign-up, .linkedin-sign-up {
+        border-radius: 7px;
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        height: 48px;
+        cursor: pointer;
+        justify-content: center;
+    }
+    .sign-up {
+        width: 410px;
+        margin-top: 90px;
+        border: solid 1px #FF5C26;
+        background-color: #FF5C26;
+        color:white;
+        margin-top: 20px !important;
+    }
+    .sign-up:hover {
+        color:white;
+    }
+    .facebook-sign-up {
+        top: 45%;
+        width: 190px;
+        border: solid 1px #3B5998;
+        background-color: #3B5998;
+        margin: 0px 25px 0px 0px;
+    }
+    .facebook-white, .google-white, .linkedin-white {
+        margin-right: 5px;
+    }
+    .facebook-white {
+        width: 22.24px;
+    }
+    .fb-likes-container {
+        float: right;
+        margin-right: 100px;
+        margin-top: 22%;
+        margin-bottom: 50px;
+        transition: right .2s ease-in;
+    }
+    .mbl-login {
+        display: none;
+    }
+    .or-txt {
+        padding: 10px 0px;
+        color: #FFF;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        .orLine {
+            border-bottom: 1px solid #FFF;
+            height: 13px;
+            margin: 10px;
+            width: 130px;
+        }
+        .ortxt {
+            margin: 10px 0px;
+        }
+    }
+}
+.background-loading {
+    background-color: rgba(0,0,0,0.7);
+}
+.inner-load {
+    width: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 20px;
+}
+.carousles {
+    width: 80%;
+    background: #F2F2F2;
+    text-align: center;
+}
+
+@media all and (max-width: 767px){
+    .front-page {
+        background: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/images/backgroundimages/plexuss-students-main.jpg');
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 887px;
+        margin-top: -50px;
+        height: 715px;
+        .img-show {
+            display: none;
+        }
+        .front-text {
+            display: none;
+        }
+        .mbl_front_text {
+            display: block;
+            margin-top: 130px;
+            width: 100%;
+            .big-text {
+                font-size: 24px;
+                font-weight: 800;
+            }
+            .small-text {
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+        .sign-up, .facebook-sign-up, .linkedin-sign-up, .google-sign-up {
+            height: 45px;
+        }
+        .sign-up {
+            width: 90%;
+            margin-top: 28px;
+        }
+        .facebook-sign-up {
+            top: 49%;
+        }
+        .signup-with {
+            width: 90%;
+            margin: auto;
+        }
+        .linkedin-sign-up, .google-sign-up, .facebook-sign-up {
+            padding-left: 0px;
+            margin: 0 15px 0 0;
+            width: 100%;
+        }
+        .linkedin-sign-up {
+            margin: 0;
+        }
+        .fb-likes-container {
+            display: none;
+        }
+        .mbl-login {
+            display: block;
+            color: #FFF;
+            cursor: pointer;
+            padding: 20px 0px;
+        }
+        .mbl-login:hover {
+            text-decoration: underline;
+        }
+        .or-txt {
+            .orLine {
+                margin: 10px 0px;
+                width: 25%;
+            }
+            .ortxt {
+                margin: 10px 0px;
+                width: 35%;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .carousles {
+        width: 100%;
+    }
+}

@@ -1,0 +1,249 @@
+#recruitmeModal {
+  .close-reveal-modal, .reveal-modal .close-reveal-modal {
+      font-size: 43px;
+      font-weight: bold;
+      margin: 0;
+      position: relative;
+      right: 0;
+      top: 0;
+  }
+  .close-modal-cont {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+  }
+  .text-center {
+     margin-bottom: 0 !important;
+  }
+  .txt-right {
+      text-align: right;
+  }
+  .header-container {
+    &:after {
+      clear: both;
+    }
+  }
+  .recruitTitle {
+    font-size: 28px;
+    font-weight: normal;
+  }
+  .recruitSubTitle {
+      font-size: 18px;
+      font-weight: normal;
+  }
+  .pb5 {
+    padding-bottom: 5px;
+  }
+  .leftRecruitForm {
+      background-color: #F5F5F5;
+      padding-right: 15px;
+      padding-left: 30px;
+      margin-top: 26px;
+      .applyTitle {
+        margin-top: 9px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .show-hide-services {
+        display: none;
+      }
+      .services-ul {
+        list-style: none;
+        margin-left: 0 !important;
+
+        input {
+          width: auto;
+        }
+        .otherReason {
+          width: 100%;
+        }
+      }
+  }
+  .rightRecruitCompare {
+    padding: 15px;
+    padding-left: 40px;
+
+    .compareTitle {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .compareMessage {
+      font-weight: normal;
+      font-size: 14px;
+      color: #797979;
+      margin-bottom: 25px;
+    }
+    .avgScoreTitle {
+      font-weight: bold;
+      font-size: 14px;
+      color: #05CED3;
+      margin-bottom: 15px;
+    }
+    .avgGPA {
+      background-color: #004358;
+    }
+    .circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 45px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 120%;
+      color: #fff;
+      padding: 15px 10px 10px;
+      text-align: center!important;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gray {
+      background-color: #F5F5F5;
+      color: #000;
+    }
+    .avgSAT {
+      background-color: #04A6AE;
+    }
+    .avgACT {
+      background-color: #05CED3;
+    }
+    .scoreTitle {
+      font-weight: bold;
+      font-size: 14px;
+      color: #168F3A;
+      margin-bottom: 15px;
+    }
+    .yourGPA {
+      background-color: #168F3A;
+    }
+    .yourSAT {
+      background-color: #1DB151;
+    }
+    .yourACT {
+      background-color: #A0DB39;
+    }
+  }
+  .btn {
+    cursor: pointer;
+    margin-top: 45px;
+    color: #ffffff;
+    border-radius: 10px !important;
+    font-size: 24px;
+    padding: 10px;
+    width: 90%;
+  }
+  .green-btn {
+    background-color: #2AC56C;
+    border: none;
+  }
+  .white-btn {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: #2AC56C;
+      border: 1px solid #2AC56C;
+      color: #fff;
+    }
+  }
+  .network-msg-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 35px;
+  }
+  .notInNetwork {
+    background-color: #FEECEC;
+    border: solid 1px #EABBBB;
+    padding: 20px;
+  }
+  .inNetwork{
+    background-color: #e7feda;
+    border:solid 1px #bbd59e;
+    padding:20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #recruitmeModal {
+    .close-modal-cont {
+      top: -10px;
+      right: 10px;
+    }
+    .model-inner-div {
+      padding: 20px;
+    }
+    .btn {
+      width: 100%;
+    }
+    .leftRecruitForm {
+      border-radius: 7px;
+      .applyTitle {
+        font-size: 18px;
+        margin: 9px auto;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .show-hide-services {
+        display: inline-block;
+      }
+    }
+    .rightRecruitCompare {
+      padding-left: 15px;
+      .compareTitle {
+        text-align: center;
+        font-weight: normal;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .avgScoreTitle, .scoreTitle {
+        margin-bottom: 5px !important;
+      } 
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #recruitmeModal {
+    .model-inner-div {
+      padding: 0;
+    }
+    .recruitTitle {
+      font-size: 24px;
+      margin-bottom: 6px !important;
+    }
+    .recruitSubTitle {
+      font-size: 16px;
+    }
+    .btn {
+      width: 100%;
+    }
+    .leftRecruitForm {
+      border-radius: 7px;
+      padding-left: 7px;
+      .applyTitle {
+        font-size: 16px;
+      }
+    }
+    .rightRecruitCompare {
+      font-size: 16px;
+    }
+  }
+}

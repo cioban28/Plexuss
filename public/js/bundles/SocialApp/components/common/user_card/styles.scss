@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,800i');
+
+/*user card*/
+.user-card{
+  margin-left: 1%;
+  margin-top: 100px;
+  width: 17%;
+  height: 412px;
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  .name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .school {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 19px;
+  }
+  .status {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 19px;
+    color: #707070;
+    padding-top: 10px;
+  }
+}
+.image-container{
+  position: relative;
+}
+.user-card .image-container .user-image {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  width: 111px;
+  height: 111px;
+  border-radius: 50%;
+  color: #202020;
+}
+.user-card .image-container .flag{
+  height: 16px;
+  width: 21px;
+  position: absolute;
+  top: 122px;
+  right: 145px;
+}
+.user-card .profile-views{
+  margin-top: 50px;
+}
+.user-card .profile-views .views-box{
+  display: inline-flex;
+  padding-bottom: 15px;
+  .text {
+    margin-right: 50px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .figure {
+    margin-left: 50px;
+    font-size: 20px;
+    color: #2AC56C;
+    font-weight: 700;
+  }
+
+}

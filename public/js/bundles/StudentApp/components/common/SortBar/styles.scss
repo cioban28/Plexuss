@@ -1,0 +1,212 @@
+// /SortBar/styles.scss
+$black: #000;
+$white: #fff;
+$green: #24b26b;
+
+@import './../../../utils/_global';
+
+#_sortingBar{
+	background-color: $black;
+	color: $white;
+	max-width: 100%;
+	font-size: 16px;
+
+	.sort-bar > .col{
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;	
+		padding: 10px 0;
+
+		> .inner-col{
+			display: inline-block;
+			position: relative;
+			padding: 0 20px;
+			max-width: 100%;
+		}
+
+		&.col-1{ width: 8.33333%; }
+		&.col-1-5{ width: 12.5%; }
+		&.col-2{ width: 16.66667%; }
+		&.col-3{ width: 25%; }
+		&.col-4{ width: 33.33333%; }
+		&.w50{ text-align: left; }
+	}	
+
+	.sort-arrows{
+		position: absolute;
+		top: 0; bottom: 0; left: 0;
+		margin: auto;
+		height: 20px;
+
+		&.asc .up{ border-left: 5px solid $green; }
+		&.desc .down{ border-left: 5px solid $green; }
+	}
+
+	.name{ visibility: hidden; }
+	.name.abbr { display: none; }
+
+	.sort-arrows + .name{
+		cursor: pointer;
+		visibility: visible;
+	}
+
+	.arrow{
+		width: 0; 
+		height: 0; 
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		border-left: 5px solid $white;
+		z-index: 2;
+		cursor: pointer;
+
+		&.up{ transform: rotate(270deg); }
+		&.down{ transform: rotate(90deg); }
+	}
+
+	.tip-container{
+		position: absolute;
+		top: 0; right: 0; bottom: 0;
+		height: 27px;
+		margin: auto;
+	}
+
+	&.scrolledToTop{
+		position: fixed;
+		top: 0; right: 0; left: 0;
+		z-index: 1;
+
+		&.sic_on{
+			right: 0;
+		}
+	}
+
+	.filter-bar{
+		background-color: #202020;
+
+		> div{
+			float: left;
+
+			&:nth-child(4), &:nth-child(5), &:nth-child(6){
+				float: right;
+			}
+		}
+
+		select{
+			margin: 0;
+		}	
+	}
+
+	.sortbar_filter{
+		position: relative;
+		padding: 10px;
+		color: #fff;
+		cursor: pointer;	
+
+		.filter_dropdown, .conversion_dropdown{
+			position: absolute;
+			top: 100%;
+			background-color: #eee;
+			padding: 10px;
+			z-index: 1;
+			max-height: 300px;
+			overflow-y: auto;
+		}
+
+		.filter_dropdown{ 
+			left: 0; 
+			width: 225px;
+			box-shadow: 2px 4px 3px -2px rgba(0,0,0,0.3);
+		}
+
+		.conversion_dropdown{
+			padding: 0;
+			width: 90px;
+			right: 0;
+			box-shadow: -4px 4px 4px -2px rgba(0, 0, 0, 0.3);
+		}
+
+		.arrow{
+			@include downArrow(5px, #fff);
+			display: inline-block;
+			margin: 0 0 0 7px;
+		}
+
+		&.open{ 
+			background-color: #eee; 
+			color: #202020;
+
+			.arrow{ @include downArrow(5px, #202020) }
+		}
+
+		.applied-filter{
+			border: 1px solid #d4d4d4;
+			background-color: #fff;
+			padding: 7px 30px 7px 8px;
+			@include ellipses();
+			margin: 10px 0 0;
+			position: relative;
+			font-size: 14px;
+
+			.remove{
+				position: absolute;
+				top: 0; right: 0; bottom: 0;
+				height: 21px; width: 24px;
+				margin: auto;
+				z-index: 1;
+				color: #000;
+			}
+		}
+
+		.conversion-item{
+			background-color: #eee;
+			padding: 7px 30px 7px 8px;
+			@include ellipses();
+			margin: 10px 0 0;
+			position: relative;
+			font-size: 14px;
+
+			&:hover{ background-color: #ddd; }
+		}
+
+		button.reset{
+			@include bRadius(3px);
+			padding: 5px 20px 8px;
+			background-color: $gray;
+			margin: 10px 0 0;
+
+			&:active{ @include activeBtnClick(); }
+		}
+	}
+}
+
+// medium only
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#_sortingBar{
+		> .col > .inner-col{
+			max-width: 93%;
+		}
+	}
+}
+
+// custom media query
+@media only screen and (max-width: 1500px) {
+	#_sortingBar{
+		.name.notAbbr{ display: none; }
+		.name.abbr{ 
+			display: inline; 
+			visibility: visible;
+			cursor: pointer;
+		}
+	}
+}
+
+// mobile only
+@media only screen and (max-width: 40em){
+	#_sortingBar > .sort-bar{
+		> .col:not(.forMobile){ display: none; }
+		> .col.forMobile{
+			&.w50{ width: 50%; }
+			&.w25{ width: 25%; }
+		}
+	}
+}

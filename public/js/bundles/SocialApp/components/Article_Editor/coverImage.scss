@@ -1,0 +1,50 @@
+.article_image{
+    margin-bottom: 25px;
+    .title{
+        font-size: 22px;
+        color: #5f5f5f;
+    }
+    .drop_zone_banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        .with_image{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            .thumb_img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 40px;
+            }
+            .drop_zone_imag_banner1{
+                border: 1.5px;
+                border-style: dashed;
+                border-radius: 7px;
+                border-color: #5f5f5f;
+                color: #5f5f5f;
+                height: 100px;
+                padding: 5px 10px;
+                width: 100%;
+            }
+        }
+        .drop_zone_imag_banner{
+            border: 1.5px;
+            border-style: dashed;
+            border-radius: 7px;
+            border-color: #5f5f5f;
+            color: #5f5f5f;
+            height: 40px;
+            padding: 5px 10px;
+            width: 100%;
+        }
+        .browse{
+            color: #2AC56C;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

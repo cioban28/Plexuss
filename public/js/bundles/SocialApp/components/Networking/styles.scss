@@ -1,0 +1,513 @@
+.networkContainer {
+  width: 80%;
+  padding: 18px 0 30px;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+  .mobile-network-menu {
+    display: none;
+  }
+  .mobile-network-header {
+    display: none;
+  }
+  .desktop-network-header {
+    display: block;
+  }
+  .network-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30% 0;
+    img {
+      width: 30px;
+    }
+  }
+  .tabs {
+    padding: 0;
+    width: 650px;
+    margin: 0 auto;
+    .tab-list {
+      color: #616161;
+      position: fixed;
+      height: 180px;
+      z-index: 999;
+      background: #F2F3F6;
+      opacity: 0.9;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 15px;
+      line-height: 18px;
+      margin-left: 0;
+      padding-bottom: 2px;
+      width: 650px;
+      .tab-list-active {
+        border-bottom: 2px solid #2AC56C;
+        color: #000;
+        padding-bottom: 0 !important;
+        line-height: 26px;
+        font-weight: 600;
+      }
+      .tab-list-item {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        margin: 0 24px;
+        cursor: pointer;
+      }
+      li:last-child {
+        float: unset;
+      }
+    }
+    .network-tabs-content-container {
+      background: #f3f3f3;
+      padding: 164px 0;
+      width: 100%;
+      ul {
+        margin: 0;
+        margin-top: 20px;
+        li {
+          list-style: none;
+          padding: 20px;
+          background: #fff;
+          margin-bottom: 15px;
+          border-radius: 10px;
+          .userProfileImg .profile_image{
+            width: 48px;
+            height: 48px;
+          }
+          .networking_card{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            .right_portion{
+              text-align: center;
+            }
+            .tick_cross_parent{
+              padding: 0;
+            }
+          }
+          .userProfileImg {
+            margin-top: 4px;
+            cursor: pointer;
+            .removeIcon {
+              position: absolute;
+              margin-top: 16px;
+              font-size: 24px;
+              color: grey;
+              cursor: pointer;
+              -webkit-transition: visibility 0s, opacity 1s linear;
+              -o-transition: visibility 0s, opacity 1s linear;
+              transition: visibility 0s, opacity 1s linear;
+            }
+            img, .profile_image{
+              width: 60px;
+              height: 60px;
+              margin-left: 50% !important;
+              border-radius: 50%;
+              background-size: cover;
+              background-position: center;
+              margin: 0 auto;
+            }
+          }
+          .userProfileImg .removeIcon:hover {
+            visibility: visible;
+            opacity: 1;
+            color: black;
+          }
+          .userDiscription {
+            display: inline;
+            font-size: 13px;
+            color: #000;
+            .collegeName{
+              color: #7f7f7f;
+            }
+            .userName{
+              display: inline;
+              font-size: 14px;
+              font-weight: bold;
+              color: #000;
+            }
+            .user_name_hover{
+              &:hover{
+                color: #2AC56C;
+              }
+            }
+            .countryFlag{
+              display: inline;
+              margin-left: 10px;
+              img{
+                width: 20px;
+                margin-left: 10px;
+              }
+              .flag-image{
+
+              }
+            }
+            .userRole {
+              color: #7f7f7f;
+            }
+          }
+          .userContactImg {
+            float: right;
+            img{
+              cursor: pointer;
+              width: 33px;
+              path {
+                fill: #fff;
+              }
+            }
+          }
+          .addUser {
+            background: #c7c7c7;
+            border-radius: 100%;
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            padding: 7px;
+            float: right;
+            cursor: pointer;
+            &:hover{
+              background: #2AC56C;
+            }
+          }
+          .requst_sent{
+            color: #2AC56C;
+            float: right;
+            padding-right: 15px;
+          }
+          .addImage {
+            width: 15px;
+          }
+          .inviteUser {
+            background: #c7c7c7;
+            border-radius: 20px;
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            padding: 3px;
+            float: right;
+            cursor: pointer;
+            &:hover{
+              background: #2AC56C;
+            }
+            span {
+              font-size: 13px;
+              color: #fff;
+              padding: 5px;
+            }
+          }
+          .requestAction {
+            display: inline;
+            padding-top: 14px;
+
+            .circle {
+              background: #c7c7c7;
+              border-radius: 100%;
+              display: inline-block;
+              padding: 8px;
+              margin-left: 5px;
+              width: 42px;
+              height: 42px;
+              cursor: pointer;
+              font-size: 17px;
+              line-height: initial;
+              .close-button {
+                color: #fff;
+                font-weight: bolder;
+                font-weight: 600;
+                width: 25px;
+                text-align: center;
+              }
+              img{
+                width: 18px;
+                margin: 0 2px 0 2px;
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+            .circle:hover {
+              background: #2AC56C;
+            }
+            .cross_circle:hover {
+              background: #bc3e3e !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .count_container {
+    position: fixed;
+    margin-top: -26px;
+    z-index: 999;
+    font-size: 12px;
+    color: #616161;
+    width: 650px;
+
+    .total_records {
+      display: inline-block;
+    }
+    .sort_by {
+      display: inline-block;
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .search_form{
+    position: fixed;
+    margin-top: -70px;
+    width: 47%;
+    z-index: 999;
+    .input_contral{
+      height: 35.23px !important;
+      padding: 2px 17px !important;
+      border-radius: 6px !important;
+      font-size: 16px !important;
+      line-height: 22px;
+      padding-left: 40px !important;
+      width: 650px;
+      border: 2px solid #eee;
+      &:focus {
+        outline: none;
+      }
+    }
+    .search_icon{
+      position: absolute;
+      z-index: 0 !important;
+      height: 35.23px !important;
+      top: 0;
+      padding-top: 0;
+      color: #6e6e6e;
+      border: 2px solid #eee;
+      border-right: none;
+      background: transparent;
+    }
+  }
+  .network-tab-label {
+    display: none;
+  }
+}
+@media all and(max-width: 1023px){
+  .networkContainer{
+    .tabs{
+      width: 535px;
+      .tab-list{
+        width: 535px;
+        .tab-list-item{
+          margin: 0 5px;
+        }
+      }
+    }
+    .search_form .input_contral{
+      width: 535px;
+    }
+    .count_container{
+      width: 535px;
+    }
+  }
+}
+@media (max-width: 767px) and (min-width: 319px){
+  .networkContainer {
+    padding: 43px 0;
+    width: 100%;
+    display: block;
+    .search_form .search_icon{
+      left: unset;
+      border-radius: 0 6px 6px 0;
+    }
+    .search_form{
+      position: relative;
+      margin-top: unset;
+      width: 100%;
+      .input_contral{
+        width: 100%;
+      }
+    }
+    .network-tab-label {
+      display: block;
+    }
+    .count_container{
+      width: 96%;
+      position: relative;
+      margin-top: unset;
+    }
+    .tabs {
+      padding: 0 2px;
+      width: 96%;
+      .tab-list {
+        display: none;
+      }
+      .network-tabs-content-container {
+        width: 100%;
+        padding: 4px 0 50px;
+
+        ul {
+          margin-top: 6px;
+
+          li {
+            padding: 15px 2px;
+            .requestAction {
+              display: inline;
+              padding-top: 20px;
+              .circle {
+                padding: 2px;
+                width: 30px;
+                height: 30px;
+                img{
+                  width: 13px;
+                  margin: 0 5px;
+                  path {
+                    fill: #fff;
+                  }
+                }
+              }
+            }
+            .userProfileImg {
+              .profile_image {
+                width: 46px;
+                height: 46px;
+                &.no-trash{
+                  margin-left: 20% !important;
+                }
+              }
+            }
+            .right_portion{
+              float: left;
+            }
+            .addUser{
+              width: 30px;
+              height: 30px;
+              padding: 3px;
+              .addImage{
+                width: 12px;
+              };
+            }
+            .networking_card {
+              .right_portion{
+                float: left;
+              }
+              .tick_cross_parent{
+                padding-left: 0.4em;
+                padding-right: 0.4em;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile-network-menu {
+      display: block;
+      background: #000;
+      z-index: 999;
+      padding: 0px 0;
+      position: -webkit-sticky;
+      position: sticky;
+
+      .menu-list {
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 8px 12px;
+        .list-item {
+          width: 25%;
+          text-align: center;
+
+          .icon-container {
+            display: inline-block;
+
+            .contacts-count{
+              position: absolute;
+              background: #ED5454;
+              border-radius: 50px 50px 50px 50px;
+              width: 20px;
+              font-size: 12px;
+              color: white;
+              right: 25px;
+            }
+
+            .icon-style {
+              margin-bottom: 6px;
+              width: 36px;
+              height: 36px;
+            }
+          }
+          .active-network-tab {
+            border-bottom: 3px solid #2BC56D;
+          }
+        }
+      }
+    }
+    .network-sticky-header{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1001;
+      padding: 0px 0 0px;
+    }
+    .mobile-network-header {
+      display: block;
+
+      .network-tab-label {
+        text-align: center;
+        font-size: 24px;
+        padding: 16px 0;
+      }
+    }
+    .mobile-network-header-sticky {
+      top: 8%;
+      position: fixed;
+      background: #f2f4f6;
+      width: 100%;
+      z-index: 1;
+    }
+    .desktop-network-header {
+      display: none;
+    }
+  }
+}
+@media all and (max-width: 320px) {
+  .networkContainer {
+    .search_form .search_icon{
+      left: unset;
+    }
+    .tabs .tab-list{
+      width: 316px;
+      .tab-list-item{
+        margin: 0 5px;
+      }
+    }
+    .tabs .network-tabs-content-container ul li .networking_card .tick_cross_parent{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px){
+  .networkContainer{
+    width: 75%;
+    .tabs .tab-list .tab-list-item{
+      margin: 0 15px;
+    }
+    .tabs .network-tabs-content-container ul li .networking_card .tick_cross_parent{
+      width: 20%;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import './../../../StudentApp/utils/_global';
+@import './../../../StudentApp/utils/_progressMeter';
+@import './../../../StudentApp/utils/_countryFlags';
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+#step2 {
+    .field-err {
+        font-size: 12px;
+
+		&.select, &.text{ margin: -12px 0 12px; }
+    }
+
+    input, select{ 
+		outline-color: $green;
+		outline-offset: -3px;
+		color: $sic_color2; }
+
+	input[type="text"], input[type="number"], select{
+		border-radius: 3px;
+		margin: 5px 0 15px;
+
+		&.err{ border: 2px solid $error; }
+    }
+    
+    input[type="number"]{ display: inline-block; }
+
+    .gpa-converter{
+
+        label{
+            margin-bottom: 20px;
+            &.err-msg{
+                @include fadeInLeft(0.3s);
+                color: $error;
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 7px;
+                font-weight: 600;
+                cursor: text;
+            }
+        }
+
+        .gpa-field{
+            @include fadeInUp(0.3s);
+
+            .err-msg, .field-err{
+                top: 90%; left: 0;
+                color: $error;
+                background-color: #fff;
+                border-radius: 3px;
+                font-size: 12px;
+                padding: 6px;
+                z-index: 1;
+                margin-top: 1px;
+                @include fadeInDown(0.2s);
+            }
+        }
+
+        .gpa-conversion-values, .manual-gpa-entry{
+            display: flex;
+            justify-content: space-between;
+
+            > div{
+                width: 47%;
+                display: flex;
+                justify-content: space-between;
+
+                label{
+                    > input, > select > option {
+                        text-align: center;
+                    }
+                }
+
+                .country_flag{
+                    margin-top: 1.25em;
+                    margin-right: 1em;
+                    transform: scale(1.25);
+                    flex-shrink: 0;
+                    &.tiny { 
+                        width: 10%;
+                    }
+                }
+
+                .conversion-loader{
+                    position: absolute;
+                    margin-left: 5.5em;
+                    margin-top: 1em;
+                    border-top: 3px solid #555;
+                    border-bottom: 3px solid #555;
+                    z-index: 1;
+
+                    + label > input{
+                        transition: background 0.5s ease-in-out;
+                        color: #8f8f8f; // Hide text in background color
+                        background-color: #8f8f8f;
+                    }
+                }
+                
+
+            }
+        }
+    }
+}

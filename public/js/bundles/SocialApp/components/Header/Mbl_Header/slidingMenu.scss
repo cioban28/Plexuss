@@ -1,0 +1,37 @@
+@media all and (max-width: 767px){
+    .sliding_menu{
+        top: 0;
+        .upper_bar{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 41px;
+            background: #4B4B4B;
+            width: 100%;
+            .img_parent{
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                .img{
+                    height: 17px;
+                }
+                .right_bar_icon{
+                    width: 4px;
+                    height: 17px;
+                }
+            }
+            .active{
+                background: #F9F9F9;
+            }
+        }
+        .rightbar{
+            top: 41px !important;
+            background: #F9F9F9;
+            .rightbar-list{
+                background: #FFFFFF;
+            }
+        }
+    }
+}

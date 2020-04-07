@@ -1,0 +1,142 @@
+.preview_modal{
+    color: #fff;
+    text-align: center;
+    .title{
+        font-size: 29px;
+    }
+    .sub_title{
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        .text{
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+    .active_preview{
+        font-weight: 600;
+        text-decoration: #2AC56C underline;
+    }
+}
+.news_block_view{
+    width: 530px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    .post-text_a{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 4.8em;
+      line-height: 1.6em;
+    }
+    .img_parent{
+      img{
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+      }
+    }
+    .post-title{
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+    .link{
+        color: #B1B1B1;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+}
+.action_box_parent{
+    width: 530px;
+    margin: 15px auto;
+    .actionBox {
+        background: #484848;
+        color: #fff;
+        padding: 12px 10px;
+        border-radius: 4px;
+        .actionRow {
+          display: flex;
+          .new-arrow{
+            width: 11px;
+          }
+          .share-column{
+            display: flex;
+            span {
+              font-size: 14px;
+              font-weight: 600;
+              cursor: pointer;
+              align-self: center;
+            }
+          }
+          .cancelButton {
+            margin: 0;
+            padding: 5px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            background: #F2F2F2;
+            color: #777;
+          }
+          .shareButton {
+            margin: 0;
+            padding: 5px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            background: #2AC56C;
+            color: #fff;
+            float: right;
+          }
+        }
+    }
+    .share_width{
+        background: #8d8c8c;
+        margin-left: 105px;
+        border-radius: 0 0 10px 10px;
+        padding: 12px;
+        color: #fff;
+        box-shadow: 0px 1px 3px #c0c0c0;
+        font-weight: 600;
+        width: 196px;
+        .item{
+          cursor: pointer;
+          &:hover{
+            color: #2AC56C;
+          }
+        }
+    }
+}
+.ReactModal__Overlay--after-open{
+  overflow: auto !important;
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .action_box_parent{
+    width: 100%;
+    .actionBox .actionRow .cancelButton{
+      padding: 5px 19px;
+    }
+    .actionBox .actionRow .shareButton{
+      padding: 5px 19px;
+    }
+  }
+  .news_block_view{
+    width: 100%;
+  }
+}
+@media all and(max-width){
+  .ReactModalPortal .ReactModal__Content{
+    margin: 0 5% 140px 5% !important;
+  }
+  .action_box_parent{
+    width: 100%;
+    .actionBox .actionRow .cancelButton{
+      padding: 5px 19px;
+    }
+    .actionBox .actionRow .shareButton{
+      padding: 5px 19px;
+    }
+  }
+  .news_block_view{
+    width: 100%;
+  }
+}

@@ -1,0 +1,123 @@
+.network_alumni{
+    .network_head{
+        font-size: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 26px 26px 10px;
+        height: 100px;
+        .left_angle{
+            font-size: 28px;
+            cursor: pointer;
+        }
+    }
+    .network-suggestions-cont {
+        overflow: hidden auto;
+        height: 82vh;
+    }
+    .home_card{
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 20px 8px;
+        .img_parent{
+            margin: 0 5px;
+            width: 100px;
+            text-align: center;
+        }
+        .text{
+            font-size: 13px;
+        }
+    }
+    .network_card{
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 10px 0;
+        cursor: pointer;
+        width: 100%;
+        .user_img_parent{
+            margin-left: 8px;
+            margin-right: 8px;
+            width: 60px;
+            position: relative;
+            .image{
+                width: 60px;
+                height: 60px;
+                display: block;
+                margin: 0 auto;
+                min-width: 60px;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+            }
+            .flag-image{
+                position: absolute;
+                min-width: 10px;
+                bottom: -4px;
+                left: 13px;
+            }
+        }
+        .desc{
+            .desc_head{
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                .name{
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 100% !important;
+                    display: block;
+                }
+                .flag_img{
+                    padding-left: 2px;
+                    img{
+                        width: 14.21px;
+                        height: 9.42px;;
+                    }
+                }
+            }
+            .sub_desc{
+                font-weight: 400;
+                font-size: 12px;
+            }
+            .userRole {
+                font-size: 12px;
+            }
+        }
+        &:hover{
+            background: #f2f2f2;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .network_alumni .network_head{
+        padding: 26px 10px 10px;
+    }
+}
+@media all and (max-width: 767px){
+    .network_alumni .network_head{
+        font-size: 17px;
+        font-weight: 600;
+        background: #F9F9F9;
+        padding: 26px 10px 10px;
+    }
+    .network_alumni .network-suggestions-cont {
+        height: 78vh;
+    }
+}

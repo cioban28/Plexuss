@@ -1,0 +1,327 @@
+.main_container{
+  color: white;
+  width: auto;
+}
+.row{
+    overflow-x: unset !important;
+}
+.action-bar1{
+    padding-bottom: 10px;
+  display: block;
+    width: 100%;
+    text-align: right;
+    background: #454545;
+    justify-content: space-between;
+}
+
+.action-bar-col:first-child ul{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 19px
+}
+.action-bar-col:first-child ul li{
+    cursor: pointer;
+}
+
+.performance-wrapper .sort-icon {
+    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/sort-icon-white.png);
+    width: 8px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 0.2em;
+    cursor: pointer;
+}
+
+.performance-wrapper table{
+    border: 0;
+    width: 100%;
+}
+
+.performance-wrapper table thead{
+    border: 0;
+}
+
+.performance-wrapper table .green{
+    color: #65D193;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.performance-wrapper table .red{
+    color: #C9462E;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.performance-wrapper table tr{
+    background-color: #FFF;
+}
+
+.performance-wrapper table th{
+    background-color: #000;
+    color: #CECECE;
+}
+
+.performance-wrapper table th,
+.performance-wrapper table td{
+    text-align: left !important;
+    padding-left: 30px;
+}
+
+.performance-wrapper table .export-report-btn{
+    display: flex;
+    color: gray;
+}
+
+.performance-wrapper table .export-report-btn.active{
+    cursor: pointer;
+    color: #fff;
+}
+
+.action-bar-col{
+  width:33.3%;
+}
+
+.active{
+  color: #43c56b;
+}
+
+.upperDiv {
+  text-align: right;
+}
+.upperDiv a {
+    float: left;
+    width: 105px;
+    padding: 5px;
+    background: #fff;
+    color: #31302ede;
+    font-size: 13px;
+    font-weight: 500;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.upperDiv a:hover {
+    background: #43c56b;
+    border: 2px solid #43c56b;
+    color: white;
+}
+
+.upperDiv a:focus {
+    background: #43c56b;
+    border: 2px solid #43c56b;
+    color: white;
+}
+
+.upperDiv ul{
+    display: inline-flex;
+    margin-bottom: 0;
+    margin: 5px 20px;
+}
+
+.upperDiv form ul{
+    margin-bottom: 0;
+    margin: 0 20px;
+}
+
+.upperDiv ul li {
+    margin-left: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+button{
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #00C273;
+    color: #fff;
+    top: 10px;
+    height: 37px;
+    border-radius: 3px;
+}
+button:hover{
+    background-color: #00C273;
+}
+
+input[type="date"]{
+    border: 0px;
+    text-transform: uppercase;
+    padding: 0px;
+    border-radius: 3px;
+    margin-top: 10px !important;
+}
+
+.tooltipInfo{
+  color: black;
+    font-size: 6pt;
+    margin-left: 0.5em;
+    border-radius: 50%;
+    width: 13px;
+    line-height: 11px;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid gray;
+}
+
+.__react_component_tooltip.type-info {
+    color: #fff;
+    background-color: #000000 !important;
+}
+
+.__react_component_tooltip.type-info.place-top:after {
+    border-top-color: #000000 !important;
+    border-top-style: solid;
+    border-top-width: 6px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: "\25BE"
+}
+
+.bottom-line{
+    border-bottom: 1px solid gray !important;
+}
+.top-line{
+    border-top: 1px solid gray !important;
+}
+table { border-collapse:collapse; }
+.width30{
+    width: 30%;
+}
+.width12{
+    width: 12%;
+}
+.width8{
+    width: 8%;
+}
+.width10{
+    width: 10%;
+}
+.width15{
+    width: 15%;
+}
+.width20{
+    width: 20%;
+}
+.table-heading{
+    background-color: #474747 !important;
+}
+.table-heading td{
+    color: #cecece;
+    font-weight: 600 !important;
+}
+tr:hover {
+    background-color: #43c56b;
+}
+tr:hover td {
+    background-color: #43c56b;
+}
+.date-picker-style{
+    width: 15% !important;
+    margin-top: 10px;
+}
+#date-range-picker-container input#_dateRange{
+    color: white !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+.sch-sort-up{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    top: -9px;
+    border: 4px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    cursor: pointer;
+}
+.sch-sort-down{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    top: 7px;
+    left: -8px;
+    border: 4px solid transparent;
+    border-top: 6px solid #ffffff;
+    cursor: pointer;
+}
+#start_date {
+    text-align: center;
+}
+#end_date{
+    text-align: center;
+}
+button:active, button:focus{
+    background-color: #00C273;
+}
+@media all and (max-width: 1300px){
+    .action-bar1 .action-bar-col:first-child{
+        display:block !important;
+        width: 40%;
+    }
+    .date-picker-style{
+        width: 23% !important;
+    }
+}
+
+@media all and (max-width: 767px){
+    .action-bar1 .action-bar-col:first-child{
+        display:block !important;
+        width: 100% !important;
+    }
+    .performance-wrapper table th, .performance-wrapper table td{
+        padding-left: 5px !important;
+    }
+    .action-bar1{
+        width: 100%;
+        display: inline-table;
+        justify-content: normal;
+    }
+    .date-picker-style{
+        width: 100% !important;
+        padding-left: 13px;
+    }
+    .upperDiv ul{
+        margin: 0;
+    }
+    .upperDiv a{
+        width: 102px;
+    }
+    button{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: 33px;
+    }
+}
+@media all and (max-width: 375px){
+    .upperDiv{
+        width: 100%;
+    }
+    .upperDiv form ul{
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .upperDiv ul li{
+        margin-left: 0;
+        padding: 0;
+    }
+    .upperDiv a{
+        width: 103px;
+    }
+    button{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: 31px;
+    }
+}

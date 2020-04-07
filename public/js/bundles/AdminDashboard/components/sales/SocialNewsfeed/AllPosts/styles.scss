@@ -1,0 +1,196 @@
+#social-newsfeed {
+  #newsfeed-content {
+    .all-posts-cont {
+      padding: 2% 0 3%;
+      .sales-header {
+        padding: 0 2%;
+        .first-section {
+          margin-bottom: 20px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          h1 {
+            font-weight: 600;
+            margin: 0;
+            font-size: 30px;
+          }
+          .btn-create-post {
+            background: #2AC56C;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 7px;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 12px 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            .fa-plus {
+              margin-right: 10px;
+            }
+          }
+        }
+        .search-form {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-bottom: 30px;
+          input {
+            border-radius: 5px;
+            margin: 0 !important;
+          }
+          .search-input {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-right: 2%;
+            .input-icon {
+              position: absolute;
+              left: 6px;
+              top: 12px;
+              cursor: pointer;
+            }
+            input {
+              font-family: 'Open Sans';
+              padding-left: 25px;
+              margin-right: 3%;
+            }
+          }
+          .date-input {
+            input {
+              padding-left: 40px;
+              background: #F6F6F6;
+            }
+          }
+          button {
+            background: #646464;
+            color: #fff;
+            padding: 0 3%;
+            border-radius: 5px;
+            font-weight: 600;
+          }
+        }
+      }
+      .post-column {
+        width: 20%;
+      }
+      .img-thumbnail {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+      }
+      .post-text {
+        word-break: break-word;
+        word-wrap: break-word;
+      }
+      .ReactTable {
+        height: 100%;
+        border-top: 0;
+      }
+      .ReactTable .rt-thead.-header {
+        -webkit-box-shadow: unset;
+                box-shadow: unset;
+      }
+      .ReactTable .rt-thead {
+        overflow-y: scroll;
+      }
+      .ReactTable .rt-thead::-webkit-scrollbar {
+        background: transparent;
+      }
+      .ReactTable .rt-thead .rt-resizable-header-content {
+        font-size: 16px;
+        font-weight: 600;
+        color: #252525;
+        text-align: left;
+      }
+      .ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
+         border-right: 0;
+         padding: 7px 0;
+      }
+      .ReactTable .rt-tbody .rt-td {
+        padding: 7px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .ReactTable .rt-tbody .rt-tr-group {
+        border: 0;
+        border-top: solid 1px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        -webkit-box-flex: unset;
+            -ms-flex: unset;
+                flex: unset;
+        &:hover {
+          background: #F5F5F5;
+        }
+      }
+      .ReactTable .rt-tr {
+        -webkit-box-flex: unset;
+            -ms-flex: unset;
+                flex: unset;
+      }
+      .ReactTable .-pagination .-previous, .ReactTable .-pagination .-next {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .checkbox-column, .status-column {
+        width: 4% !important;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+      .post-column {
+        width: 20% !important;
+      }
+      .reach-column, .views-column, .shares-column {
+        width: 10% !important;
+      }
+      .create-at-column {
+        width: 10% !important;
+      }
+      .full-width {
+        width: 100%;
+      }
+      .post-stats {
+        font-size: 14px;
+      }
+      .created-at {
+        font-size: 14px;
+        color: #aaaaaa;
+      }
+    }
+  }
+}
+
+@media(max-width: 1300px) {
+  #social-newsfeed {
+    #newsfeed-content {
+      .all-posts-cont {
+        .create-at-column {
+          width: 15% !important;
+        }
+      }
+    }
+  }
+}

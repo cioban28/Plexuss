@@ -1,0 +1,30 @@
+.single-post-banner{
+    width: 80%;
+    .single-post{
+        margin: 100px auto;
+        width: 600px;
+        .deleted_post_banner{
+            border: 0.2px solid #d1cdcd;
+            padding: 10px;
+            background: #fdfdfde0;
+            .deleted_post_content{
+                color: #707070;
+                .dpc_header{
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                .dpc_text{
+
+                }
+            }
+        }
+    }
+}
+@media all and(max-width: 767px){
+    .single-post-banner{
+        width: 100%;
+        .single-post{
+            width: 100%;
+        }
+    }   
+}

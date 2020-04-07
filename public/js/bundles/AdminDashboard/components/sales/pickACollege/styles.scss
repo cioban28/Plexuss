@@ -1,0 +1,356 @@
+// styles.scss
+
+$test: thin solid red;
+$green: #24b26b;
+$orange: #FF5C26;
+$gray: #797979;
+$minCol: 5;
+$maxCol: 12;
+
+//mixins
+@mixin noUserSelect(){
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}
+
+@mixin bRadius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin absolutely(){
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+@mixin ellipse(){
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.stylish-scrollbar{
+	&::-webkit-scrollbar{
+		width: 8px;
+	}
+	&::-webkit-scrollbar::-webkit-scrollbar-button{
+		background-color: #eee;
+		height: 0;
+	}
+	&::-webkit-scrollbar-track{
+		background-color: #eee;
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: #bebebe;
+	}
+}
+
+#_pick_college_action_bar{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $gray;
+    color: #fff;
+    padding: 40px 10px 20px 50px;
+
+    > div:first-child{
+    	font-size: 20px;
+    }
+
+    > div{
+    	display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+	    align-items: center;
+		font-family: 'Open Sans', sans-serif;
+    }
+
+	button, input{
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.add{
+		color: #fff;
+		background-color: $green;
+		@include bRadius(2px);
+		padding: 7px 20px;
+		font-size: 10px;
+		font-weight: 600;
+		outline-color: transparent;
+
+		&:hover, &:focus{
+			background-color: $green;
+		}
+
+		&:active{
+			background-color: $green;
+			box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4);
+		}
+
+		> span{
+			font-size: 20px;
+			font-weight: 600;
+			vertical-align: sub;
+		}
+
+		&.close{ background-color: #aaa; }
+	}
+
+	.export{
+		color: #fff;
+		background-color: transparent;
+		padding: 7px 20px;
+		font-size: 10px;
+		font-weight: 600;
+		outline-color: transparent;
+	}
+
+	.left-actions > div:not(:last-child){ margin: 0 10px 0 0; }
+	.right-actions > button{ margin: 0 0 0 10px; }
+
+	.search-college-container{
+		position: relative;
+		height: 40px;
+	}
+
+	.search-wrapper{
+		position: absolute;
+		top: 0; left: 0;
+		border: thin solid #ddd;
+	    width: 300px;
+	    min-height: 200px;
+	    border-radius: 3px;
+	    background: #fff;
+	    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+	    z-index: 1;
+
+	    .input-wrapper{ padding: 0 5px; }
+
+	    input{
+	    	border: none;
+	    	box-shadow: none;
+	    	border-bottom: 1px solid #797979;
+	    }
+
+	    .pending{
+	    	color: #202020;
+	    	font-size: 12px;
+	    }
+
+	    .results{ 
+	    	overflow-y: auto; 
+	    	max-height: 200px;
+	    }
+
+	    .result{
+    		display: flex;
+    		flex-direction: row;
+    		justify-content: flex-start;
+    		align-items: flex-start;
+    		color: $gray;
+	    	font-family: 'Open Sans', sans-serif;
+	    	cursor: pointer;
+	    	padding: 5px 0;
+
+	    	&:not(:last-child){ margin: 0 0 10px 0; }
+
+	    	&:hover{ background-color: #eee; }
+
+	    	> div:first-child, > div:last-child{ width: 15%; }
+
+	    	> div:nth-child(2){ width: 70% }
+
+	    	> div:first-child > div{
+	    		width: 30px;
+	    		height: 30px;
+	    		margin: 2px auto 0;
+	    		background-repeat: no-repeat;
+	    		background-size: contain;
+	    		background-position: center;
+	    	}
+
+    		.name{
+	    		font-size: 12px;
+	    		font-weight: 600;
+    		}
+
+    		.location{
+    			font-size: 10px;
+    		}
+
+    		.aor{
+    			font-size: 12px;
+    			font-weight: 600;
+    			color: #FFBF00;
+    			text-align: center;
+    		}
+	    }
+	}
+}
+
+#_priority_list{
+	margin: 0 0 50px;
+
+	.header, .tableRow{
+		font-size: 14px;
+		padding: 15px 0;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.header{
+		background-color: #000;
+		color: #fff;
+		font-weight: 600;
+		@include noUserSelect();
+
+		> div.column{
+			cursor: pointer;
+			@include ellipse();
+		}
+
+		> .column:nth-child(1){ text-align: center; }
+
+		@for $i from $minCol to $maxCol {
+			> .column:nth-child(#{$i}){ text-align: center; }
+		}
+	}
+
+	.tableRow{
+		background-color: #fff;
+		color: $gray;
+
+		> div.column{
+			&:not(:nth-child(2)){ @include ellipse(); }
+
+			input, select{ 
+				margin: 0;
+				padding: 0 0 0 5px;
+			    height: 24px;
+			    color: #797979;
+			    @include bRadius(3px);
+			    text-align: center;
+			}
+		}
+
+		.name{
+			color: $green;
+			cursor: pointer;
+		}
+
+		.promote{ cursor: pointer; }	
+
+		> .column:nth-child(1){ text-align: center; }
+
+		@for $i from $minCol to $maxCol {
+			> .column:nth-child(#{$i}){ text-align: center; }
+		}
+
+		.actions-col{
+			> div{
+				display: inline-block;
+				vertical-align: middle;
+				cursor: pointer;
+				visibility: hidden;
+			}
+
+			> div:first-child{
+				margin: 0 5px 0 0;
+			}
+		}
+
+		&:hover{
+			&:not(.promoted){ background-color: #eee; }
+
+			.actions-col{
+				> div{ visibility: visible; }
+			}
+		}
+
+		&.promoted{
+			background-color: $green;
+			color: #fff;
+
+			.promote{ transform: rotate(180deg); }
+		}
+	}
+
+}
+
+.sprite-item{
+	background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/sales/pick_a_college_spritesheet.png) no-repeat;
+
+	&.edit, &.save, &.remove, &.promote{
+		width: 25px;
+		height: 24px;
+	    background-size: cover;
+	}
+
+	&.edit{ background-position: -83px 0px; }
+	&.save{ background-position: -121px 0px; }
+	&.remove{ background-position: -157px 0px; }
+	&.promote{ background-position: 7px -1px; margin: auto; }
+}
+
+.remove-modal{
+	background-color: #fff;
+	@include bRadius(5px);
+	padding: 20px;
+
+	.modal-question{
+		color: $gray;
+		font-weight: 600;
+		text-align: center;
+		font-size: 16px;
+		font-family: 'Open Sans', sans-serif;
+		margin: 0 0 15px;
+	}
+
+	.modal-actions{
+		text-align: center;
+		font-size: 14px;
+		font-family: 'Open Sans', sans-serif;
+
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+			padding: 10px 20px;
+			@include bRadius(5px);
+			cursor: pointer;
+		}
+
+		> div:first-child{
+			background-color: $gray;
+			color: #fff;
+		}
+
+		> div:last-child{
+			background-color: transparent;
+			color: $gray;
+			text-decoration: underline;
+		}
+	}
+}
+
+.no-schools{
+	color: $gray;
+    background: #eee;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.loading-spinner{
+	position: relative;
+	height: 70px;
+}
+
+.scrolled{
+	position: fixed;
+	top: 0; right: 0; left: 0;
+	z-index: 1;
+}

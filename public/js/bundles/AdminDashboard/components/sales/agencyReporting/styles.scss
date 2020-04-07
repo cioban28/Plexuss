@@ -1,0 +1,146 @@
+.invisibile-div{
+	visibility: hidden;
+    height: 50px;
+    width: 10em;
+}
+
+/* Topnav bar */
+.top-bar{
+    background-color: #484848 !important;
+}
+
+.loading-spinner{
+	margin: auto;
+}
+
+#topnavsearch .top_search_txt{
+    background-color: #F2F2F2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#topnavsearch .go-btn{
+    background-color: #F2F2F2;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* Header */
+.reporting-header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #333333;
+    margin-top: -1em;
+	color: #fff;
+	color: #CECECE;
+	padding: 2.5em;
+    margin-top: 0.09em;
+}
+
+.reporting-header .title h3{
+	color: #CECECE;
+}
+
+.export-report-btn{
+	opacity: 0.5;
+
+	&.active{
+		opacity: 1;
+	    transition: opacity 0.5s ease-out;
+	    -moz-transition: opacity 0.5s ease-out;
+	    -webkit-transition: opacity 0.5s ease-out;
+	    -o-transition: opacity 0.5s ease-out;
+
+		&:hover{
+			cursor: pointer;
+			opacity: 0.7;
+		}
+	}
+}
+
+.reporting-header .right-side-container{
+	display: flex;
+}
+
+/***/
+
+.reporting-wrapper table{
+	border: 0;
+	width: 100%;
+}
+
+.reporting-wrapper table .green{
+	color: #65D193;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.reporting-wrapper table .red{
+	color: #C9462E;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.reporting-wrapper table tr:nth-child(odd){
+}
+
+.reporting-wrapper table tr:nth-child(even){
+	background-color: #F0F0F0;
+}
+
+.reporting-wrapper table tr:not(:first-child){
+	height: 3em;
+    border-bottom: 2px solid #E8E8E8;
+}
+
+.reporting-wrapper table th{
+	background-color: #000;
+	color: #CECECE;
+}
+
+.reporting-wrapper table th,
+.reporting-wrapper table td{
+	text-align: center;
+}
+
+.reporting-wrapper table .export-report-btn{
+	display: flex;
+	color: gray;
+}
+
+.reporting-wrapper table .export-report-btn.active{
+	cursor: pointer;
+	color: #fff;
+}
+
+.export-report-btn{
+    margin-left: 0.5em;
+    margin-top: 0.25em;
+	display: flex;
+}
+
+.export-report-btn .export-text{
+	font-size: 16px;
+    margin-left: 5px;
+}
+
+.export-icon{
+	background: url(/images/agency/dash-icons.png) -533px -17px;
+	width: 20px;
+    height: 23px;
+    transform: scale(0.8);
+}
+
+.reporting-wrapper table .export-report-btn .export-text{
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.spin-container{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 200;
+}
+
+

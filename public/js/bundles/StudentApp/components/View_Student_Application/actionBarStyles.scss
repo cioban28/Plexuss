@@ -1,0 +1,40 @@
+// /View_Student_Application/styles.scss
+
+@import './../../utils/_global';
+
+$offset: 240px;
+
+#_AppActionBar{
+	background: $green;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	padding: 15px;
+	position: fixed;
+	top: 0; left: 0; right: $offset;
+	z-index: 1;
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+
+	> div{
+		display: inline-block;
+		width: 50%;
+
+		&:last-child{ text-align: right; }
+
+		div{
+			display: inline-block;
+			padding: 0 10px;
+			font-weight: 100;
+		}
+	}
+
+	.action{
+		font-weight: 600;
+		cursor: pointer;
+		text-decoration: underline;
+
+		&.pdf{ text-decoration: initial; }
+		&:hover{ text-shadow: 2px 2px rgba(0,0,0,0.2); }
+
+		> a{ color: #fff; }
+	}
+}	

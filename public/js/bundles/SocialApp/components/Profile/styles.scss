@@ -1,0 +1,1115 @@
+.profile-loader{
+    position: absolute;
+    left: 40%;
+    top: 48%;
+  img{
+    width: 55px;
+  }
+}
+.profile_content {
+  width: 80%;
+  .profile_header {
+    background-image: url("/social/images/Header.png");
+    background-position: center;
+    background-position-y: -40px;
+    background-size: cover;
+    height: 415px;
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 10px;
+
+    .profile_action_area {
+      background: #221E1F;
+      width: 100%;
+      padding: 0 45px 0 5%;
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: -ms-flexbox;
+      display: flex;
+
+      .user_info {
+        float: left;
+        width: 55%;
+
+        .profile_image {
+          width: 151px;
+          height: 151px;
+          border-radius: 100%;
+          border: 4px solid #fff;
+          background-color: #fff;
+          overflow: hidden;
+          margin: -20px 0;
+          margin-right: 19px;
+          float: left;
+
+          .profile_image-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+          }
+        }
+        .profile_info {
+          padding: 13px 25px;
+
+          .profile_name {
+            font-size: 22px;
+            color: #fff;
+            display: inline-block;
+            margin: 0 0 6px;
+            .profile_flag{
+
+            }
+          }
+          p {
+            margin: 0 0 3px;
+            color: #999999;
+            font-size: 12px;
+            line-height: 14px;
+            span {
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      .action_buttons {
+        width: 45%;
+        float: right;
+        text-align: right;
+        padding-top: 35px;
+        .profile_toggle{
+          text-align: left;
+        }
+        .message_toggle_btn{
+          top: -91px;
+        }
+        .share_profile {
+          margin-right: 10px;
+          padding: 8px 15px;
+          border-radius: 6px;
+          background: #2AC56C;
+          font-size: 14px;
+          font-family: 'Open sans';
+          &.active {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        .edit_profile {
+          margin-left: 10px;
+          padding: 8px 15px;
+          border-radius: 6px;
+          background: #FFFFFF;
+          color: #221E1F;
+          font-size: 14px;
+          font-weight: 600;
+          font-family: 'Open sans';
+        }
+        .btn_hover:hover{
+          color:#2AC56C;
+        }
+        .profile_button {
+          margin-right: 10px;
+          padding: 10px 15px;
+          border-radius: 6px;
+          background: #fff;
+          color: #221E1F;
+          font-size: 12px;
+          font-weight: bold;
+          span {
+            padding: 0 4px 0;
+          }
+          .connet_btn{
+            padding: 4px 0 10px 0;
+          }
+          &.connected{
+            padding: 10px 20px;
+            span{
+              padding: 0 7px;
+            }
+          }
+          .connect-options-menu{
+            text-align: left;
+            padding: 5px 22px 5px 20px;
+            position: absolute;
+            background: #fff;
+            width: auto;
+            margin-left: -20px;
+            border-radius: 0 0 6px 6px;
+            box-shadow: 0px 3px 2px rgba(0,0,0,.1);
+            .rbr_btn{
+              padding: 7px 0 7px 15px;
+            }
+          }
+        }
+        .remove_cursor{
+            cursor: unset !important;
+        }
+      }
+      .share_profile_incognito_banner {
+        position: absolute;
+        background: #fff;
+        margin: 65px -20px 0 0;
+        right: 189px;
+        z-index: 999;
+        display: inline-block;
+        padding: 10px 7px 10px 20px;
+        border-radius: 6px;
+        border-top-right-radius: 0;
+        //box-shadow: 1px 1px 1px 1px #c0c0c0;
+
+        .social_media_icons_container {
+
+          .social_media_icons {
+
+            .share_url_banner {
+              background: #F0EFF0;
+              border-radius: 2px;
+              padding: 4px 21px;
+            }
+            .share_on_social_tag {
+              padding: 4px 10px;
+              margin-left: 20px;
+              margin-right: 5px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .socila_btn {
+              display: inline-block;
+              vertical-align: middle;
+
+              .social-icon {
+                width: 25px;
+                cursor: pointer;
+                padding-bottom: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mbl_tabs {
+    display: none;
+  }
+  .row_container {
+    width: 100%;
+    margin: 0 0 0;
+    padding: 0 5% 0;
+    max-width: unset;
+  }
+  .profile-widgets {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 29px 20px;
+    float: left;
+    color: #202020;
+    margin-bottom: 25px;
+
+    .widget-heading {
+
+      h2 {
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+        margin: 0 0 17px;
+        font-family: 'Open Sans';
+        font-weight: 600;
+      }
+    }
+    .widget-content {
+
+      p {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 0 0 10px;
+        color: #202020;
+      }
+      .private-section{
+        font-size: 14px;
+        color: #707070;
+      }
+      .edu-detail-row{
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
+        .edu-detail-logo{
+          width: 55px;
+          height: 55px;
+          padding: 2px;
+          object-fit: contain;
+          border-radius: 50%;
+          border: 1px solid #b1b1b1;
+        }
+        .edu-detail-title{
+          font-weight: bold;
+        }
+      }
+      .claimfame-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          float: left;
+          width: 100%;
+          margin: 0 0 0px;
+
+          p {
+            margin: 0 0 4px;
+          }
+        }
+      }
+      .endorse {
+        font-size: 11px;
+        width: 100%;
+        text-align: right;
+        margin: 0 0 8px;
+      }
+      .skills-list {
+        list-style: none;
+        margin: 0;
+        font-size: 15px;
+        .single_skill_more_details_container{
+          padding: 1em;
+          color: #a6a6a6;
+          width: 96%;
+          margin-bottom: 1em;
+          animation: fadeIn 0.3s;
+          border: 1px solid;
+          .cross_btn{
+            float: right;
+          }
+          .margin_right{
+            margin-right: 10px;
+          }
+        }
+        li {
+          margin-bottom: 18px;
+          display: flex;
+          align-items: center;
+
+          .fa-caret-down {
+            margin-right: 3.8px;
+          }
+          .fa-caret-right {
+            margin-right: 7px;
+          }
+          .skill-name{
+            max-width: 50%;
+            font-size: 14px;
+          }
+          .skill-endorsers-pics {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 0 10px;
+            .skill-endorser-img {
+              width: 23px;
+              height: 23px;
+              border-radius: 50%;
+              background-position:center;
+              background-size:cover;
+              display: inline-block;
+            }
+          }
+          .skilled-users-list {
+            display: inline-block;
+            margin-left: 10px;
+
+            .skilled-users {
+              display: inline-block;
+              margin-left: 4px;
+
+              img {
+                height: 18px;
+                width: 18px;
+                border: 1px solid #202020;
+                border-radius: 100%;
+              }
+            }
+          }
+          .skills-count {
+            border: 1px solid #202020;
+            border-radius: 100%;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            display: inline-block;
+            font-size: 10px;
+            margin: 0 10px 0 0;
+          }
+          .add-button {
+            padding: 1px 6px;
+            width: 23px;
+            height: 23px;
+            float: right;
+            border-radius: 4px;
+            background: #2AC56C;
+            margin: 0 10px 0 0;
+            &.endorse-btn {
+              padding: 0 5px;
+              border: 1px solid #2ac56c;
+              background-color: #fff;
+              color: #2ac56c;
+            }
+          }
+        }
+      }
+      .projects-slider {
+        width: 90%;
+        max-width: 85vw;
+        height: auto;
+        margin: 0 auto;
+        .slick-slider{
+          .slick-next:before, .slick-prev:before{
+            color: #202020;
+          }
+        }
+        .current-project-indicator{
+          font-size: .9em;
+          color: #868686;
+          float: right;
+          margin-top:-40px;
+        }
+        .single-project-container{
+          width: 100%;
+          margin: 0 auto;
+          border-radius: 6px;
+          cursor: pointer;
+          .single-project-img-contain{
+            height: 200px;
+            width: 100%;
+            .single-project-img{
+              height: 200px;
+              border-radius: 6px 6px 0 0;
+              width: 100%;
+              object-fit: cover;
+              // background-size: cover;
+              // background-position: center;
+            }
+          }
+          .single-project-info{
+            background-color: #efefef;
+            border-radius: 0 0 6px 6px;
+            padding: 10px 20px;
+            .single-project-title{
+              color: #202020;
+              font-size: 1em;
+              font-weight: 600;
+            }
+            .single-project-date{
+              color: #868686;
+              font-size: .75em;
+              span {
+                float: right;
+              }
+            }
+          }
+        }
+
+        .carousel.carousel-slider {
+          overflow: inherit;
+        }
+        .carousel {
+          .carousel-status{
+            top: -42px;
+          }
+          .slide img {
+            border-radius: 6px;
+          }
+          .slider-wrapper.axis-horizontal .slider .slide {
+            border-radius: 6px;
+          }
+          .thumbs-wrapper {
+            display: none;
+          }
+        }
+      }
+      .liked-colleges {
+        margin: 0;
+
+        li {
+          list-style: none;
+          display: inline-block;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          img {
+            border: 1px solid #B1B1B1;
+            border-radius: 100%;
+            height: 46px;
+            width: 46px;
+            object-fit: contain;
+            padding: 2px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.block_modal{
+  background: #fff;
+  width: 600px;
+  height: 433px;
+  text-align: center;
+  font-family: 'Open Sans';
+  padding: 50px;
+  font-size: 24px;
+  border-radius: 6px;
+  .name{
+    margin-top: 13px;
+    margin-bottom: 65px;
+    font-weight: bold;
+  }
+  .modal_btn {
+    width: 180px;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Open Sans';
+    margin: 20px auto;
+    padding: 0;
+    height: 45px;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+  .block_btn{
+    background: #db0000;
+  }
+  .cancel_btn{
+    background: #a5a5a5;
+  }
+  .footer_note{
+    font-size: 18px;
+    color: #8f8f8f;
+    margin-top: 50px;
+  }
+}
+.cursor_pointer{
+  cursor: pointer;
+}
+.gif-loader-profile{
+  position: absolute;
+  left: 52%;
+  top: 33%;
+  img{
+    width: 50px;
+  }
+}
+@media (min-width: 1024px){
+  .profile_content {
+    .row_container {
+      #feeds_section {
+        width: 90%;
+        float: right;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1300px){
+  .profile_content {
+    padding-right: 0;
+    .profile_header{
+      width: 100%;
+      margin-top: 8px;
+      .profile_action_area{
+        .share_profile_incognito_banner .social_media_icons_container .social_media_icons .share_url_banner{
+          display: block;
+        }
+        .share_profile_incognito_banner .social_media_icons_container .social_media_icons .share_on_social_tag{
+          margin-left: 0;
+        }
+        .action_buttons{
+          width: 42%;
+        }
+      }
+      .row_container{
+        width: 76%;
+      }
+    }
+    .profile-widgets {
+      width: 100%;
+      background: #fff;
+      border-radius: 6px;
+      padding: 29px 20px;
+      float: left;
+      color: #202020;
+      margin-bottom: 25px;
+
+      .widget-heading {
+
+        h2 {
+          font-size: 14px;
+          line-height: 24px;
+          color: #000000;
+          margin: 0 0 17px;
+          font-family: 'Open Sans';
+          font-weight: 600;
+        }
+      }
+      .widget-content {
+
+        p {
+          font-size: 14px;
+          line-height: 19px;
+          margin: 0 0 10px;
+          color: #202020;
+        }
+        .claimfame-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          li {
+            float: left;
+            width: 100%;
+            margin: 0 0 0px;
+
+            p {
+              margin: 0 0 4px;
+            }
+          }
+        }
+        .endorse {
+          font-size: 11px;
+          width: 100%;
+          text-align: right;
+          margin: 0 0 8px;
+        }
+        .skills-list {
+          list-style: none;
+          margin: 0;
+          font-size: 15px;
+
+          li {
+            margin-bottom: 18px;
+
+            .fa {
+              margin-right: 4px;
+            }
+            .skilled-users-list {
+              display: none;
+              margin-left: 5px;
+
+              .skilled-users {
+                display: inline-block;
+                margin-left: 1px;
+
+                img {
+                  height: 18px;
+                  width: 14px;
+                  border: 1px solid #202020;
+                  border-radius: 100%;
+                }
+              }
+            }
+            .skills-count {
+              border: 1px solid #202020;
+              border-radius: 100%;
+              width: 18px;
+              height: 18px;
+              text-align: center;
+              display: inline-block;
+              font-size: 10px;
+              margin-left: 4px;
+            }
+            .add-button {
+              padding: 2px 6px;
+              float: right;
+              border-radius: 4px;
+              background: #2AC56C;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+        .projects-slider {
+          .carousel.carousel-slider {
+            overflow: inherit;
+          }
+          .carousel {
+            .carousel-status{
+              top: -42px;
+            }
+            .slide img {
+              border-radius: 6px;
+            }
+            .slider-wrapper.axis-horizontal .slider .slide {
+              border-radius: 6px;
+            }
+            .thumbs-wrapper {
+              display: none;
+            }
+          }
+        }
+        .liked-colleges {
+          margin: 0;
+
+          li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            img {
+              border: 1px solid #B1B1B1;
+              border-radius: 100%;
+              height: 32px;
+              width: 32px;
+              object-fit: contain;
+              padding: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .profile_content {
+    width: 80%;
+    padding-right: 0;
+
+    .profile_header{
+      width: 100%;
+      margin-top: 6px;
+      .profile_action_area{
+        padding: 0 0 0 5px;
+
+        .user_info {
+          width: 65%;
+        }
+        .share_profile_incognito_banner .social_media_icons_container .social_media_icons .share_url_banner{
+          display: block;
+        }
+        .share_profile_incognito_banner .social_media_icons_container .social_media_icons .share_on_social_tag{
+          margin-left: 0;
+        }
+        .action_buttons{
+          width: 35%;
+
+          .share_profile {
+            margin: 0;
+            padding: 8px 5px;
+            float: left;
+          }
+          .edit_profile {
+            margin: 0 8px 0 0;
+            padding: 8px 5px;
+          }
+          .profile_button{
+            margin-right: 5px;
+            padding: 10px 10px;
+          }
+        }
+        .profile_content .profile_header .profile_action_area .share_profile_incognito_banner {
+          right: 42px;
+        }
+      }
+    }
+    .row_container{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-width: unset;
+      .profile-widgets {
+        width: 100%;
+        background: #fff;
+        border-radius: 6px;
+        padding: 20px 10px;
+        float: left;
+        color: #202020;
+        margin-bottom: 25px;
+
+        .widget-heading {
+
+          h2 {
+            font-size: 11px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0 0 17px;
+            font-family: 'Open Sans';
+            font-weight: 600;
+          }
+        }
+        .widget-content {
+
+          p {
+            font-size: 11px;
+            line-height: 19px;
+            margin: 0 0 10px;
+            color: #202020;
+          }
+          .claimfame-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+              float: left;
+              width: 100%;
+              margin: 0 0 0px;
+
+              p {
+                margin: 0 0 4px;
+              }
+            }
+          }
+          .endorse {
+            font-size: 11px;
+            width: 100%;
+            text-align: right;
+            margin: 0 0 8px;
+          }
+          .skills-list {
+            list-style: none;
+            margin: 0;
+            font-size: 10px;
+
+            li {
+              margin-bottom: 18px;
+
+              .fa {
+                margin-right: 5px;
+              }
+              .skilled-users-list {
+                display: inline-block;
+                margin-left: 5px;
+
+                .skilled-users {
+                  display: inline-block;
+                  margin-left: 1px;
+
+                  img {
+                    height: 14px;
+                    width: 12px;
+                    border: 1px solid #202020;
+                    border-radius: 100%;
+                  }
+                }
+              }
+              .skills-count {
+                border: 1px solid #202020;
+                border-radius: 100%;
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                display: inline-block;
+                font-size: 10px;
+                margin-left: 4px;
+              }
+              .add-button {
+                padding: 2px 6px;
+                float: right;
+                border-radius: 4px;
+                background: #2AC56C;
+                margin: 0 10px 0 0;
+              }
+            }
+          }
+          .projects-slider {
+            .carousel.carousel-slider {
+              overflow: inherit;
+            }
+            .carousel {
+              .carousel-status{
+                top: -42px;
+              }
+              .slide img {
+                border-radius: 6px;
+              }
+              .slider-wrapper.axis-horizontal .slider .slide {
+                border-radius: 6px;
+              }
+              .thumbs-wrapper {
+                display: none;
+              }
+            }
+          }
+          .liked-colleges {
+            margin: 0;
+
+            li {
+              list-style: none;
+              display: inline-block;
+              margin-right: 3px;
+              margin-bottom: 3px;
+              img {
+                border: 1px solid #B1B1B1;
+                border-radius: 100%;
+                height: 28px;
+                width: 28px;
+                object-fit: contain;
+                padding: 2px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px){
+  .gif-loader-profile{
+    left: 46%;
+    top: 73%;
+  }
+  .profile_content {
+    width: 100%;
+
+    .profile_header{
+      width: 100%;
+      height: 278px;
+      margin-top: 44px;
+      margin-bottom: 15px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url("/social/images/Header.png");
+
+      .profile_action_area{
+        display: block;
+        height: 170px;
+        padding: 0 35px 0 35px;
+        background: none;
+
+        .user_info {
+          text-align: center;
+          width: 100%;
+
+          .profile_image {
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+            border: 4px solid #fff;
+            margin: -85px auto 0;
+            overflow: hidden;
+            float: none;
+            display: block;
+
+            img {
+              width: 100%;
+              display: block;
+              height: 100%;
+            }
+          }
+          .profile_info {
+            padding: 0;
+            display: block;
+            width: 100%;
+            p {
+              color: #fff;
+            }
+          }
+        }
+        .action_buttons{
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          top: 95px;
+          left: 0;
+
+          .profile_toggle {
+            z-index: 999;
+          }
+          .profile_button{
+            margin-right: 5px;
+            padding: 10px 10px;
+          }
+        }
+        .share_profile_incognito_banner {
+          position: absolute;
+          background: #fff;
+          margin: 165px 0 0 0;
+          left: 15px;
+          z-index: 999;
+          display: inline-block;
+          width: calc(100vw - 10%);
+          padding: 10px 16px;
+          border-radius: 6px;
+          box-shadow: 0px 1px 5px rgba(0,0,0,.5);
+          .social_media_icons_container {
+            .social_media_icons {
+              .share_url_banner {
+                display: block;
+                overflow: auto;
+              }
+              .share_on_social_tag {
+                padding: 4px 10px 4px 0;
+                margin: 0;
+              }
+              .socila_btn {
+                margin-top: 4px;
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mbl_tabs {
+      display: block;
+      .tabs .tab-list {
+        margin: 0;
+        padding: 0 1.5em 10px;
+        background-color: #fff;
+        .tab-list-item {
+          width: 50%;
+          display: inline-block;
+          text-align: center;
+          font-weight: 600;
+          cursor: pointer;
+          &.tab-list-active {
+            border-bottom: 2px solid #2ac56c;
+          }
+        }
+      }
+    }
+    .row_container{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-width: unset;
+    }
+    .profile-widgets {
+      width: 100%;
+      background: #fff;
+      border-radius: 6px;
+      padding: 29px 20px;
+      float: left;
+      color: #202020;
+      margin-bottom: 25px;
+
+      .widget-heading {
+
+        h2 {
+          font-size: 14px;
+          line-height: 24px;
+          color: #000000;
+          margin: 0 0 17px;
+          font-family: 'Open Sans';
+          font-weight: 600;
+        }
+      }
+      .widget-content {
+
+        p {
+          font-size: 14px;
+          line-height: 19px;
+          margin: 0 0 10px;
+          color: #202020;
+        }
+        .claimfame-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          li {
+            float: left;
+            width: 100%;
+            margin: 0 0 0px;
+
+            p {
+              margin: 0 0 4px;
+            }
+          }
+        }
+        .endorse {
+          font-size: 11px;
+          width: 100%;
+          text-align: right;
+          margin: 0 0 8px;
+        }
+        .skills-list {
+          list-style: none;
+          margin: 0;
+          font-size: 15px;
+
+          li {
+            margin-bottom: 18px;
+
+            .fa {
+              margin-right: 8px;
+            }
+            .skilled-users-list {
+              display: inline-block;
+              margin-left: 15px;
+
+              .skilled-users {
+                display: inline-block;
+                margin-left: 4px;
+
+                img {
+                  height: 18px;
+                  width: 18px;
+                  border: 1px solid #202020;
+                  border-radius: 100%;
+                }
+              }
+            }
+            .skills-count {
+              border: 1px solid #202020;
+              border-radius: 100%;
+              width: 18px;
+              height: 18px;
+              text-align: center;
+              display: inline-block;
+              font-size: 10px;
+              margin-left: 4px;
+            }
+            .add-button {
+              padding: 2px 6px;
+              float: right;
+              border-radius: 4px;
+              background: #2AC56C;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+        .projects-slider {
+          .carousel.carousel-slider {
+            overflow: inherit;
+          }
+          .carousel {
+            .carousel-status{
+              top: -42px;
+            }
+            .slide img {
+              border-radius: 6px;
+            }
+            .slider-wrapper.axis-horizontal .slider .slide {
+              border-radius: 6px;
+            }
+            .thumbs-wrapper {
+              display: none;
+            }
+          }
+        }
+        .liked-colleges {
+          margin: 0;
+
+          li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            img {
+              border: 1px solid #B1B1B1;
+              border-radius: 100%;
+              height: 46px;
+              width: 46px;
+              object-fit: contain;
+              padding: 2px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

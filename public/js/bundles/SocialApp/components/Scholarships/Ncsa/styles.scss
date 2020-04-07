@@ -1,0 +1,396 @@
+// Scholarships/Ncsa/styles.scss
+
+@import './../../../../StudentApp/utils/_global';
+
+
+#ncsa{
+	width: 80%;
+}
+
+.ncsa-main{
+	margin: 60px 50px 0;
+}
+
+.mobile-apply{
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    
+	background-color: #2ba6cb;
+	padding: 1em 2em;
+	border-radius: 10px;
+	margin-top: .5em;
+	
+	cursor: pointer;
+	display: none;
+
+	img {
+		width: 16px;
+	    margin: 0 5px 3px 0;
+	    height: auto;
+	}
+}
+
+.ncsa-title{
+    background-size: cover;
+    background-image: url(/images/NCSA-images/title_bg.png);
+    background-position: 0% 27%;
+    border-radius: 5px;
+    padding: 6%;
+    margin: 0 0 2%;
+
+    h1{
+    	color: white;
+    	text-align: center;
+    	font-size: 2.5em;
+	    font-weight: 600;
+	    letter-spacing: .05em;
+	    padding-bottom: 0;
+    }
+}
+
+.ncsa-content{
+	background-color: white;
+    border-radius: 5px;
+    padding: 1.25em;
+    margin-bottom: 10%;
+
+    h6{
+    	color: #0085B2;
+	    font-size: 1.5em;
+	    font-weight: normal;
+    }
+
+    p{
+    	color: black;
+		font-size: .9em;
+		text-align: left;
+		margin-bottom: 3em;
+	}
+
+    .endorsement{
+		text-align: center;
+		padding-top: 5em;
+	}
+
+	.here{
+		font-style: italic;
+	}
+	.testimonal{
+		font-size: 1.2em;
+		color: #000;
+	}
+
+	.testimonal-name{
+		font-size: 0.8em;
+		color: #000;
+	}
+}
+
+.ncsa-logo{
+	max-width: 20%;
+	height: auto;
+	// Center aligns image (block + auto for left/right margins)
+	display: block;
+	margin: 1.25em auto;
+}
+
+// Engage Template styling
+.engage-container{
+	background-color: #fff;
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.75);
+    padding: .6em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+
+    .engage-text{
+		color: #000;
+		font-size: 1.1em;
+		text-align: left;
+		margin: .75em 0;
+    }
+
+    .engage-btns{
+    	div{
+    		font-weight: 600;
+			padding: 11px 20px;
+			border-radius: 10px;
+			margin: .25em 0;
+			cursor: pointer;
+			color: #fff;
+			width: 150px;
+			float: right;
+    	}
+    }
+}
+
+// Engage customized buttons 
+.ncsa-apply{
+	background-color: #2ba6cb;
+	width: 150px;
+
+	img{
+		width: 16px;
+	    margin: 0 5px 3px 0;
+	    height: auto;
+	}
+}
+
+// Sign Up ad
+.plexuss-signup{
+	display: none;
+}
+
+// Modal Template styling
+.modal-overlay-div{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .65);
+}
+
+.modal-content-div{
+    z-index: 10000;
+    overflow: auto;
+    position: fixed;
+    padding: .25em;
+    min-width: 20em;
+    max-height: 85%;
+    text-align: center;
+    // Centers div in window. preserves size.
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content-div:after{
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    margin-left: -.05em;
+    content: '';
+}
+
+.modal-dialog-div{
+    position: relative;
+    outline: 0;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    cursor: default;
+    border-radius: 4px;
+    background-color: white;
+    padding: .5em 1em;
+}
+
+.modal-close-btn{
+	color: #AAAAAA;
+	text-align: right;
+	line-height: .8em;
+	font-size: 2.5em;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 90%;
+}
+
+// Modal customization
+.ncsa-modal{
+
+	.ncsa-modal-form{
+		//overflow-y: scroll;
+		max-height: 20em;
+		padding: 1em;
+	}
+	
+	.ncsa-label {
+		text-align: left;
+	}
+
+	.required{
+		color: red;
+	}
+
+	input{
+		margin-bottom: 0;
+	}
+
+	.ncsa-form-field{
+		margin-bottom: 1em;
+
+		.error{
+			color: red;
+			text-align: left;
+			font-size: .75em;
+		}
+	}
+
+	.modal-title{
+		font-size: 1.5em;
+		font-weight: bolder;
+		color: #4d4d4d;
+		margin: 0 1.5em .5em;
+	}
+
+	.gradYear-modal-dropdown, .sports-modal-dropdown, .applicant-modal-dropdown {
+		width: 100%;
+	}
+
+	.modal-next-btn{
+		background-color: #26b24b;
+		color: white;
+		width: 40%;
+		padding: .8em;
+	    border-radius: 3px;
+	    margin: 1em 2em 1em;
+	    cursor: pointer;
+	}
+
+	.modal-prev-btn{
+		background-color: #555555;
+		color: white;
+		width: 40%;
+		padding: .6em;
+	    border-radius: 3px;
+	    margin: 1em 0 1em 2em;
+	    cursor: pointer;
+	}
+
+	.modal-finish-btn{
+		background-color: #26b24b;
+		color: white;
+		width: 40%;
+		padding: .8em;
+	    border-radius: 3px;
+	    margin: 1em 2em 1em;
+	    cursor: pointer;
+
+	    &:disabled{
+	    	background-color: #7DB28B;
+	    }
+	}
+
+	.modal-ok-btn{
+		background-color: #26b24b;
+		color: white;
+		width: 50%;
+		padding: .6em;
+	    border-radius: 3px;
+	    margin: 1em 25%;
+	    cursor: pointer;
+	}
+
+	.hide{
+		display: none;
+	}
+
+	.hide-form{
+		display: none;
+	}
+
+}
+
+// Dropdown Template styling
+.dd-wrapper{
+	position: relative;
+	display: inline-block;
+	text-align: left;
+
+	.dd-header{
+		background-color: #CCCCCC;
+		padding: .3em .5em;
+		border-radius: 3px;
+
+		.dd-header-title{
+			span {
+				float: right;
+				color: #777;
+				transform: scaleX(1.5);
+				font-size: .75em;
+				line-height: 2em;
+				width: 1em;
+			}
+		}
+	}
+
+	.dd-list{
+		margin: 0;
+		border: 2px solid #CCCCCC;
+		border-radius: 3px;
+		max-height: 8em;
+		overflow-y: scroll;
+
+		background-color: white;
+		position: absolute;
+		z-index: 10;
+		width: 100%;
+
+		.dd-list-item{
+			padding: .3em .5em;
+			border-top: 1px solid #CCCCCC;
+		}
+	}
+}
+
+// Dropdown customization
+.ncsa-dd{
+	width: 70%;
+}
+
+// For Small(phones) devices
+@media all and (max-width: 575px){
+	.ncsa-modal{
+		.modal-dialog-div{
+			min-width: 0;
+			max-width: 18em;
+			overflow-y: scroll;
+		}
+		.modal-title{
+			margin: .5em 1em 1em;
+		}
+
+		.modal-next-btn,.modal-prev-btn,.modal-finish-btn,.modal-ok-btn{
+			margin: 0;
+		}
+	}
+
+	.ncsa-title{
+	    h1 {
+	    	font-size: 2.07em;
+	    }
+	}
+
+	.ncsa-logo{
+		max-width: 40%;
+	}
+}
+
+// For all Small(phones) and medium(Tablets) devices
+@media all and (max-width: 767px){
+	#ncsa {
+		width: 100%;
+		.ncsa-main {
+			margin: 50px 20px 0;
+		}
+	}
+	.ncsa-engage{
+	    display: none;
+	}
+
+	.plexuss-signup{
+		display: none;
+	}
+
+	.mobile-apply{
+		display: block;
+	}
+}

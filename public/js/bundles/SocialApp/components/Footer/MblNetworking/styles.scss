@@ -1,0 +1,20 @@
+.mbl_banner{
+    font-family: Open Sans;
+    right: 0;
+    position: fixed;
+    top: 94px;
+    height: 100%;
+    background: #efefef;
+    width: 100%;
+    overflow: auto;
+    .mbl_list{
+        list-style: none;
+        width: 100%;
+        float: right;
+        background: #fff;
+        margin-bottom: 180px;
+        li{
+            position: relative;
+        }
+    }
+}

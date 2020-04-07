@@ -1,0 +1,109 @@
+// /messages/threadDetails/styles.scss
+
+@import '../../../cms/_global.scss';
+
+#_threadDetailsContainer{
+	font-size: 16px;	
+
+	.student-youre-messaging{ 
+		padding: 20px;
+		position: relative; 
+		@include absolutely();
+	}
+
+	.pic{
+		background-color: #fff;
+		width: 100px;
+		height: 100px;
+		margin: 0 0 20px 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+	}
+
+	.name-country{
+		max-width: 100%;
+		margin: 0 0 7px;
+
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+
+			&:first-child{ max-width: 20%; }
+			&:last-child{ max-width: 80%; }
+		}
+	}
+
+	.name{
+		font-size: 20px;	
+		@include ellipses();
+	}
+
+	.bg{
+		background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/message_panel_sprite.png);
+		background-repeat: no-repeat;
+		padding: 0 0 0 20px;
+		margin: 0 0 7px;
+		@include ellipses();
+	}
+
+	.level{ margin: 0 0 7px; }
+	.school{ background-position: -1px 5px; }
+	.grad{ background-position: -1px -16px; }	
+	.degree{ background-position: -1px -38px; }
+	.financial{ background-position: -1px -65px; }
+	.start-date{ background-position: -1px -93px; }
+	.major{ background-position: -1px 6px; }
+	.status{ color: $orange; }
+
+	.country{
+		color: #fff;
+		font-weight: 600;
+		padding: 3px;
+		margin: 0 5px 0 0;
+		@include bRadius(3px);
+		display: inline-block;
+	}	
+
+	.actions{
+		position: absolute;
+		right: 0; bottom: 0; left: 0;
+		text-align: center;
+		padding: 0 0 40px;
+		background-color: #fff;
+	}
+
+	.invite, .remove{
+		color: #fff;
+		background-color: $gray;
+		@include bRadius(3px);
+		display: inline-block;
+		padding: 5px 0;
+		width: 200px;
+		text-align: center;
+		cursor: pointer;
+		font-size: 15px;
+		@include noUserSelect();
+	}
+
+	.invite .icon{
+		width: 30px;
+		height: 21px;
+		background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/message_panel_sprite.png);
+		background-repeat: no-repeat;
+		background-position: -1px -157px;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 5px 0 0;
+	}
+
+	.invite:active{ @include activeBtnClick(); }
+
+	.remove{
+		color: $gray;
+		text-decoration: underline;
+		background-color: transparent;
+		padding: 3px 15px;
+		font-size: 14px;
+	}
+}

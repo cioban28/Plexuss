@@ -1,0 +1,220 @@
+@media all and (max-width: 767px){
+    .con_container{
+        overflow-y: auto;
+            top: 0;
+            right: 0;
+            position: absolute;
+            left: 0;
+            background: #fff;
+            height: 100%;
+            width: 100%;
+        .con_header{
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            color: #989898;
+            .back_btn{
+                margin: 10px;
+                .left_arrow{
+                    font-size: 20px;
+                }
+            }
+            .name{
+                padding-left: 60px;
+                font-weight: 600;
+            }
+        }
+        .pre_msgs{
+            background: #989898;
+            color: #fff;
+            width: 41%;
+            font-size: 11px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        .convo{
+            margin-bottom: 200px;
+            .bubble-container{
+                animation: _fadeInDown 0.3s;
+                .incoming-bubble{
+                    position: relative;
+                    padding: 12px 41px 12px 70px;
+                    .msg{
+                        background-color: #eee;
+                        color: #797979;
+                        font-size: 14px;
+                        font-family: 'Open Sans', sans-serif;
+                        padding: 6px 10px;
+                        position: relative;
+                        border-radius: 5px;
+                        word-break: break-word;
+                        .arrow{
+                            transform: rotate(180deg);
+                            right: 100%;
+                            border-left: 5px solid #eee;
+
+                            width: 0;
+                            height: 0;
+                            border-top: 5px solid transparent;
+                            border-bottom: 5px solid transparent;
+                            // border-left: 5px solid #24b26b;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                    .pic-wrapper{
+                        background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/users/images/9160_1473437504_beagle_puppy_jpg.jpg);
+                        background-color: white;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto auto auto 15px;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid #eee;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 100%;
+                        .pic-name{
+                            position: absolute;
+                            bottom: 100%;
+                            background-color: #202020;
+                            color: #fff;
+                            padding: 2px 7px;
+                            font-size: 14px;
+                            display: none;
+                            white-space: nowrap;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+                .me-bubble{
+                    padding: 10px 70px 10px 33px;
+                    position: relative;
+                    .pic-wrapper{
+                        margin: auto 16px auto auto;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid #eee;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 100%;
+                    }
+                    .msg{
+                        background-color: #24b26b;
+                        color: #fff;
+                        font-size: 14px;
+                        font-family: 'Open Sans', sans-serif;
+                        padding: 6px 10px;
+                        position: relative;
+                        border-radius: 5px;
+                        word-break: break-word;
+                        .arrow{
+                            left: 100%;
+                            width: 0;
+                            height: 0;
+                            border-top: 5px solid transparent;
+                            border-bottom: 5px solid transparent;
+                            border-left: 5px solid #24b26b;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .actionsContainer{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 5px 10px 0;
+            background-color: #fff;
+            .send-container{
+                padding: 0 100px 0 0 !important;
+                position: relative;
+                #send_field{
+                    padding-left: 10px;
+                    font-size: 14px;
+                    height: 38px;
+                    overflow: auto;
+                    margin: 0;
+                    border-radius: 3px;
+                    border: 2px solid #cccccc;
+                    color: #797979;
+                    resize: none;
+                    transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
+                    width: 270px;
+                    border-radius: 6px;
+                    min-height: 38px;
+                }
+                .send_button{
+                    width: 75px;
+                    background-color: #ff5c27 !important;
+                    border-radius: 6px;
+                    display: block;
+                    outline-color: transparent;
+                    font-family: 'Open Sans', sans-serif;
+                    padding: 8px 0 8.4px;
+                    margin: 0;
+                    border-radius: 3px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        .template-container{
+            margin: 0 0 10px;
+            .attachmentsButton{
+                display: inline-block;
+                font-size: 14px;
+                line-height: 14px;
+                vertical-align: middle;
+                margin-bottom: 5px;
+                color: #797979;
+                .picTextButton{
+                    display: inline-block;
+                    padding: 0px 15px;
+                    cursor: pointer;
+                    .btn-image{
+                        position: relative;
+                        display: inline;
+                        top: 50%;
+                    }
+                }
+                .attch-icon{
+                    display: inline-block;
+                    width: 18px;
+                    height: 16px;
+                    background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/attach-dark.png );
+                    background-size: 100%;
+                }
+                .btn-text{
+                    position: relative;
+                    display: inline;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}

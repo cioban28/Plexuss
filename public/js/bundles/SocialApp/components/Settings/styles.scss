@@ -1,0 +1,787 @@
+.setting_banner_top{
+    width: 80%;
+    margin-top: 60px;
+}
+.delete-account-modal{
+    .del-acc-modal-close{
+        text-align: right;
+        font-size: 20px;
+        margin-right: -25px;
+        cursor: pointer;
+    }
+    .del-acc-title {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    .del-acc-subtitle {
+
+    }
+    .del-acc-warning {
+        font-size: .8em;
+        color: #707070;
+    }
+    .del-acc-btns{
+        // display: inline-flex;
+        margin-top: 25px;
+        .del-acc-delete {
+            color: #fff;
+            background-color: red;
+            border-radius: 6px;
+            padding: 10px 40px;
+            cursor: pointer;
+            text-align: center;
+            float: left;
+        }
+        .del-acc-cancel {
+            color: #707070;
+            background-color: #e1e4e6;
+            border-radius: 6px;
+            padding: 10px 40px;
+            margin-right: 25px;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+    textarea {
+        margin: 30px 0;
+        min-height: 100px;
+    }
+}
+.setting_banner{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    .setting_options_container{
+        width: 202px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        color: #4D4D4D;
+        font-size: 13px;
+        padding-bottom: 10px;
+        .header{
+            font-weight: 600;
+            font-size: 15px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .active_settings_options{
+            background: #F7F9FA;
+            border-left: 3px solid #2AC56C;
+            font-weight: 600;
+            color: #202020;
+        }
+        .settings_options{
+            margin-left: 0;
+            margin-right: 0;
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+            .option_icon{
+                text-align: center;
+                .lock{
+                    width: 10.3px;
+                    height: 16.3px;
+                }
+                .email_notification{
+                    width: 17.23px;
+                    height: 11.27px;
+                }
+                .text_msg{
+                    width: 20px;
+                    height: 24px;
+                }
+                .privacy{
+                    width: 16.83px;
+                    height: 20.07px;
+                }
+                .invite_friends{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+    .setting_privacy_container{
+        // height: 669px !important;
+    }
+    .invite_friends_container{
+        // height: 669px !important;
+        .manage_imported_contacts{
+            color: #2AC56C;
+            text-decoration: underline;
+            margin-left: 50%;
+            cursor: pointer;
+        }
+    }
+    .setting_content_container{
+        width: 631px;
+        // height: 570px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding: 37px 50px 37px 50px;
+        color: #4D4D4D;
+        .header_container{
+            display: inline-flex;
+            align-items: center;
+            .img_container{
+                width: 22px;
+                .lock{
+                    width: 10.3px;
+                    height: 16.3px;
+                }
+                .email_notification{
+                    width: 17.23px;
+                    height: 11.27px;
+                }
+                .text_msg{
+                    width: 20px;
+                    height: 24px;
+                }
+                .privacy{
+                    width: 16.83px;
+                    height: 20.07px;
+                }
+                .invite_friends{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            .heading{
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+        .content_container{
+            font-size: 16px;
+            margin-top: 15px;
+            .explanation{
+                padding-bottom: 15px;
+            }
+            .explanation4{
+                margin-bottom: 15px;
+                &.alert-box{
+                    &.success{
+                        background-color: #2AC56C;
+                        border-color: #2AC56C;
+                    }
+                }
+                .error_list_elem{
+                    color: red;
+                    font-size: 14px;
+                }
+            }
+            .save_settings_btn{
+                background: #2AC56C !important;
+                color: #FFFFFF;
+                font-size: 15px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                padding: 0 10px;
+                margin-top: 20px;
+                width: 200px;
+                cursor: pointer;
+                &.disabled{
+                    pointer-events: none;
+                }
+            }
+            .change_password{
+                .lable{
+                    font-size: 16px;
+                }
+                .input{
+                    box-shadow: none;
+                    border: 1px solid #E7E7E7;
+                    border-radius: 5px;
+                    width: 439px;
+                    background: #fff;
+                    margin-top: 12px;
+                    margin-bottom: 19px;
+                }
+                .change_password_btn{
+                    background: #2AC56C !important;
+                    color: #FFFFFF;
+                    font-size: 15px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 6px;
+                    width: 200px;
+                    cursor: pointer;
+                }
+            }
+            .notifications_container{
+                display: inline-flex;
+                justify-content: space-between;
+                height: 38px;
+                border: 1px solid rgba(51, 51, 51, .3);
+                width: 100%;
+                align-items: center;
+                padding: 0 17px;
+                border-radius: 5px;
+                margin-top: 22px;
+                .text_container {
+                    font-weight: 600;
+                }
+                &.sub-open{
+                    border-radius: 5px 5px 0 0;
+                }
+                .swicth_details_container{
+                    display: inline-flex;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    .switch .react-switch{
+                        margin-top: -3px;
+                    }
+                    .details{
+                        border-left: 1px solid rgba(51, 51, 51, .3);
+                        margin-left: 20px;
+                        padding-left: 15px;
+                        height: 100%;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 600;
+                        font-size: 12px;
+                        cursor: pointer;
+                        .carat_container{
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+            .subnotifications_container{
+                display: inline-flex;
+                justify-content: space-between;
+                height: 38px;
+                border: 1px solid rgba(51, 51, 51, .3);
+                border-top:none;
+                width: 100%;
+                align-items: center;
+                padding: 0 17px;
+                //border-radius: 5px;
+                .subtext_container {
+                    font-size: 13px;
+                }
+                .swicth_details_container{
+                    display: inline-flex;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    .switch .react-switch{
+                        margin-top: -3px;
+                    }
+                }
+            }
+            #settings-phone-input .react-tel-input .arrow{
+                position: relative !important;
+                top: 50% !important;
+                border-left: 3px solid transparent !important;
+                border-right: 3px solid transparent !important;
+            }
+            .text_container{
+                .react-tel-input{
+                    .country-list{
+                        margin-top: 1px;
+                    }
+                    input[type=tel]{
+                        width: 100%;
+                    }
+                }
+                .terms_of_service{
+                    display: inline-flex;
+                    margin-top: 33px;
+                    input{
+                        width: 21px;
+                        height: 21px;
+                        margin-top: 3px;
+                    }
+                    ._text{
+                        margin-left: 10px;
+                        .highlight{
+                            color: #2AC56C;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .next_button{
+                    margin-top: 33px;
+                    background: #2AC56C;
+                    color: #FFFFFF;
+                    font-size: 15px;
+                    width: 162px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    &.disabled{
+                        pointer-events: none;
+                    }
+                }
+                .terms_msg{
+                    color: #FF5C26;
+                    font-size: 12px;
+                }
+            }
+            .phone_varification{
+                .title{
+                    font-weight: 600;
+                    padding-bottom: 15px;
+                }
+                .phone_number{
+                    font-weight: 600;
+                    padding-bottom: 15px;
+                }
+                .react-code-input{
+                    display: inline-flex !important;
+                    input{
+                        width: 62px !important;
+                    }
+                }
+                .varification_desc{
+                    padding-bottom: 15px;
+                }
+                .resend{
+                    margin-top: 15px;
+                    color: #2AC56C;
+                    text-decoration: underline;
+                    padding-bottom: 15px;
+                    cursor: pointer;
+                }
+                .footer{
+                    display: inline-flex;
+                    .go_back{
+                        color: #2AC56C;
+                        text-decoration: underline;
+                        width: 100px;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                    .confirm{
+                        background: #2AC56C;
+                        color: #FFFFFF;
+                        font-size: 15px;
+                        width: 130px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .privacy_container{
+                .privacy-incognito{
+                    width: 100%;
+                    margin: 30px 0;
+                    .privacy-save-btn{
+                        padding: 10px 40px;
+                        background-color: #2AC56C;
+                        color: #fff;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        text-align: center;
+                        width: 35%;
+                        &.disabled{
+                            pointer-events: none;
+                        }
+                    }
+                }
+                .sub_hading_container{
+                    display: inline-flex;
+                    .img_container{
+                        margin-right: 8.34px;
+                        img{
+                            width: 18.66px;
+                            height: 20.59px;;
+                        }
+                    }
+                    .info_icon{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 1px solid #4D4D4D;
+                        text-align: center;
+                        font-size: 10pt;
+                        cursor: pointer;
+                        color: #4D4D4D;
+                        margin-left: 5px;
+                    }
+                    .react_tooltip{
+                        background: #FFFFFF !important;
+                        color: #4D4D4D !important;
+                        border-radius: 5px;
+                        opacity: 1;
+                        box-shadow: 0px 0px 5px 1px rgba(0,0,0,.5);
+                        .info_tooltip_container{
+                            width: 380px;
+                            padding: 18px 0;
+                            .info_tooltip_header{
+                                display: inline-flex;
+                                justify-content: center;
+                                .img_conttainer{
+                                    margin-right: 14px;
+                                    img{
+                                        width: 15.99px;
+                                        height: 17.65px;;
+                                    }
+                                }
+                                .info_tooltip_heading{
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .info_tooltip_description{
+                                padding-top: 17px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .__react_component_tooltip.type-dark.place-right:after{
+                        border-right-color: #FFFFFF !important;   
+                    }
+                }
+                .privacy_switch{
+                    margin: 20px 0;
+                }
+                .privacy_table{
+                    margin-top: 25px;
+                    font-size: 15px;
+                    .privacy_table-header{
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px 0 15px;
+                    }
+                    .privacy_btns{
+                        display: inline-flex;
+                        margin-left: 50%;
+                        width: 50%;
+                        .regular_btn{
+                            text-align: center;
+                            padding: 5px 0;
+                            width: 50%;
+                            color: #4D4D4D;
+                            border: 1px solid #4D4D4D;
+                        }
+                        .incognito_btn{
+                            text-align: center;
+                            padding: 5px 0;
+                            width: 50%;
+                            background: #4D4D4D;
+                            border: 1px solid #4D4D4D;
+                            color: #FFFFFF;
+                        }
+                    }
+                    .privacy_table_row{
+                        border-bottom: 1px solid rgba(51, 51, 51, .3);
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        padding: 7px 0;
+                        .privacy-row-text{
+                            padding-left: 0;
+                        }
+                        .tick_icon{
+                            text-align: center;
+                            img{
+                                width: 17px;
+                                height: 17px;
+                            }
+                        }
+                        .cross_icon{
+                            text-align: center;
+                            img{
+                                width: 17px;
+                                height: 17px;
+                            }
+                        }
+                    }
+                }
+                .privacy_footer{
+                    text-decoration: underline;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-top: 50px;
+                    &:hover{
+                        color: #C73921;
+                    }
+                }
+            }
+            
+            .invite_friends_content{
+                margin-top: 25px;
+                .heading{
+                    font-weight: 600;
+                }
+                .mail_container{
+                    display: inline-flex;
+                    margin-top: 25px;
+                    .img_container{
+                        width: 100px;
+                        height: 100px;
+                        margin-right: 30px;
+                        .caption{
+                            text-align: center;
+                        }
+                    }
+                }
+                .explanation1{
+                    margin-top: 50px;
+                    padding-bottom: 15px;
+                }
+                .explanation4{
+                    margin-bottom: 15px;
+                }
+                .invite_friends_form{
+                    display: inline-flex;
+                    margin: 15px 0;
+                    .input_invite_frnds{
+                        box-shadow: none;
+                        border: 1px solid #E7E7E7;
+                        border-radius: 5px 0 0 5px;
+                        width: 439px;
+                        background: #fff;
+                        margin-top: 12px;
+                        margin-bottom: 19px;
+                    }
+                    .submit_invite_frnds{
+                        background: #2AC56C;
+                        margin-top: 12px;
+                        margin-bottom: 19px;
+                        box-shadow: none;
+                        border: unset;
+                        width: 100px;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 600;
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+                .preview_invite{
+                    color: #2AC56C;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+label.switch{
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 20px;
+    border: none;
+    .checkIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 15;
+        color: #fff;
+    }
+    .unChecKIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 15;
+        color: #707070;
+        padding-right: 6px;
+    }
+}
+
+@media all and (max-width: 1300px){
+    .setting_banner{
+        padding: 0 10px;
+        .setting_content_container{
+            width: 570px;
+            margin-left: 15px;
+            padding: 37px 36px 37px 36px;
+            .content_container{
+                .invite_friends_content{
+                    .invite_friends_form{
+                        .input_invite_frnds{
+                            width: 399px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 1023px) and (min-width: 768px) {
+    .setting_banner_top{
+        width: 75%;
+    }
+    .upper_container{
+        width: 100%;
+        margin-top: 20px;
+        .setting_content_container{
+            margin-left: 0;
+            width: 510px;
+            .content_container{
+                .invite_friends_content{
+                    .invite_friends_form{
+                        .input_invite_frnds{
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .setting_banner .invite_friends_container .manage_imported_contacts{
+        margin-left: 0;
+    }
+}
+@media all and (min-width: 768px){
+    .settings-web-view{
+        display: block;
+    }
+    .settings-mbl-view{
+        display: none;
+    }
+}
+@media all and (max-width: 767px){
+    .title-image-adjustment{
+        float: right;
+    }
+    .settings-web-view{
+        display: none;
+    }
+    .settings-mbl-view{
+        display: block;
+    }
+    .setting_banner_top{
+        width: 100%;
+        margin-top: 48px;
+    }
+    .upper_container{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .setting_banner{
+        padding: 0;
+        .setting_options_container{
+            width: 100%;
+            background: transparent;
+            .header{
+                font-size: 22px;
+                font-weight: 400;
+                margin-bottom: 12px;
+            }
+            .mbl-color{
+                background: #FFFFFF;
+            }
+            .settings_options{
+                height: 55px;
+                border-bottom-style: inset;
+                font-size: 16px !important;
+                font-weight: 100 !important;
+                .option_icon{
+                    text-align: center;
+                }
+                .right-arrow{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+        }
+        .setting_content_container{
+            margin-left: 0;
+            padding: 20px 20px 200px;
+            height: 100% !important;
+            position: fixed;
+            width: 100%;
+            overflow: auto;
+            .content_container{
+                .privacy_container{
+                    .sub_hading_container{
+                        .react_tooltip{
+                            display: none;
+                        }
+                    }
+                    .privacy-incognito{
+                        .privacy-save-btn{
+                            width: 65%;
+                        }
+                    }
+                }
+                .explanation{
+                    height: 100%;
+                    margin-bottom: 25px;
+                }
+                .change_password{
+                    .input{
+                        width: 100%;
+                    }
+                }
+                .notifications_container{
+                    font-size: 14px;
+                    padding: 0 10px;
+                }
+                .invite_friends_content{
+                    .invite_friends_form{
+                        .input_invite_frnds{
+                            width: 100%;
+                        }
+                    }
+                    .mail_container{
+                        .img_container{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .invite_friends_container{
+            .manage_imported_contacts{
+                margin-left: 0;
+            }
+        }
+    }
+    .delete-account-modal{
+        .del-acc-btns{
+            .del-acc-cancel{
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.invites_btn{
+    background: #2AC56C !important;
+    color: #FFFFFF;
+    font-size: 15px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.back_contacts{
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+.single_invite_msg{
+    color: #2AC56C;
+    font-size: 10px;
+}

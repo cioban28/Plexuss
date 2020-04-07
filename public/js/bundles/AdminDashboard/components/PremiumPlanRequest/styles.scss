@@ -1,0 +1,114 @@
+#admin {
+    background-color: #eeeeee;
+}
+
+.admin-premium-plan-request-container {
+    margin-top: 4em;
+
+    .upgrade-to-premium-header {
+        text-align: center;
+        font-size: 28pt;
+        color: #797979;
+    }
+
+    .premium-plans-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3em;
+
+        .premium-plan-container {
+            max-width: 20%;
+            margin: 1em;
+
+            .plan-label {
+                text-align: center;
+                background-color: #fff;
+                color: #545454;
+                font-weight: bold;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding: 0.5em;
+            }
+
+            .details-container{
+                position: relative;
+                height: 20em;
+                padding: 0.5em;
+                background-color: #393939;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                .premium-plan-description{
+                    color: #fff;
+                    padding-top: 1em;
+                    text-align: center;
+                }
+
+                .request-premium-plan-button{
+                    position: absolute;
+                    background-color: #ff7f00;
+                    color: #fff;
+                    width: 70%;
+                    padding: 0.5em;
+                    border-radius: 5px;
+                    text-align: center;
+                    cursor: pointer;
+                    bottom: 2em;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+
+                    -webkit-transition: opacity 0.3s ease-in;
+                    -moz-transition: opacity 0.3s ease-in;
+                    -o-transition: opacity 0.3s ease-in;
+                    -ms-transition: opacity 0.3s ease-in;
+                    transition: opacity 0.3s ease-in;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+
+                }
+            }
+          
+        }
+    }
+
+    .premium-request-success-modal {
+        padding: 0.5em 2em;
+
+        .header-container {
+            margin-top: 3em;
+            
+            .header-text {
+                font-size: 15pt;
+                text-align: center;
+            }
+        }
+
+        .ok-button {
+            cursor: pointer;
+            border-radius: 3px;
+            background-color: #2BC56D;
+            text-align: center;
+            width: 40%;
+            color: #fff;
+            margin: 2em auto;
+            font-size: 14pt;
+            padding: 0.5em;
+            font-weight: bold;
+
+            -webkit-transition: opacity 0.3s ease-in;
+            -moz-transition: opacity 0.3s ease-in;
+            -o-transition: opacity 0.3s ease-in;
+            -ms-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+
+}

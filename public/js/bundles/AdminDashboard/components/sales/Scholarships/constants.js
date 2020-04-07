@@ -1,0 +1,1 @@
+export const BASIC_SELECT_FIELDS_1 = {name: 'country', label: 'Country', options: [], placeholder: 'Select Country...', select_multiple: true, err: 'Must choose at least one country.'};

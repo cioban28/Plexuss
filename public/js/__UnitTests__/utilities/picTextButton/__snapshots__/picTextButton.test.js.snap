@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PicTextButton pic button render test 1`] = `
+<div
+  className="_picTextButton"
+  onClick={undefined}
+>
+  <div
+    className="btn-image"
+  >
+    <div
+      className="imgClass"
+    />
+  </div>
+  <div
+    className="btn-text"
+  >
+    Facebook
+  </div>
+</div>
+`;

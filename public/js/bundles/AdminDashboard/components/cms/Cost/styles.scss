@@ -1,0 +1,156 @@
+// /Cost/style.scss
+
+@import './../_global';
+
+.tuition_cost_container{
+	max-width: 100%;
+	padding: 15px 15px 15px $toolsNavWidth;
+	color: $gray;
+	position: relative;
+
+	.content-start{ max-width: 100%; }
+
+	.options > div{
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 600;
+		font-size: 14px;
+		cursor: pointer;
+
+		& > div{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.divider{ margin: 0 0 0 10px; }
+		&:not(:last-child){ margin: 0 10px 0 0; }
+		.active{ color: $green; }
+	}
+
+	.cost-field-label{
+		color: $gray;
+	}
+
+	.cost-input{
+		color: $gray;
+
+		&.error{
+			border: 1px solid $error;
+			margin: 0;
+		}
+
+		@include placeholderColor(#ddd);
+	}
+
+	.has-error{
+		border: 1px solid $error;
+		color: $error;
+		background: #fff;
+		margin: 0 0 15px;
+		font-size: 11px;
+		padding: 3px;
+		text-transform: initial;
+	}
+
+	.actions{
+		text-align: right;
+
+		.save{	
+			@include noUserSelect();
+			padding: 0;
+			cursor: pointer;
+			width: 135px;
+			background: $green;
+			color: #fff;
+			@include bRadius(3px);
+			height: 40px;
+
+			&[disabled]{ background: $green; }
+			&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4); }
+		}
+	}
+
+	.disclaimer{
+		color: $gray;
+		font-size: 14px;
+		margin: 0 0 20px;
+	}
+
+	.est-preview{
+		color: $gray;
+		font-weight: 600;
+		max-width: 250px;
+		margin: 50px 0 0;
+		padding: 0 0 0 20px;
+
+		> div{
+			position: relative;
+			margin: 50px 0;
+			font-size: 16px;
+		}
+
+		> div > div{
+			position: absolute;
+			top: 0; left: 100%;
+		}
+	}
+
+	.exp-breakdown-link{
+		text-decoration: underline;
+		padding: 0 0 0 20px;
+
+		a{ color: $green; }
+	}
+
+	.quicktip-container{
+		font-size: 14px;
+
+		.company{
+			margin: 0 0 15px;
+
+			> div:first-child{ float: left; }
+			> div:last-child{ text-align: right; }
+
+			&:after{ @include clearfix(); }
+		}
+
+		u{ cursor: pointer; }
+		img{ max-width: 500px; }
+		input[type="file"]{ margin: 0 0 5px; }
+
+		.preview-tip{
+			max-width: 300px;
+			background: $flatblack;
+			padding: 12px;
+			color: #ddd;
+			position: relative;
+
+			> div:not(.qtip){
+				margin: 0 0 10px;
+			}
+
+			img, .qtip{
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			img{ 
+				width: 30%; 
+				padding: 0 10px 0 0;
+			}
+
+			.qtip{ width: 70%; }
+			u{ cursor: initial; }
+
+			.arrow{ 
+				display: block;
+				position: absolute;
+				top: 0; right: 100%; bottom: 0;
+				margin: auto;
+				@include leftArrow(10px, $flatblack);
+			}
+
+			@include bRadius(5px);
+		}
+	}
+}

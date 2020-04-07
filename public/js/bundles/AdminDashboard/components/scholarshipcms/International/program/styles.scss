@@ -1,0 +1,29 @@
+// styles.scss
+$gray: #797979;
+$green: #24b26b;
+
+.i-container{
+	color: $gray;
+
+	> .column:first-child{
+		padding: 0 0 0 20px;
+	}
+
+	h5, label{
+		color: $gray;
+	}
+
+	label{
+		text-transform: capitalize;
+		input{
+			margin-right: 5px;
+		}
+	}
+
+	.save{
+		background: $green;
+		color: #fff;
+		border-radius: 3px;
+		padding: 12px 40px;
+	}
+}

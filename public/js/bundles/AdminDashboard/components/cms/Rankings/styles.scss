@@ -1,0 +1,751 @@
+// styles.scss
+#admin-content-management #main-content-management-container{
+	position: absolute;
+	top: 82px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+#admin-content-management > #topAlertContainer{
+	margin: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+body#admin-content-management #main-content-management-container.with-daily-chat-bar{
+	top: 126px;
+}
+
+/*scrollbar width*/
+body::-webkit-scrollbar,
+#main-content-management-container .build-fields-container::-webkit-scrollbar,
+#main-content-management-container .build-preview-container::-webkit-scrollbar,
+.ranking-build-container.ranking-component-inner.row::-webkit-scrollbar,
+#main-content-management-container .ranking-lists-container .scrolling-list-container::-webkit-scrollbar{
+	width: 10px;
+}
+
+/*the up/down arrows of the scrollbar*/
+body::-webkit-scrollbar::-webkit-scrollbar-button,
+#main-content-management-container .build-fields-container::-webkit-scrollbar::-webkit-scrollbar-button,
+#main-content-management-container .build-preview-container::-webkit-scrollbar::-webkit-scrollbar-button,
+.ranking-build-container.ranking-component-inner.row::-webkit-scrollbar::-webkit-scrollbar-button,
+#main-content-management-container .ranking-lists-container .scrolling-list-container::-webkit-scrollbar::-webkit-scrollbar-button{
+	background-color: #eee;
+	height: 0;
+}
+
+/*the scrollbar background*/
+body::-webkit-scrollbar-track,
+#main-content-management-container .build-fields-container::-webkit-scrollbar-track,
+#main-content-management-container .build-preview-container::-webkit-scrollbar-track,
+.ranking-build-container.ranking-component-inner.row::-webkit-scrollbar-track,
+#main-content-management-container .ranking-lists-container .scrolling-list-container::-webkit-scrollbar-track{
+	background-color: #eee;
+}
+
+/* the bar that actually does the scrolling */
+body::-webkit-scrollbar-thumb,
+.build-fields-container::-webkit-scrollbar-thumb,
+.build-preview-container::-webkit-scrollbar-thumb,
+.ranking-build-container.ranking-component-inner.row::-webkit-scrollbar-thumb,
+.ranking-lists-container .scrolling-list-container::-webkit-scrollbar-thumb{
+	background-color: #bebebe;
+}
+
+/**************** cms nav - start **************/
+.cms-sub-nav.row{
+	max-width: 100%;
+	border-bottom: 1px solid #797979;
+}
+
+.cms-sub-nav.row .sub-nav{
+	margin: 2px 1px 7px;
+}
+
+.cms-sub-nav.row .sub-nav dd > a{
+	font-weight: 600;
+}
+
+.cms-sub-nav.row .sub-nav dd.active > a{
+	color: #FF5C26;
+	background: #fff;
+}
+/**************** cms nav - end **************/
+
+/**************** ranking component container styles - start ******************/
+.ranking-component-container, .logo-component-container,
+.rep-top-container{
+	position: absolute;
+	top: 36px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.ranking-lists-container, .logo-options-container{
+	width: 20%;
+}
+
+.ranking-build-container, .logo-preview-container{
+	width: 80%;
+}
+
+.ranking-component-inner{
+	float: left;
+}
+
+
+
+/*ranking lists styles*/
+.ranking-item-options-container .list-operation{
+	float: left;
+}
+
+.ranking-item-options-container .list-operation:nth-child(2){
+	padding: 0 10px;
+	color: #2ba6cb;
+	font-weight: 600;
+}
+
+.ranking-lists-container{
+	background-color: #eee;
+	border-right: 1px solid #797979;
+	position: relative;
+}
+
+.ranking-lists-container .ranking-list-header{
+	border-bottom: 1px solid #797979;
+	padding: 20px 0;
+	background-color: #fff;
+	color: #797979;
+	font-size: 18px;
+}
+
+.ranking-lists-container .ranking-list-header a{
+	font-size: 14px;
+}
+.ranking-lists-container .ranking-list-header a:hover{
+	text-decoration: underline;
+}
+
+.ranking-lists-container .scrolling-list-container{
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	top: 101px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.ranking-lists-container .rank-item-container.row > .column{
+	padding: 20px 0 45px;
+	border-bottom: 1px solid #797979;
+}
+
+.ranking-lists-container .rank-title{
+	color: #797979;
+	font-size: 18px;
+}
+
+.ranking-item-options-container .list-operation:first-child > a, 
+.ranking-item-options-container .list-operation:last-child > a{
+	text-decoration: underline;
+	font-size: 14px;
+}
+.ranking-item-options-container .list-operation:first-child > a:hover, 
+.ranking-item-options-container .list-operation:last-child > a:hover{
+	text-decoration: none;
+}
+
+
+
+/*build ranking styles*/
+.ranking-build-container.ranking-component-inner.row{
+	max-width: 100%;
+}
+
+.build-fields-container, .build-preview-container{
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y:auto;
+	padding: 30px;
+}
+
+.build-fields-container .save-ranking-btn{
+	color: #fff;
+	width: 150px;
+	background-color: #FF5C26;
+	padding: 8px 0;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.build-fields-container .save-ranking-btn:hover{
+	background-color: #eee;
+	color: #FF5C26;
+}
+
+.build-fields-container label, .rep-edit label{
+	color: #797979;
+}
+
+.build-fields-container > form > div:first-child{
+	font-size: 23px;
+	color: #797979;
+	padding-bottom: 15px;
+}
+
+.build-fields-container > form .invalid-form-err-msg{
+	color: #FF5C26;
+	display: none;
+}
+
+/*preview of ranking pin styles*/
+.build-preview-container > .preview-window{
+	background-color: #eee;
+	padding: 30px 0;
+}
+
+.build-preview-container .pin-preview{
+	margin: 80px auto;
+	width: 300px;
+	box-shadow: 9px 3px 11px 1px #797979;
+}
+
+.build-preview-container .pin-preview > .row:first-child > .column{
+	color: #fff;
+	background-color: #04a6ae;
+	font-weight: 600;
+	padding: 10px;
+	word-break: break-word;
+}
+
+.build-preview-container .pin-preview > .row:last-child{
+	background-color: #202020;
+	padding: 15px;
+}
+
+.build-preview-container .pin-preview > .row:last-child > .column{
+	color: #fff;
+}
+
+.build-preview-container .pin-preview a{
+	color: #FF5C26;
+}
+
+.build-preview-container .pin-preview .rank-num{
+	font-size: 35px;
+	padding-left: 5px;
+	font-weight: 600;
+}
+
+.build-preview-container .pin-preview .descript{
+	padding: 10px 7px;
+	word-break: break-word;
+}
+
+.build-preview-container .r_img > img{
+	height: 100px;
+}
+
+.build-preview-container .view-rankings-btn{
+	width: 200px;
+	background-color: #797979;
+	padding: 8px 0;
+	border-radius: 2px;
+	margin-top: 10px;
+}
+
+.build-preview-container .view-rankings-btn > a{
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.build-preview-container .view-rankings-btn:hover{
+	background-color: #eee;
+}
+.build-preview-container .view-rankings-btn:hover > a{
+	color: #797979;
+}
+/**************** ranking component container styles - end ******************/
+
+
+
+/**************** logo component container styles - start ******************/
+.logo-options-container, .logo-preview-container{
+	/*border: thin solid red;*/
+}
+
+.logo-options-container, .logo-options-container h4,
+.rep-pic, .rep-pic h4{
+	color: #797979;
+}
+
+/* logo options styling */
+.logo-btn, .rep-edit .save{
+	background-color: #797979;
+	color: #fff;
+	border-radius: 2px;
+	font-size: 14px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.logo-btn.save, .rep-edit .save{
+	background-color: #FF5C26;
+	font-weight: 600;
+}
+
+.logo-btn.update{
+	margin: 15px 0 0;
+}
+
+.logo-btn.save:hover, .logo-btn.save:active, .rep-edit .save:hover{
+	color: #FF5C26;
+	background-color: #eee;
+}
+
+.logo-btn.update:hover, .logo-btn.update:active{
+	color: #797979;
+	background-color: #eee;
+}
+
+.upload-container, .save-container{
+	max-width: 365px;
+	margin: 0 auto;
+	padding: 10px 20px;
+}
+
+.save-container img{
+	width: 60%;
+	margin: 5px 0 20px;
+}
+
+#uploadLogoInput, #upload-profilePic-input{
+	display: none;
+}
+
+.logo-preview-container{
+	padding: 20px;
+}
+
+.outer{
+	margin: 0 auto;	
+	padding: 20px;
+	background-color: #797979;
+	border-radius: 4px;
+	max-width: 800px;
+}
+
+.head, .media{
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.head{
+	margin-bottom: 12px;
+}
+
+.head .img{
+	width: 20%;
+	padding: 0 0 10px 10px;
+}
+
+.head .info{
+	width: 80%;
+	padding: 0 10px 8px 0;
+}
+
+.head .rank{
+	color: #fff;
+	background-color: green;
+	border-radius: 0 3px 0 3px;
+	font-size: 10px;
+	font-weight: 600;
+	padding: 5px;
+}
+
+.head .addr, .head .share{
+	font-size: 12px;
+}
+
+.social img{
+	width: 13px;
+}
+
+.social .right{
+	margin: 0 0 0 10px;
+}
+
+.social .share{
+	line-height: 26px;
+	font-weight: 600;
+}
+
+.media{
+	position: relative;
+}
+
+.media .toggle-btns{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: auto;
+	border-radius: 3px;
+	font-size: 16px;
+	padding: 1px 5px;
+}
+
+.toggle-btns span:first-child{
+	color: #FF5C26;
+}
+
+.media .arrow{
+	position: absolute;
+	top: 42%;
+	width: 45px;
+	height: 33px;
+	z-index: 1;
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/icons/overview-image-arrows.png');
+}
+
+.media img{
+	border-radius: 4px;
+}
+
+.arrow.left{
+	left: 10px;
+}
+
+.arrow.right{
+	right: 10px;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+  	-o-transform: rotate(180deg);
+  	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.preview-text{
+	color: #797979;
+	margin-top: 10px;
+}
+
+.nav-items ul{
+	background-color: #000;
+	border-radius: 0 0 4px 4px;
+	margin: 0;
+}
+
+.nav-items ul li{
+	padding: 0;
+	color: #fff;
+}
+
+.nav-items ul li:not(:first-child){
+	border-left: 1px dotted #eee;
+}
+
+.nav-items li span{
+	font-size: 12px;
+}
+
+.nav-items li img{
+	width: 15px;
+	margin-right: 4px;
+}
+.nav-items li img.admissions{
+	width: 11px;
+}
+
+.nav-items .dropdown{
+	width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    margin-left: 7px;
+    position: relative;
+    top: 14px;
+}
+
+/* logo preview styling */
+
+/**************** logo component container styles - end ******************/
+
+
+
+/**************** rep component container styles - end ******************/
+.rep-pic, .rep-edit{
+	width: 25%;
+}
+
+.rep-preview, .rep-edit .save{
+	width: 50%;
+}
+
+.rep-edit .save{
+	margin: 20px 0 0 auto;
+}
+
+.rep-pic .save-container .img{
+	width: 100px;
+    margin: 5px 0 20px;
+    border-radius: 100%;
+    height: 100px;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
+}
+
+.rep-pic .img.has-default{
+	background-color: #ddd;
+}
+
+.rep-preview .left{
+	width: 50%;
+	padding: 0 5px;
+}
+
+.card-outer{
+	max-width: 250px;
+	margin: auto;
+	padding: 15px;
+	background-color: #797979;
+	border-radius: 3px;
+}
+
+.card{
+	font-size: 14px;
+	background-color: #fff;
+	box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.5);
+	color: #fff;
+}
+
+.card div.name, .card div.school{
+	font-weight: 600;
+}
+
+.card div.school{
+	padding: 0 30px;
+}
+
+.card .pic, .card .school-logo{
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	border-radius: 100%;
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.card .pic{
+	margin: 10px auto;
+	background-color: #ddd;
+}
+
+.card .title{
+	padding: 0 5px;
+}
+
+.card .member-since{
+	font-size: 13px;
+}
+
+.back .card div:not(.send-msg){
+	color: #26b24b;
+}
+
+.back .card div.desc{
+	color: #797979;
+	font-size: 12px;
+	padding: 7px 5px 0;
+	overflow: hidden;
+}
+
+.card .send-msg{
+	background-color: #26b24b;
+	color: #fff;
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+.rep-preview .details{
+	position: relative;
+	height: 270px;
+}
+
+.front .details > div{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.front .details .details-inner{
+	z-index: 1;
+}
+
+.front .details .details-inner{
+	padding: 20px 0 0;
+}
+
+.back .details{
+	padding: 10px 0 0;
+}
+
+.front .details .layer{
+	z-index: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.char_counter{
+	color: #797979;
+	line-height: 8px;
+}
+
+.char-count.min{
+	color: #26b24b;
+}
+
+.char-count.max{
+	color: red;
+}
+
+.char_counter:first-of-type{
+	margin: 0 0 1rem 0;
+}
+
+textarea[name="description"], input#rep_title[name="title"]{
+	margin: 0;
+}
+
+#RepPicEditModal{
+	width: 40%;
+}
+
+#RepPicEditModal .save-btn {
+	background-color: #FF5C26;
+}
+
+#RepPicEditModal .save-btn:hover{
+	background-color: #A9A4A4;
+}
+
+
+/**************** rep component container styles - end ******************/
+
+
+
+/*medium up*/
+@media only screen and (min-width: 40.063em){
+	#main-content-management-container .ranking-component-inner{
+		height: 100%;
+	}
+}
+
+/*medium only*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em){
+	#main-content-management-container .ranking-lists-container, .logo-options-container{
+		width: 30%;
+	}
+
+	#main-content-management-container .ranking-build-container, .logo-preview-container{
+		width: 70%;
+	}
+
+	.ranking-build-container.ranking-component-inner.row{
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.media .toggle-btns{
+		font-size: 14px;
+	}
+
+	.rep-preview{
+		margin: 50px 0;
+	}
+}
+
+/*small and medium*/
+@media only screen and (max-width: 64em){
+	#main-content-management-container .build-preview-container > .preview-window{
+		padding: 30px 10px;
+	}
+
+	#main-content-management-container .build-fields-container, #main-content-management-container .build-preview-container{
+		padding: 10px;
+		height: auto;
+	}
+
+	.rep-pic, .rep-edit, .rep-preview{
+		width: 100%;
+	}
+}
+
+/*small only*/
+@media only screen and (max-width: 40em){
+	#main-content-management-container .ranking-lists-container{
+		width: 100%;
+		height: 100%;
+	}
+
+	.logo-options-container{
+		width: 100%;
+		height: auto;
+	}
+
+	#main-content-management-container .ranking-build-container, .logo-preview-container{
+		width: 100%;
+	}
+
+	#main-content-management-container .ranking-component-inner{
+		float: none;
+	}
+
+	#main-content-management-container .build-preview-container .pin-preview{
+		width: 250px;
+	}
+
+	.ranking-build-container.ranking-component-inner.row{
+		margin-bottom: 50px;
+	}
+
+	#main-content-management-container .cms-sub-nav.row .sub-nav dt,
+	#main-content-management-container .cms-sub-nav.row .sub-nav dd{
+		margin-left: 0;
+	}
+
+	.upload-container, .save-container{
+		max-width: 365px;
+		margin: 0 auto;
+		padding: 10px 40px;
+	}
+
+	.media .toggle-btns{
+		font-size: 12px;
+	}
+
+	.rep-preview{
+		margin: 50px 0 100px 0;
+	}
+
+	.rep-preview .left{
+		width: 100%;
+	}
+
+	.left.back{
+		margin: 20px 0 0;
+	}
+}

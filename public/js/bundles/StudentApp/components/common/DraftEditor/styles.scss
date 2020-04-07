@@ -1,0 +1,54 @@
+/* /DraftEditor/styles.scss*/
+
+@import './../../../utils/_global';
+
+#_draft{
+	background-color: #fff;
+	padding: 10px 10px 30px;
+	@include bRadius(3px);
+	color: $matteblack;
+	-webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+	        box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+	@include fadeInLeft(0.4s);
+	position: relative;
+
+	nav{
+		padding: 0 0 10px;
+		margin: 0 0 10px;
+		border-bottom: 1px solid #eee;
+
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			@include bRadius(3px);
+			border: 1px solid #fff;
+			width: 25px;
+			text-align: center;
+
+			&:not(:last-child){ margin: 0 5px 0 0; }
+			&:nth-child(1){ font-weight: bold; }
+			&:nth-child(2){
+				font-family: initial;
+				font-style: italic; }
+			&:nth-child(3){ text-decoration: underline; }
+
+			&:hover{ border: 1px solid #eee; }
+			&:active{ -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3); box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3); }
+		}
+	}
+
+	section{
+		padding: 5px 0;
+		.DraftEditor-editorContainer > .public-DraftEditor-content{ height: 200px; overflow: auto; }
+	}
+
+	.word-count{
+		position: absolute;
+		bottom: 10px; left: 10px;
+		color: $gray;
+		text-shadow: 1px 1px #ddd;
+
+		&.at_max{ color: $error; }
+	}
+}

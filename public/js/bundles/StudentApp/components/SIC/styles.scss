@@ -1,0 +1,374 @@
+// SIC/styles.scss
+
+@import './../../utils/_global';
+@import './../../utils/_progressMeter';
+
+$sectionWidth: 180px;
+
+#_SIC{
+	position: absolute;
+	top: 0; right: 0; bottom:0;
+	width: $sic_width;
+	background-color: $sic_color;
+	color: #fff;
+	z-index: 100;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	overflow-y: auto;
+	padding: 0 0 50px;
+
+
+	&:before {
+	    content: '';
+	    background-color: #2e2e2e;
+	    width: 240px;
+	    top: 0px;
+	    right: 0px;
+	    height: 100%;
+	    z-index: -1;
+	    position: fixed;
+	}
+
+	&.scrolledToTop{
+		position: fixed;
+		top: 0; right: 0;
+		z-index: 100;
+	}
+
+	.close-sic-btn{
+		display: none;
+		cursor: pointer;
+	    text-align: center;
+	    font-weight: 600;
+	    @include bRadius(100%);
+	    width: 30px;
+	    height: 30px;
+	    border: 2px solid #ffffff;
+	    font-size: 30px;
+	    line-height: 25px;
+	    position: absolute;
+	    top: 15px; right: 15px;
+	}
+
+	.title{ 
+		padding: 15px 10px 0 10px;
+		font-size: 18px; }
+
+	.membership{
+		padding: 25px 0 35px;
+
+		.plan{
+			padding: 0 0 0 60px;
+			text-transform: capitalize;
+			position: relative;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 100;
+
+			&.non-prem{
+				margin-left: -50px;
+			}
+
+			.badge.premium{
+				background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/intl_students/premium_icon.png);
+				width: 50px; height: 50px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 0; left: 0; bottom: 0;
+				margin: auto;
+
+				&.plus{ background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/intl_students/premium_plus_icon.png); }
+			}
+		}
+	}
+
+	.diff, .app-status{ border-bottom: 1px solid #eee; }
+
+	.diff{
+		background-color: $sic_color2;
+		font-size: 14px;
+		color: #fff;
+
+		&:not(.schedule) .inner{ padding: 30px 100px 30px 0; }
+
+		&.apps, &.essays{ 
+			cursor: pointer;
+			text-decoration: underline; }
+
+		.inner{
+			position: relative;
+			max-width: $sectionWidth+60;
+			margin: auto;
+		}
+
+		.num{ 
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			margin: auto;
+			width: 90px;
+			height: 75px;
+			text-align: center;
+			padding-right: 20px;
+			font-weight: 600;
+			font-size: 50px; 
+			text-decoration: initial;
+		}
+
+		&.schedule{
+			padding: 20px 10px 12px;
+
+			.schedule-btn{
+				margin: 0 auto 10px;
+				width: 165px;
+				padding: 10px 0;
+				background-color: $green;
+				color: #fff;
+				cursor: pointer;
+				font-size: 16px;
+				font-weight: 200;
+				@include bRadius(5px);
+				@include noUserSelect();
+
+				&:active{ @include activeBtnClick(); }
+			}	
+		}
+	}
+
+	#_skyper{
+		img{ 
+			margin: 0 5px 0 0;
+			width: 22px; }
+
+		> a{ color: #2ba6cb; }
+		
+		a#_skypeCall{ display: inline-block; }
+
+		a#_skypeChat{ 
+			&:before{ content: ' | '; }
+			margin: 0 0 0 4px;
+			display: none; 
+		}
+
+		&:hover{
+			a#_skypeChat{
+				display: inline-block;
+				@include fadeInRight(0.3s);
+			}
+		}
+	}
+
+	.profile{
+		padding: 35px 0;
+		position: relative;
+		width: 150px;
+		margin: auto;
+
+		.meter{
+			position: absolute;
+			top: 0; bottom: 0; left: 0;
+			width: 60px;
+			height: 60px;
+			z-index: 101;
+			margin: auto;
+
+			.CircularProgressbar .CircularProgressbar-path{ stroke: #a0db39; }
+			.CircularProgressbar .CircularProgressbar-text{ 
+				font-size: 23px;
+				fill: #fff; }
+		}
+
+		a.edit{ 
+			text-decoration: underline;
+			font-size: 14px;
+			cursor: pointer;
+			color: $green; 
+			display: block;
+			text-align: right;
+		}
+
+		div.edit{
+			font-size: 14px;
+			font-weight: bold;
+			text-align: right;
+		}
+	}
+
+	.section-name{
+		@include noUserSelect();
+	    cursor: pointer;
+	    text-align: left;
+	    font-weight: 600;
+	    position: relative;
+	    max-width: $sectionWidth;
+	    margin: auto auto 10px;
+	    font-size: 14px;
+
+		> span{
+			position: absolute;
+			right: 0;
+		}
+
+	}
+
+	.sections-list{
+		@include fadeInRight(0.3s);
+		text-align: left;
+		max-width: $sectionWidth;
+		margin: 0px auto 10px auto;
+
+		.s-item{ 
+			font-weight: 200; 
+			@include fadeInRight(0.3s);
+			color: $gray;
+			font-size: 15px; 	
+
+			> a{ 
+				color: #fff;
+				> span{ color: $green; }
+			}
+			
+			> a.incomplete{ 
+				color: $gray;
+			}
+
+			&:last-child{ padding: 0 0 10px; }
+		}
+
+		&:not(.complete){
+			.s-item > span.colleges{ font-weight: 600; }
+		}
+	}
+
+	.review-route{
+		display: block;
+		width: 165px;
+		margin: 20px auto 25px;
+		color: $green;
+		text-align: center;
+		background-color: #fff;
+		@include bRadius(3px);
+		padding: 6px 0;
+
+		&:active{ @include activeBtnClick(); }
+	}
+
+	.subm-school{
+		padding: 15px 0 15px 45px;
+		position: relative;
+		@include ellipses();
+		width: 79%;
+		margin: auto;
+		text-align: left;
+
+		.logo{
+			width: 40px; height: 40px;
+			@include bRadius(100%);
+			position: absolute;
+			top: 0; left: 0; bottom: 0;
+			margin: auto;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+
+	.finish-signup{
+		font-size: 15px;
+		text-decoration: underline;
+		cursor: pointer;
+		color: $green;
+		padding: 10px 0 20px;
+	}
+
+	.small{
+		font-size: 12px;
+		font-weight: 100;
+	}
+
+	.prem-msg-cont{
+		position: relative; 
+	    bottom: 0px;
+	    z-index: 102;
+	    background-color: #2e2e2e;
+	    box-shadow: 0px 1px px 30px #2e2e2e;
+	    padding: 25px;
+	    border-bottom: 1px solid #797979;
+
+	}
+
+	.signup-btn{
+		cursor: pointer;
+		display: inline-block;
+		border-radius: 5px;
+		padding: 5px 10px;
+		width: 90%;
+	}
+	.signup-btn a{
+		color: #ffffff;
+	}
+
+	.signup-btn:hover,
+	.signup-btn:active,
+	.signup-btn:focus{
+		background-color: #fc612e;
+	}
+
+	.intl-btn{
+		cursor: pointer;
+		background-color: #ffffff;
+		border-radius: 5px;
+		padding: 8px 6px;
+		display: inline-block;
+		font-size: 13px;
+		width: 72%;
+		font-weight: 600;
+		margin-top: 20px;
+	}
+	.intl-btn a{
+		color: #2e2e2e;
+	}
+	.intl-btn:hover,
+	.intl-btn:active,
+	.intl-btn:focus{
+		background-color: #f3f3f3;
+	}
+
+	.intl-title{
+		margin-top: 20px;
+		font-size: 15px;
+	}
+
+	.intl-title img{
+		margin-right: 8px;
+	}
+
+	.delbasid{
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		z-index: 1;
+	}
+
+}
+
+.menuPremium-btn{ display: none; }
+
+
+@media all and (max-width: 900px){
+	#_SIC{display: none;}
+	.menuPremium-btn{ display: inline-block; }
+}
+
+@media only screen and (max-width: 40em){
+	.mobilePremium-btn{ display: block; }
+
+	#_SIC{ 
+		width: 100%;
+		padding: 50px 0;
+
+		.close-sic-btn{ display: inline-block; }
+		.title{ font-size: 23px; }
+		.subm-school{ max-width: $sectionWidth+70; }
+	}
+}

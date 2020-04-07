@@ -1,0 +1,92 @@
+// GetStarted_tcpa/styles.scss
+
+@import './../../utils/_global';
+//@import './../../../../../css/foundation.min';
+
+.main-container {
+	height: 94vh;
+    overflow-y: scroll;
+}
+.spin-wrap {
+	width: 69px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+
+	&.continue{
+		width: 156px;
+	}
+}
+.spin-wrap2 {
+	position: relative;
+}
+.text-container {
+	margin: 3% 20%;
+	font-size: 1.5em;
+	color: #fff;
+}
+.tcpa-container {
+	margin: 0 20%;
+	background-color: #f0f0f0;
+	border-radius: 4px;
+
+	.no-terms {
+		padding: 3%;
+		font-size: 1.1em;
+		text-align: center;
+	}
+}
+.next-container {
+	margin: 0 20%;
+	margin-top: 25px;
+	cursor: pointer;
+
+	.next-btn {
+		margin: 25px 0;
+		border: none;
+		border-radius: 4px;
+		padding: 10px 0;
+		float: right;
+		width: 25%;
+		background-color: #2ac56c;
+		color: #fff;
+		opacity: 1;
+		text-align: center;
+	    font-size: 1.15em;
+
+		&.disabled {
+			background-color: #69cc93;
+		}
+	}
+}
+.tcpa-card {
+	padding: 10px;
+    padding-bottom: 25px;
+
+}
+.college-row {
+	margin: 0 !important;
+}
+.college-name {
+	line-height: 50px;
+}
+.college-text {
+	font-size: .75em;
+	line-height: 18px;
+	margin-top: 12px;
+	padding-right: 50px;
+}
+.logo {
+	background-color: #fff;
+	border-radius: 50%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+.check-box {
+	display: block;
+	margin: 0 auto !important;
+}

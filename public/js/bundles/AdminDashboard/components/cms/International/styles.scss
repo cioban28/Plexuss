@@ -1,0 +1,933 @@
+// styles.scss
+
+@import './../_global.scss';
+
+.intl-container{
+	max-width: 100%;
+	padding: 15px 15px 15px $toolsNavWidth;
+	margin: 0 auto 100px;
+	position: relative;
+	height: 100%;
+
+	.import-warning-modal{
+		background-color: #fff;
+		padding: 20px;
+		@include bRadius(3px);
+		@include fadeIn(0.5s);
+
+		> h4, select{ color: $gray; }
+
+		.close{
+			display: inline-block;
+			cursor: pointer;
+			font-size: 20px;
+		}
+	}
+
+	.reset-modal{ 
+		color: $gray; 
+		small{ font-size: 12px; }
+	}
+
+	.reset-question{ font-size: 18px; }
+	.content-start{ max-width: 100%; }
+}
+
+.i-container{
+	color: $gray;
+
+	> .column:first-child:not(.alum){
+		padding: 0 0 0 20px;
+	}
+
+	h5, label{
+		color: $gray;
+	}
+
+	label{
+		text-transform: capitalize;
+
+		&.cost-label{
+			max-width: 300px;
+		}	
+
+		input{
+			&.radio{
+				margin-right: 5px;
+			}
+
+			&.cost-input{
+				color: $gray;
+
+				&.error{
+					border: 1px solid $error;
+					margin: 0;
+				}
+
+				@include placeholderColor(#ddd);
+			}
+		}
+
+		&.admitted{
+			max-width: 200px;
+			position: relative;
+
+			input, .perc-view{
+				display: inline-block;
+			}
+
+			.perc-view{
+				position: absolute;
+				top: 0; bottom: 0; left: 100%;
+				width: 200px;
+				height: 19px;
+				margin: auto;
+				padding: 0 0 0 5px;
+
+				span{ color: $green; }
+			}
+		}	
+	}
+
+	.has-error{
+		border: 1px solid $error;
+		color: $error;
+		background: #fff;
+		margin: 0 0 15px;
+		font-size: 11px;
+		padding: 3px;
+		text-transform: initial;
+	}
+
+	.save, .cancel{	
+		@include noUserSelect();
+		padding: 0;
+		cursor: pointer;
+		width: 135px;
+	}
+
+	.save{
+		background: $green;
+		color: #fff;
+		@include bRadius(3px);
+		height: 40px;
+
+		&[disabled]{
+			background: $green;
+		}
+
+		&:active{ box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4); }
+	}
+
+	.cancel{
+		display: inline-block;
+		vertical-align: top;
+		padding: 8px 0;
+		background: transparent;
+		color: $gray;
+		text-align: center;
+	}
+}
+
+.cost-preview{
+	background: #000;
+    @include bRadius(5px 0 0 5px);
+	padding: 20px 10px;
+    max-width: 300px;
+    margin: 10px auto 0;
+    color: #fff;
+    border-right: 5px solid $green;
+
+    &.scholarship.info{
+    	border-right: initial;
+    	@include bRadius(5px);
+    }
+
+    .title{
+    	font-size: 16px;
+    	font-weight: 600;
+    	margin: 0 0 10px;
+    	text-transform: uppercase;
+    }
+
+    .cost-row, .cost-row-inner{
+		> div{
+			display: inline-block;
+			vertical-align: middle;
+    	}
+
+    	.name{
+	    	font-size: 10px;
+	    	text-transform: uppercase;
+	    	width: 60%;
+	    	font-weight: 600;
+    	}
+
+    	.cost{
+	    	font-size: 12px;
+    		color: $green;
+    		font-weight: 600;
+	    	width: 40%;
+	    	text-align: right;
+
+	    	a{ 
+	    		color: $green; 
+	    		&.true { text-decoration: underline; }
+	    	}
+    	}
+    }
+
+    .cost-row, .cost-row-outer{
+    	&:not(:last-child){
+    		margin: 0 0 10px;
+    	}
+
+    	&:first-child:not(.scholarship.info){
+    		margin: 20px 0;
+    		.name{
+    			font-size: 14px;
+    		}
+    		.cost{
+    			font-size: 16px;
+    		}
+    	}	
+    }
+
+    .cost-row-inner{
+    	.percentage{
+    		> div{
+    			display: inline-block;
+    			vertical-align: middle
+    		}
+    	}
+
+    	&.admissions{
+			.name{
+    			font-size: 10px;
+    			font-weight: 100;
+    		}
+
+    		.cost{ font-size: 18px; }
+    	}
+
+    	&.admissions_available, &.application_deadline{
+    		> div{
+    			display: block;
+    			width: 100%;
+    		}
+
+    		.cost{ 
+    			text-align: left; 
+    			text-transform: uppercase;
+    		}
+
+    		.name { text-transform: capitalize; }
+    	}
+
+    	&.scholarship.info{
+
+    	}
+
+    	&.scholarship_available .cost{
+    		text-transform: capitalize;
+    	}
+
+    	&.scholarship_link{
+    		> div{
+    			display: block;
+    			width: 100%;
+    			text-align: left;
+    			@include ellipses();
+    		}
+    	}
+    }
+}
+
+.add-testimonial-btn{
+	background: $gray;
+	padding: 10px 20px;
+
+	&:hover, &:active, &:visited, &:focus{
+		background: $gray;
+	}
+}
+
+.testimonial-bar{
+	color: #fff;
+	border-radius: 1px;
+    background: #797979;
+    padding: 2px 0 2px 10px;
+    margin: 20px 0;
+}
+
+.testimonial{
+	display: inline-block;
+	vertical-align: top;
+	max-width: 110px;
+	margin: 0 20px 20px 0;
+	@include fadeInRight(0.25s);
+
+	.testimonial-actions > div{
+		display: inline-block;
+		vertical-align: middle;
+		color: #2ba6cb;
+		font-size: 14px;
+		@include noUserSelect();
+
+		&:not(:last-child){
+			margin: 0 10px 0 0;
+		}
+
+		&:not(:nth-child(2)){
+			cursor: pointer;
+		}
+	}
+
+	.title{
+		text-transform: capitalize;
+		@include ellipses();
+		font-size: 15px;
+	}
+}
+
+.conditional-radio{
+	margin: 0 0 15px;
+
+	.label-name{
+		padding: 0 0 7px;
+	}
+
+	.directions{
+		font-size: 12px;
+		text-transform: initial;
+	}
+
+	> label{
+		display: inline-block;
+		font-size: 13px;
+
+		&:not(:last-child){
+			margin: 0 20px 0 0;
+		}
+	}
+
+	span{
+		padding: 0 0 0 5px;
+		vertical-align: text-bottom;
+	}
+}
+
+.app-deadline{
+	margin: 0 0 15px;
+
+	> label{
+		display: inline-block;
+
+		&.deadline-radio{
+			margin: 0 10px 0 0;
+		}
+	}
+
+	input[value="rolling_admissions"]{
+		margin: 0 5px 0 0;
+	}
+
+	span{
+		vertical-align: text-bottom;
+	}
+}
+
+.date-picker-wrapper{
+	max-width: 260px;
+	display: inline-block;
+	margin: 0 0 0 5px;
+
+	#_dateRange{ width: 200px !important; }	
+}
+
+.intl-reqs{
+	.req{
+		margin: 0 0 10px;
+
+		.section-head{
+			background: #aaa;
+			color: #fff;
+			font-size: 16px;
+			padding: 3px 5px;
+			margin: 0 0 10px;
+		}
+
+		.name{
+			text-transform: capitalize;
+		}
+
+		.add{
+			text-transform: uppercase;
+			text-decoration: underline;
+			font-size: 14px;
+			cursor: pointer;
+			@include noUserSelect();
+
+			&:hover{
+				text-decoration: initial; 
+			}
+		}
+
+		.actions{
+			> div, label{
+				color: skyblue;
+				font-size: 12px;
+			}
+
+			> div:not(:last-child){
+				margin: 0 7px 0 0;
+			}
+
+			> div:nth-child(odd), label{
+				text-decoration: underline;
+				cursor: pointer;
+				@include noUserSelect();
+
+				&:hover{
+					text-decoration: initial;
+				}
+			}
+		}
+
+		input{
+			margin: 0 0 5px;
+		}
+
+		.saved-req{
+			margin: 0 0 10px;
+			@include fadeInUp(0.25s);
+
+			.title{
+				font-size: 14px;
+			}	
+
+			.actions{ margin: 5px 0 0; }
+		}
+
+		.attachment{
+			font-size: 11px;
+			@include ellipses;
+		}
+	}	
+
+	.new-req-actions{ margin: 5px 0 0; }
+}
+
+.intl-reqs-preview{
+	max-width: 300px;
+	margin: auto;
+
+	.p-list{
+		margin: 0 0 20px;
+	}
+
+	.p-head{
+		background-color: #000;
+		color: #fff;
+		padding: 6px 12px;
+		font-weight: 600;
+		font-size: 15px;
+		text-transform: uppercase;
+	}
+
+	.req-p-row{
+		padding: 6px 12px;
+		border-right: thin solid #eee;
+		border-left: thin solid #eee;
+		border-bottom: thin solid #eee;
+		@include fadeInUp(0.25s);
+
+		> div{
+			display: inline-block;
+			font-size: 12px;
+			color: #000;
+
+			&.middle{ vertical-align: middle; }
+			&.top{ vertical-align: top; }
+		}
+
+		.req-name{
+			width: 70%;
+			text-align: left;
+
+			> div:first-child{ font-weight: 600; }
+		}
+
+		.download{
+			width: 30%;
+			text-align: right;
+
+			a{
+				font-size: 12px;
+				cursor: pointer;
+				color: $green;
+				text-decoration: underline;
+
+				&:hover{
+					text-decoration: initial;
+				}
+			}
+
+			
+		}
+	}
+}
+
+.alumni-card-wrapper{
+	border: 1px solid $gray;
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	@include fadeInRight(0.25s);
+}
+
+.alumni-card{
+	width: 250px;
+	margin: auto;
+	color: $gray;
+	text-align: center;
+	padding: 30px 5px;
+
+	.pic{
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		@include bRadius(100%);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-color: $gray;
+	}
+
+	.name{
+		font-size: 16px;
+		margin: 5px 0;
+		color: $green;
+		@include ellipses;
+
+		a{ color: $green; }
+	}
+
+	.edu, .location{
+		font-size: 12px;
+		@include ellipses;
+	}
+
+	.linkedin{
+		width: 20px;
+		height: 20px;
+		background-color: #0077B5;
+		color: #fff;
+		margin: 5px auto 0;
+		@include bRadius(3px);
+		font-weight: 600;
+		line-height: 20px;
+
+		&.invisi{ visibility: hidden; }
+
+		a{ 
+			color: #fff;
+			display: block;
+		}
+	}
+
+	.edit-mode{
+		> div{
+			color: skyblue;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 12px;
+
+			&:not(:last-child){
+				margin: 0 5px 0 0;
+			}
+		}
+
+		> div:nth-child(odd){
+			text-decoration: underline;
+			cursor: pointer;
+
+			&:hover{
+				text-decoration: initial;
+			}
+		}
+	}
+}
+
+.alum-btn{
+	background-color: $gray;
+	color: #fff;
+	@include bRadius(5px);
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 0 40px;
+	cursor: pointer;
+	@include noUserSelect();
+
+	&:active{
+		box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.2);
+	}
+}
+
+.alum_form{
+
+	.grad_details{
+		> select{
+			display: inline-block;
+		}
+
+		select.dep_id{
+			width: 70%;
+		}
+
+		select.grad_year{
+			width: 30%;
+		}
+	}
+
+	.upload-pic-container{
+		padding: 10px 0 10px 80px;
+		position: relative;
+	}
+
+	.upload-btn{
+		position: absolute;
+		top: 0; left: 0; bottom: 0;
+		height: 33px;
+		margin: auto;
+
+		label{ 
+			color: #fff; 
+			margin: 0 20px 0 0;
+		}
+	}
+
+	.upload-name{
+		@include ellipses();
+	}
+}
+
+.grade-section-name{
+	font-size: 20px;
+}
+
+.grade-field-container{
+	max-width: 800px;
+	margin: 10px 0 40px;
+}
+
+.exam-section{
+	display: none;
+
+	&.show{ 
+		display: block; 
+		@include fadeInUp(0.25s);
+	}
+}
+
+.grade-title{
+	color: #fff;
+	background-color: $gray;
+	@include bRadius(1px);
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 2px 10px;
+	margin: 0 0 20px;
+}
+
+.grades.parent{
+	display: inline-block;
+	padding: 0 0 20px;
+
+	.sub-label{
+		font-weight: 600;
+	}
+
+	&:not(:last-child){
+		margin: 0 30px 0 0;
+	}
+
+	input, .cost-field-label{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.cost-field-label{
+		margin: 0 10px 0 0;
+	}
+
+	input{
+		width: 100px;
+		margin: 0;
+	}
+}
+
+.exam-btn-container{
+	max-width: 600px;
+	margin: 10px 0 40px;
+}
+
+.exam-btn{
+	@include bRadius(8px);
+	@include noUserSelect();
+	color: $green;
+	display: inline-block;
+	padding: 5px 0;
+	margin: 0 10px 10px 0;
+	cursor: pointer;
+	border: 1px solid $green;
+	background-color: #fff;
+	width: 130px;
+	text-align: center;
+	font-size: 14px;
+	position: relative;
+
+	.checkmark{
+		color: $green;
+		position: absolute;
+		top: 0; left: 10px; bottom: 0;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 30px;
+		display: none;
+
+		&.complete{
+			display: block;
+		}
+	}
+
+	&:active{
+		box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3);
+	}
+
+	&.show{
+		background-color: $green;
+		color: #fff;
+
+		.checkmark{ color: #fff }
+	}	
+}
+
+.intl-majors-container{
+	form{ padding: 0 5px 0 0; }
+
+	.inner-form-wrapper{
+		background-color: $deptBg;
+		margin: 0 0 20px;
+	}
+
+	.conditional-radio{
+		margin: 0;
+	}
+
+	.select-multiple-label{
+		font-size: 14px;
+	}
+}
+
+.dept_degree_selection_container, 
+.major_degree_selection_container{
+
+	.dept-dropdown-container:not(:first-child){
+		margin: 10px 0 0;
+	}
+
+	.dept-dropdown-container{
+		@include fadeInUp(0.25s);
+	}	
+
+	.dept-dropdown, .degree-container{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.dept-dropdown{
+		width: 40%;
+
+		> div{
+			background-color: #fff;
+			@include bRadius(1px);
+			position: relative;
+		}
+		
+		.close, .arrow-wrapper{
+			position: absolute;
+			top: 0; bottom: 0;
+		    width: 40px;
+		    text-align: center;
+		    cursor: pointer;
+		}
+
+		.close{ 
+			left: 0; 
+
+			> div{
+				font-size: 20px;
+			    line-height: 41px;
+			    -webkit-transform: .8s cubic-bezier(0.4, 0, 1, 1);
+			    transform: .3s cubic-bezier(0.4, 0, 1, 1);
+			    -webkit-transition: -webkit-transform .8s cubic-bezier(0.4, 0, 1, 1);
+				transition: transform .8s cubic-bezier(0.4, 0, 1, 1);
+			}
+
+			&:hover > div{
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+
+		.arrow-wrapper{
+			right: 0;
+
+			&.open{ 
+				background-color: $gray; 
+
+				.arrow{ border-left: 8px solid #fff; }
+			}
+			
+		}
+
+		.arrow{ 
+			width: 0;
+		    height: 0;
+		    border-top: 8px solid transparent;
+		    border-bottom: 8px solid transparent;
+		    border-left: 8px solid $gray;
+		    transform: rotate(90deg);
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		}
+
+		.name{
+			padding: 11px 40px;
+			@include ellipses();
+			font-size: 14px;
+			background: $majorBg;
+		}
+	}
+
+	.degree-container{
+		width: 60%;
+
+		&.hidden{ visibility: hidden; }
+
+		.degree-type-box{
+			display: inline-block;
+			text-align: center;
+			width: 20%;
+
+			label { 
+				@include noUserSelect();
+				font-size: 13px; 
+			}
+			
+			input[type="checkbox"]{ margin: 0; }
+		}
+	}	
+}
+
+.dept_degree_selection_container{
+	margin: 0 0 15px;
+}
+
+.major_degree_selection_container{
+	background-color: $majorBg;
+	padding: 10px 0 15px;
+
+	.dept-dropdown, .pickDeptMajor_container{
+		padding: 0 0 0 13px;
+	}
+}
+
+.pickDeptMajor_container{
+	select{ max-width: 300px; }
+
+	.pick_dropdown_name{ 
+		text-transform: capitalize; 
+		font-size: 14px;
+		font-weight: 600;
+	}
+	
+	.conditional-radio-container{
+		display: inline-block;
+	}
+}
+
+.intl-major-actions{
+	> div{
+		display: inline-block;
+		width: 50%;
+	}
+
+	.import{
+		display: inline-block;
+		color: #fff;
+		background-color: $gray;
+		padding: 5px 10px;
+		font-size: 14px;
+		@include bRadius(3px);
+		cursor: pointer;
+
+		&:active{
+			box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3);
+		}
+	}
+}
+
+.note-preview{
+	max-width: 300px;
+	margin: auto;
+}
+
+.notes-editor{
+	height: 250px;
+}
+
+.toastr-component{
+	.main{
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.sub{ font-size: 14px; }
+
+	a{ 
+		font-size: 14px;
+		color: #fff; 
+		text-decoration: underline;
+	}
+}
+
+#_simplestModal > .simple-inner{
+	max-width: 500px;
+
+	.yes, .no{
+		color: #fff;
+		padding: 10px 40px;
+		@include noUserSelect();
+
+		&:active{
+			box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4);
+		}
+	}
+
+	.yes{
+		background-color: $green;
+	}
+
+	.no{
+		background-color: $gray;
+		margin: 10px 10px 0 0;
+	}
+
+	small{ color: inherit; }
+}

@@ -1,0 +1,114 @@
+.dashboard-label{
+  text-align: center;
+  margin: 14px;
+}
+.dashboard-label span {
+  font-size: 19px;
+  font-weight: 400;
+  min-height: 26px;
+  min-width: 113px;
+}
+.stats-box{
+  background: #FFFFFF;
+  border-radius: 7px;
+  padding: 16px 10px;
+  min-height: 118px;
+  line-height: 22px;
+  display: block;
+  margin: auto 6px;
+}
+.stats-box .stats-image {
+  color: #B0B0B0;
+  opacity: 100%;
+  margin: 32px auto;
+  width: 35.62px;
+  height: 26.58px;
+}
+.stats-box span {
+  margin: 18px auto;
+  font-size: 40px;
+  color: #2AC56C;
+  display: block;
+}
+.stats-box .stats-label span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #202020;
+}
+.stats-area {
+  padding-bottom: 30px;
+  margin-left: -0.4em;
+  margin-right: -0.4em;
+}
+.stats-area img {
+  display: block;
+}
+.stats-area-cover {
+  float: left;
+  width: 100%;
+  margin: 75px 0px 15px;
+}
+.article-list-area {
+
+}
+.article-list-area .tabs dd.active a, .tabs .tab-title.active a {
+  border-bottom: 1px solid #2AC56C;
+  margin: unset;
+  background: none;
+}
+
+.article-list-area .tabs dd > a, .tabs .tab-title > a {
+  padding: 0.5rem 0rem;
+  background: none;
+}
+.article-list-area .tabs dd > a:hover, .tabs .tab-title > a:hover {
+  background: none;
+}
+.article-list-area table tr.even, .article-list-area table tr.alt, .article-list-area table tr:nth-of-type(even) {
+background-color: #fff;
+}
+
+
+  /*Table styling*/
+.article-list-area table {
+  border-collapse: collapse;
+  border-radius: 0.8em;
+  overflow: hidden;
+  border-spacing: 0;
+  width: 100%;
+  padding: 0 5px;
+}
+.article-list-area table thead tr th {
+  background: #4B4B4B;
+  color: #F2F2F2;
+  font-weight: 400;
+}
+
+.article-list-area td {
+  /*padding: 4px;*/
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.article-list-area table thead tr th img {
+  width: 20px;
+  height: 17px;
+  color: #F2F2F2;
+}
+.article-list-area table thead tr th {
+  width: 28px;
+}
+.article-list-area table thead tr {
+  height: 45px;
+}
+.article-list-area tr:hover {background-color:#f5f5f5;}
+/*.article-list-area table {
+  padding: 0 10px;
+}*/
+.article-list-area table tbody tr td a {
+  text-decoration: underline;
+  color: #2AC56C;
+}
+.article-list-area table tbody tr td, .article-list-area table tr td {
+  display: table-cell;
+  line-height: 1.0rem;
+}

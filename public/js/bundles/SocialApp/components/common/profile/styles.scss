@@ -1,0 +1,248 @@
+.home_widget {
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 7px;
+  padding: 22px 16px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  line-height: 22px;
+  margin-bottom: 22px;
+  width: 100%;
+
+  .connect_count {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2AC56C;
+  }
+  .connect_count:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #2AC56C;
+  }
+  .profile_box{
+    text-align: center;
+
+    .profile_image {
+      cursor: pointer;
+      display: block;
+      .prof-img{
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 6px;
+        background-position: center;
+        background-size: cover;
+      }
+      .flag_image_container{
+        margin-top: -19px;
+      }
+    }
+    .user_name {
+      font-weight: 600;
+      display: block;
+      color: #000000;
+    }
+    .user_name:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #2AC56C;
+    }
+    .institute_name {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+    .user_role {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    .edit_profile {
+      font-size: 14px;
+      color: #000000;
+      display: block;
+    }
+    .edit_profile:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #2AC56C;
+    }
+  }
+  .next-step-text {
+    margin: 0 -16px;
+    padding-left: 15px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: .8em;
+    font-weight: 600;
+  }
+  .sub_header_bottom_line{
+    border-bottom: 0.2px solid #e9e9e9;
+  }
+  .prof-progress {
+    width: 100%;
+    padding: 0 0 15px 0;
+    display: inline-flex;
+    align-items: center;
+    &.complete {
+      padding-bottom: 0;
+    }
+
+    .progress_bar{
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+    }
+    .text{
+      padding-left: 15px;
+      .title{
+        font-size: 16px;
+        font-weight: 600;
+        color: #202020;
+        &:hover{
+          color: #2AC56C;
+          text-decoration: underline;
+          text-decoration-color: #2AC56C;
+        }
+      }
+      .sub_title{
+        font-size: 12px;
+        color: #202020;
+        opacity: 63%;
+      }
+    }
+  }
+  .next-step {
+    width: 100%;
+    padding-top: 15px;
+    a {
+      color: #202020;
+      font-weight: 400;
+      cursor: pointer;
+      padding-left: 15px;
+      &:hover {
+        color: #2AC56C;
+      }
+    }
+    .checkMark_parent{
+      text-align: center;
+      padding: 0;
+      img{
+        height: 22px;
+        width: 22px;
+      }
+      .check-mark{
+        border: 1.5px solid #E4E4E4;
+        border-radius: 50%;
+        padding: 2px;
+        color: #E4E4E4;
+      }
+    }
+  }
+  
+  .close_widget {
+    display: inline-block;
+    float: right;
+    margin-top: -15px;
+    margin-right: -5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .add_project {
+    margin-top: 25px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #2AC56C;
+    width: 82px;
+  }
+  .add_project:hover {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .views_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    width: 100%;
+
+    li {
+      float: left;
+      width: 100%;
+      margin: 0 0 12px;
+
+      .view_heading{
+        float: left;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+      }
+      .views_count {
+        float: right;
+        font-style: normal;
+        color: #707070;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+      }
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.user_name_hover:hover {
+  text-decoration: underline;
+  text-decoration-color: #2AC56C;
+  cursor: pointer;
+  color: unset;
+}
+
+@media screen and (max-width: 1300px){
+  .home_widget {
+    width: 99%
+  }
+  .profile-box{
+    padding: 20px 10px 0;
+    .profile-image{
+      .prof-img{
+        width: 80px;
+      }
+    }
+    .profile-content{
+      a{
+        font-size: 15px;
+      }
+      strong{
+        font-size: 13px;
+      }
+      .views-list{
+        padding: 10px 4px 20px;
+        li{
+          em{
+            float: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .home_widget .prof-progress {
+    width: auto;
+    .progress_bar {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .text {
+    padding-left: 10px;
+  }
+}

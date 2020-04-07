@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,800i');
+.body{
+  background-color: #f2f4f6;
+  padding-top: 50px;
+  font-family: 'Open Sans';
+}
+.social_dashbord_banner{
+  width: 80%;
+  margin-top: 60px;
+  .gif-loader-cont{
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    img{
+      width: 55px;
+    }
+  }
+  .post-loader{
+    display: inline-block;
+    margin-left: 278px;
+    img{
+      width: 55px;
+    }
+  }
+  .gif-loader{
+    left: 52%;
+    position: relative;
+    img{
+      width: 55px;
+    }
+  }
+}
+.custom-row {
+  max-width: 1100px;
+  padding: 0 20px;
+
+  #main-content {
+    width: 90%;
+    float: right;
+    overflow-x: hidden;
+
+    .incognito-dashboard{
+      padding: 10px 20px;
+      background-color: #e2e4e6;
+      border: 1px solid #C0C0C0;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      text-align: center;
+      img {
+        width: 18px;
+        margin: 0 15px 0 5px;
+      }
+      .incognito-link{
+        color: #707070;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+#middle-colom p {
+    color: #606060;
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-left: 3px;
+}
+
+#middle-colom {
+  background: #fff;
+  padding: 35px 50px 60px 35px;
+}
+
+#middle-colom label {
+    font-size: 17px;
+    color: #4d4d4d;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.profile_parent{
+  position: fixed;
+  max-width: 400px;
+}
+@media all and(max-width: 1300px){
+  .profile_parent{
+    margin-left: 0 !important;
+  }
+  .custom-row #main-content{
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) and (min-width: 678px){
+  .custom-row {
+    padding: 0;
+  }
+  .profile_parent{
+    margin-left: 5px;
+  }
+  .social_dashbord_banner{
+    .gif-loader-cont{
+    position: absolute;
+    left: 48%;
+    top: 33%;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .mbl_none{
+    display: none;
+  }
+  .social_dashbord_banner{
+    width: 100%;
+    margin: 0;
+    .gif-loader-cont{
+    position: absolute;
+    left: 44%;
+    top: 33%;
+    }
+  }
+  .custom-row{
+    padding: 0;
+    margin: 0;
+    #main-content{
+      padding: 0;
+      float: none;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+  }
+}

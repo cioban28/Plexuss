@@ -1,0 +1,1401 @@
+@import './../../../StudentApp/utils/_global';
+@import './../Base/_base';
+@import './../Base/_spinloader';
+
+/* fonts and text stylings for stat boxes */
+#_admin_dash{
+
+    .inquiries-dashboard-statistics {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        justify-content: center;
+
+        .inquiries-dashboard-single-stat {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+	.dash-centered-row{
+		position: relative;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 80%;
+		width: 80%;
+		height: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		clear: both;
+	}
+
+    .free-service-tool-links{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40em;
+    }
+
+	.title-big{
+		line-height: 51px;
+		font-size: 50px;
+	}
+
+    .premium-features-title{
+        padding-left: 0.4em;
+    }
+
+    .premium-features-desc-txt{
+        color: #606060;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0.5em 0;
+    }
+
+	.title2{
+		font-weight: 400;
+		font-size: 30px;
+	}
+	.title3{
+		font-weight: 400;
+		font-size: 21px;
+	}
+	.desc-txt{
+		font-weight: 300;
+		font-size: 13px;
+	}
+
+    .bold-text{
+        font-weight: bold;
+    }
+
+	/************************ admin dashboard *******************************/
+
+	.admin-main-dash-container {
+		position: relative;
+	}
+
+    .premium-request-success-modal {
+        padding: 0.5em 2em;
+
+        .header-container {
+            margin-top: 3em;
+            
+            .header-text {
+                font-size: 15pt;
+                text-align: center;
+            }
+        }
+
+        .ok-button {
+            cursor: pointer;
+            border-radius: 3px;
+            background-color: #2BC56D;
+            text-align: center;
+            width: 40%;
+            color: #fff;
+            margin: 2em auto;
+            font-size: 14pt;
+            padding: 0.5em;
+            font-weight: bold;
+
+            -webkit-transition: opacity 0.3s ease-in;
+            -moz-transition: opacity 0.3s ease-in;
+            -o-transition: opacity 0.3s ease-in;
+            -ms-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .error-or-suggestions-message {
+        .contact-us-button {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #2AC56C;
+        }
+
+    }
+
+    .premium-features-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 70%;
+        max-width: 1000px;
+        margin-left: 9em;
+        margin-bottom: 0.5em;
+        border-radius: 5px;
+        height: 16.5em;
+        overflow: auto;
+
+        .premium-feature-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 2.5em;
+            margin-bottom: 2.5em;
+
+            .premium-feature-select-toggle {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                margin-left: 2em;
+                background-color: #d4d4d4;
+                border-radius: 50%;
+
+                -webkit-transition: opacity 0.3s ease-in;
+                -moz-transition: opacity 0.3s ease-in;
+                -o-transition: opacity 0.3s ease-in;
+                -ms-transition: opacity 0.3s ease-in;
+                transition: opacity 0.3s ease-in;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+
+                &.active {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -295px -2px;
+                    background-color: #00cc82;
+                }
+            }
+
+            .premium-feature-icon {
+                height: 45px;
+                width: 45px;
+                margin-left: 2em;
+
+                &.daily_recommendations {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -3px 0;
+                }
+
+                &.texting {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -52px 0;
+                }
+
+                &.targeting {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -107px 0;
+                }
+
+                &.advanced_search {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -335px 0;
+                }
+
+                &.chat_bot {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -401px 0;
+                }
+
+                &.verification {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -490px 0;
+                }
+
+                &.hot_transfer {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -537px 0;
+                }
+
+                &.call_center {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -451px 0;
+                }
+            }
+
+            .premium-feature-label {
+                width: 10em;
+                margin-left: 1em;
+                font-size: 11pt;
+                font-weight: 600;
+            }
+
+            .premium-feature-description {
+                font-size: 10pt;
+                margin-left: 2em;
+                width: 35em;
+            }
+
+            .premium-feature-play-button {
+                border: 1px solid #e6e6e6;
+                margin-left: 1.5em;
+                padding: 0.1em 1em;
+                cursor: pointer;
+
+                -webkit-transition: opacity 0.3s ease-in;
+                -moz-transition: opacity 0.3s ease-in;
+                -o-transition: opacity 0.3s ease-in;
+                -ms-transition: opacity 0.3s ease-in;
+                transition: opacity 0.3s ease-in;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+
+
+                .play-button-icon {
+                    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -157px 0;
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+
+        .dashboard-video-modal {
+            padding: 1em 2.5em;
+            border-radius: 0.5em;
+            text-align: center;
+
+            .header-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1em;
+
+                .header-text {
+                    font-size: 16pt;
+                    margin-left: 0.5em;
+                    font-weight: 500;
+                }
+
+                .video-icon {
+                    height: 45px;
+                    width: 45px;
+
+                    &.daily_recommendations {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -3px 0;
+                    }
+
+                    &.texting {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -52px 0;
+                    }
+
+                    &.targeting {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -107px 0;
+                    }
+
+                    &.advanced_search {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -335px 0;
+                    }
+
+                    &.chat_bot {
+                        background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png) -401px 0;
+                    }
+                }
+            }
+
+            .description-text {
+                margin: 1em 0;
+            }
+          
+        }
+    }
+
+    .premium-features-button-container {
+        width: 70%;
+        max-width: 1000px;
+        text-align: center;
+        margin-left: 9em;
+        margin-bottom: 1em;
+
+        .premium-features-submit-button {
+            padding: 1em;
+            border-radius: 5px;
+            background-color: #00cc82;
+            color: #fff;
+            display: inline-block;
+            cursor: pointer;
+
+            -webkit-transition: opacity 0.3s ease-in;
+            -moz-transition: opacity 0.3s ease-in;
+            -o-transition: opacity 0.3s ease-in;
+            -ms-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+
+            @include fadeInRight(0.3s);
+        }
+    }
+
+
+    .premium-plans-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .premium-plan-container {
+            width: 20%;
+
+            .plan-label {
+                text-align: center;
+                background-color: #fff;
+                color: #545454;
+                font-weight: bold;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding: 0.5em;
+            }
+
+            .details-container{
+                position: relative;
+                height: 20em;
+                padding: 0.5em;
+                background-color: #393939;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                .premium-plan-description{
+                    color: #fff;
+                    padding-top: 1em;
+                    text-align: center;
+                }
+
+                .request-premium-plan-button{
+                    position: absolute;
+                    background-color: #ff7f00;
+                    color: #fff;
+                    width: 70%;
+                    padding: 0.5em;
+                    border-radius: 5px;
+                    text-align: center;
+                    cursor: pointer;
+                    bottom: 2em;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+
+                    -webkit-transition: opacity 0.3s ease-in;
+                    -moz-transition: opacity 0.3s ease-in;
+                    -o-transition: opacity 0.3s ease-in;
+                    -ms-transition: opacity 0.3s ease-in;
+                    transition: opacity 0.3s ease-in;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+
+                }
+            }
+
+          
+        }
+    }
+
+	/*  stats content on left side of banner */
+	.stats-cur-log-container{
+		margin-top: 25px;
+		
+		.desc-bold{
+			font-weight: 600;
+			font-size: 14px;
+			margin-right: 10px;
+		}
+
+	}
+
+
+	/* stats content on right side of banner */
+	.statsbox{
+		text-align: center;
+
+		.big-num{
+			position: relative;
+			display: inline-block;
+			font-size: 43px;
+		}
+	}
+
+	.stats-picbox{
+		position: relative;
+		margin-left: 10px;
+		text-align: center;
+		
+		.bottom-text{
+			font-size: 26px;
+		}
+	}
+
+
+	.bignum-tooltip{
+			font-size: 12px;
+		    background-color: #0e0e0d;
+		    padding: 10px 5px;
+		    border-radius: 5px;
+		    position: absolute;
+		    min-width: 82px;
+		    display: none;
+		}
+	.bignum-tooltip:before{
+		content: '';
+		position: absolute;
+		height: 0px;
+		width: 0px;
+		margin-top: -23px;
+		margin-left: 10px;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-bottom: 8px solid #0e0e0d;
+		border-top: 6px solid transparent;
+	}
+
+
+	.bignum-hover{
+		cursor: pointer;
+	}
+
+	.bignum-hover:hover .bignum-tooltip{
+		display: block;
+	}
+
+	/* prescreened colors **/
+
+	.prescreen-top{
+		background-color: #2BC56D;
+		color: #ffffff;
+	}
+	.prescreen-bottom{
+		background-color: #219F56;
+	}
+
+	/*---------- dashbaord main --------------*/
+
+	.dashboard-main-container{
+		position: relative;
+		color: $mainTextColor;
+		padding-top: 25px;
+		width: 100%;
+		min-height: 100vh;
+		height: 100%;
+		background-color: $mainBackColor;
+		clear: both;
+	}
+
+
+
+
+
+
+
+	/*---- option box ----*/
+	.optionBox{
+		margin-bottom: 20px;
+		transition: ease 1s;
+	}
+
+	.optionBox-top{
+		position: relative;
+		width: 100%;
+		height: 160px;
+		text-align: center;
+		background-color: #fff;
+
+		&.inquiry{ color: $plexred; }
+		&.recommend{ color: $plexorange; }
+		&.pending{ color: $plexgold; }
+		&.approved{ color: $plexyellow; }
+		&.message{ color: $plexdblue; }
+		&.text{ color: $plexblue; }
+		&.campaign{ color: $plexteal; }
+		&.chat{ color: $plexgreen; }
+
+		.inner{
+			position: relative;
+			top: 31%;
+			width: 100%;
+
+		}
+
+		.left-note{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+
+		.right-note{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: $mainTextColor;
+		}
+	}
+
+	.optionBox-bottom{
+		position: relative;
+		cursor: pointer;
+		width: 100%;
+		color: #fff;
+		text-align: center;
+		transition: ease .5s;
+
+		&.inquiry{ background-color: $plexred; }
+		&.recommend{ background-color: $plexorange; }
+		&.pending{ background-color: $plexgold; }
+		&.approved{ background-color: $plexyellow; }
+		&.message{ background-color: $plexdblue; }
+		&.text{ background-color: $plexblue; }
+		&.campaign{ background-color: $plexteal; }
+		&.chat{ background-color: $plexgreen; }
+
+		a{
+			color: #ffffff;
+			display: block;
+			width: 100%;
+		}
+
+	}
+	.optionBox-bottom:hover, 
+	.optionBox-bottom:active{
+			opacity: .6;
+	}
+
+
+
+
+	/*** buttons styling *****/
+
+	.top-btn-container{
+
+		float: right;
+
+		& > *{
+			display: inline-block !important;
+		}
+	}
+
+
+
+
+	.button-inner{
+		width: auto;
+	}
+
+
+	.white-btn{
+		position: relative;
+		margin-left: 8px;
+		margin-bottom: 5px;	
+		color: $mainTextColor;
+		background-color: #ffffff;
+		font-size: 11px;
+		font-weight: 600;
+
+		a, a:hover{
+			color: $mainTextColor;
+		}
+	}
+	.text-btn{
+		color: $mainTextColor;
+		font-weight: 600;
+		margin-bottom: 10px;
+
+		a, a:hover{
+			color: $mainTextColor;
+		}
+	}
+
+	#tools{
+		.text-btn{
+			display: inline-block;
+			padding: 0px 5px;
+		}
+
+		
+	}
+	.tool-btn{
+			display: inline-block;
+			height: 36px;
+			padding: 5px 0px !important;
+			margin-left: -6px;
+		}
+
+
+	/****************** buttons and icons styling and images **************/
+	.white-btn-base{
+		width: 20px;
+		height: 23px;
+		margin-right: 10px;
+	}
+	.txt-btn-base{
+		width: 37px;
+		height: 30px;
+		margin-right: 5px;
+	}
+
+
+
+	.adv-search{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -507px -19px;
+		@extend .white-btn-base;
+	}
+	.export-icon{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -533px -17px;
+		@extend .white-btn-base;
+	}
+	.target-icon{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -562px -18px;
+		@extend .white-btn-base;
+	}
+
+
+
+	.content-mng{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -586px -12px;
+		@extend .txt-btn-base;
+	}
+
+	.adv-search-b{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -622px -12px;
+		@extend .txt-btn-base;
+	}
+
+    .crm-integration{
+        background: url("https://s3-us-west-2.amazonaws.com/asset.plexuss.com/admin/admin-mvp-sprite-r1.png") -252px -8px;
+        opacity: 0.9;
+        @extend .txt-btn-base;
+    }
+
+	.help-faq{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -661px -12px;
+		@extend .txt-btn-base;
+	}
+
+
+
+
+	/*** imgs for stats ****/
+	.male-female-container{
+		width: 31px;
+		height: 48px;
+		margin-bottom: 7px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	.male-pic{
+		background: url('/images/nav-icons/dash_icons_sheet.png') 234px 0px;
+		background-size: 1900%;
+		@extend .male-female-container;
+	}
+
+	.female-pic{
+		background: url('/images/nav-icons/dash_icons_sheet.png') 202px 0px;
+		background-size: 1900%;
+		@extend .male-female-container;
+	}
+
+	.top-stat{	
+		position: relative;
+		display: inline-block;
+		font-size: 43px;
+
+		&.male_stat{ background: url('/images/nav-icons/dash_icons_sheet.png') 234px 0px; }
+		&.female_stat{ background: url('/images/nav-icons/dash_icons_sheet.png') 202px 0px; }
+		&.male_stat, &.female_stat{ 
+			width: 31px;
+			height: 48px;
+			margin-bottom: 7px;
+			margin-left: auto;
+			margin-right: auto;	
+			background-size: 1900%; 
+		}
+	}
+
+	.bottom-stat{
+		&.male_stat, &.female_stat{
+		    font-size: 26px;
+		}
+	}
+
+
+
+
+	/*** icons for optionBox links ***/
+	.link-icon-container{
+			width: 42px;
+			height: 34px;
+			margin-right: 10px;
+		}
+
+	.btn-text{
+		vertical-align: middle;
+	}
+
+	/* option box link icons */
+	.inquiry-o{
+		background: url('/images/nav-icons/dash_icons_sheet.png') 9px -10px;
+		@extend .link-icon-container;
+	}
+	.recommend-o{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -32px -10px;
+		@extend .link-icon-container;
+	}
+	.pending-o{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -71px -10px;
+		@extend .link-icon-container;
+	}
+	.approved-o{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -120px -10px;
+		@extend .link-icon-container;
+	}
+
+
+	/* option box icons */
+
+	.b-message{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -167px -11px;
+		width: 60px;
+		height: 45px;
+	}
+
+	.b-text{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -230px -3px;
+		width: 45px;
+		height: 60px;
+	}
+
+	.b-campaign{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -275px -11px;
+		width: 90px;
+		height: 45px;
+	}
+
+	.b-chat{
+		background: url('/images/nav-icons/dash_icons_sheet.png') -372px -5px;
+		width: 60px;
+		height: 55px;
+	}
+
+
+	/***** upgrade button *****/
+	.upgrade-btn{
+		color: #ffffff;
+		font-weight: 300;
+		font-size: 13px;
+		border-bottom: 1px solid #ffffff; /* want underline a little distance away */
+		margin: 2px 0px 0px 10px;
+		padding: 1px 1px;
+		background: transparent;
+
+		&:hover, &:active, &:focus{
+			color: #ffffff;
+			opacity: .7;
+		}
+	}
+
+	#important_msg_btn{
+		margin-top: 22px;
+	    margin-left: -10px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    padding: 8px 18px 8px 10px;
+	    border-radius: 6px;
+	    line-height: 20px;
+	    background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.imp-msg-link{
+		cursor: pointer;
+		text-decoration: underline;
+		color: $plexgreen;
+	}
+
+	.exclaim{
+		cursor: pointer;
+		display: inline-block;
+		margin-right: 9px;
+		margin-left: -1px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		text-align: center;
+		vertical-align: middle;
+		color: $mainTextColor;
+		font-size: 14px;
+		font-weight: 600;
+
+		&:hover{
+			opacity: .9;
+		}
+	}
+
+	.exclaim-text{
+		color: #ffffff;
+		font-size: 13px;
+		font-weight: 700;
+	}
+
+
+
+	/* verified check graphic */
+	.verified-check{
+		width: 17px;
+	    height: 17px;
+	    margin-top: -6px;
+	    display: inline-block;
+	    border: 2px solid $mainTextColor;
+	    color: $mainTextColor;
+	    text-align: center;
+	    vertical-align: middle;
+	    font-size: 14px;
+	    font-weight: 600;
+	    line-height: 10px;
+	    border-radius: 50%;
+	    margin-right: 5px;
+	    margin-left: 8px;
+	}
+	/* verified check graphic */
+	.verified-check-white{
+		width: 17px;
+	    height: 17px;
+	    margin-top: -5px;
+	    display: inline-block;
+	    border: 2px solid #cccccc;
+	    color: #cccccc;
+	    text-align: center;
+	    vertical-align: middle;
+	    font-size: 14px;
+	    font-weight: 600;
+	    line-height: 10px;
+	    border-radius: 50%;
+	    margin-right: 5px;
+	    margin-left: 0px;
+	}
+
+
+	/**** upgrade notification ***/
+	.upgradeNotify-ad{
+		position: absolute;
+		display: none;
+		background-color: rgba(255,255,255, 1);
+		border-radius: 5px;
+		width: 300px;
+		padding: 17px;
+		margin-top: -1px;
+		color: $mainTextColor;
+		box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+		z-index: 10;
+
+
+		.upgradeTitle{
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+
+		.button{
+			float: right;
+			font-size: 14px;
+			display: inline-block;
+			padding: 5px 2rem;
+			border-radius: 3px;
+			margin: 16px 0px 0px 0px;
+			color: #ffffff;
+		}
+		.sendReq{
+			background-color: #F95D00;
+		}
+		.alreadyReq{
+			background-color: #2ba6cb;
+		}
+
+	}
+
+
+	/****************** tooltip ***************/
+	.tooltip-qu{
+		cursor: pointer;
+		display: inline-block;
+		margin-left: 3px;
+		background-color: #ffffff;
+		width: 13px;
+		height: 13px;
+		border-radius: 50%;
+		font-weight: 600;
+		font-size: 10px;
+		text-align: center;
+		color: #060606;
+
+		&:hover, &:active, &:focus{
+			opacity: .7;
+		} 
+	}
+
+	.tooltip-desc{
+		display: none;
+		position: absolute;
+		margin-top: 89px; /*right now based on height of statbox */
+		/*left: -50%; */
+		width: 122%;
+		font-size: 12px;
+		padding: 8px;
+		background-color: #0e0e0d;
+		border-radius: 5px;
+		z-index: 900;
+
+		& .bold{
+			font-weight: bold;
+		}
+
+		& p{
+			color: #eeeeee;
+			font-size: 12px;
+			font-weight: 300;
+		}
+
+		.arrow{
+			position: absolute;
+			left: 47%;
+			top: -14px;
+			height: 0px;
+			width: 0px;
+			border-right: 6px solid transparent;
+			border-left: 6px solid transparent;
+			border-bottom: 8px solid #0e0e0d;
+			border-top: 6px solid transparent;
+		}
+
+	}
+
+	.veri-arrow{
+		position: absolute;
+		margin-left: 90px;
+		top: -13px;
+		height: 0px;
+		width: 0px;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-bottom: 8px solid rgb(32,32,32);
+		border-top: 6px solid transparent;
+		}
+
+	.veri-inner-arrow{
+		position: absolute;
+		margin-left: 230px;
+		top: -13px;
+		height: 0px;
+		width: 0px;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		border-bottom: 8px solid rgb(32,32,32);
+		border-top: 6px solid transparent;
+	}
+
+
+	/* stats in banner */
+	.stats-rightSide .row{
+		margin-top: 20px;
+
+	}
+
+	/******* optionBox bottom sizing *****/
+	.box-btn-size{
+		height: 60px;
+	}
+
+	/* icon for prescreen optionBox */
+	.presrceen-right{
+		width: 20px;
+		height: 20px;
+		background-color: #ffffff;
+		color: $plexgreen; 
+
+	}
+
+
+
+
+
+	/******* important message modal ************/
+	.important-message-notices{
+		font-size: 15px;
+		max-width: 300px;
+		color: $plexgreen;
+	}
+
+
+	/********* announcements **************/
+	.numberIndicator{
+		right: 30px;
+		bottom: -47px;
+	}
+	.dismiss-btn{
+		top: -19px;
+		right: 50px;
+	}
+
+	.x-close-btn{
+		top: -28px;
+		right: 20px;
+	}
+
+
+
+	/********** Verified Boxes *************/
+	.veri-tooltip-title{
+		font-weight: 600;
+		margin-bottom: 11px;
+	}
+	.veri-row{
+		margin-bottom: 5px;
+	}
+	.veri-row > div{
+		display: inline-block;
+	}
+
+	.verified-container{
+		display: inline-block;
+		width: 310px;
+		margin: 0px 10px 10px 8px;
+		color: #ffffff;
+		vertical-align: top;
+
+		.verfied-cont-container{
+			background-color: $plexgreen;
+			border-radius: 5px;
+			height: 150px;
+			width: 100%;
+			padding: 10px 20px;
+			color: #ffffff;
+		}
+
+
+		.veri-rightside{
+			text-align: center;
+			width: 112px;
+			display: inline-block;
+		}
+		.veri-leftside{
+			display: inline-block;
+			vertical-align: top;
+			width: 100px;
+			height: 100%;
+		}
+
+		.total-count{
+			font-weight: 100;
+			text-align: right;
+			position: relative;
+		}
+
+		.large-num{
+			font-size: 58px;
+			line-height: 69px;
+			min-height: 69px;
+			position: relative;
+		}
+
+
+		.veri-inner-tip{
+			p{
+				margin-top: 6px;
+				font-size: 13px;
+				font-weight: 400;
+				line-height: 15px;
+				color: #cccccc;
+			}
+
+			h5{
+				color: #cccccc;
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+
+		.appli-download-link{
+			cursor: pointer;
+			color: $plexgreen;
+		    font-size: 14px;
+		    text-decoration: underline;
+		    text-align: center;
+		    margin-top: 5px;
+		}
+
+		.upcoming-interviews{
+			color: $plexgreen;
+			text-align: center;
+			background-color: #ffffff;
+			font-size: 16px;
+			padding: 7px 7px 7px 20px;
+		}
+
+
+
+		/******************* background images ***************/
+
+		/***** Verified icons *******/
+		.verified-icon{
+			width: 92px;
+			height: 88px;
+		}
+		.vHandshakes-icon{
+			background: url("/images/admin/dashboard/verified_icons.png") 0 0;
+			@extend .verified-icon;
+		}
+		.vPrescreen-icon{
+			background: url("/images/admin/dashboard/verified_icons.png") -96px 0;
+			@extend .verified-icon;
+		}
+		.vApplications-icon{
+			background: url("/images/admin/dashboard/verified_icons.png") -190px 0;
+			@extend .verified-icon;
+		}
+	}
+
+
+
+	/***************** download applied modal *************/
+		.downloadApplied-container{
+			background-color: #ffffff;
+			border-radius: 2px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,.9);
+			padding: 30px;
+			min-width: 320px;
+			max-width: 450px;
+
+			& > *{
+				color: $mainTextColor;
+			}
+
+			h3{
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
+
+			p{
+				font-size: 14px;
+				line-height: 23px;
+			}
+
+			.button-container{
+				text-align: center;
+			}
+
+			.orangeButton{
+				color: #ffffff;
+				font-weight: 600;
+				font-size: 16px;
+				padding: 3px 10px;
+				width: 130px;
+				background-color: $plexsalmon;
+				display: inline-block;
+				border-radius: 2px;
+				text-align: center;
+			}
+		}
+
+		
+
+
+
+	/*********MEDIA QUERIES *******/
+
+
+	@media all and (min-width: 994px) and (max-width: 1229px){
+		.verified-container{
+			width: 260px;
+			padding: 3px;
+		}
+	}
+
+	@media all and (max-width: 1192px){
+		.verified-container{
+			margin-right: 0px;
+		}
+	}
+
+
+	@media all and (min-width: 642px) and (max-width : 993px){
+		.verified-container{
+			width: 48%;
+		}
+	}
+
+	@media all and (max-width: 641px){
+		.verified-container{
+			width: 99%;
+		
+
+		 	.veri-rightside{
+
+				.large-num{
+					font-size: 50px;
+				    margin-top: 17px;
+				    line-height: 46px;
+				}	
+			}
+
+			.appli-download-link{
+				margin-left: 2%;
+			}
+		}
+
+
+		#_indexedCarousel .open-carousel-container{
+			text-align: left;
+			padding-left: 0px;
+			margin-left: -5px;
+		}
+
+		#_admin_dash .exclaim-text{
+			color: #cccccc;
+		}
+
+	}
+
+	@media only screen and (max-width: 1273px){
+			
+		.exclaim::after{
+			width: 280px;
+			font-size: 11px;
+		}
+	}
+
+	/*** medium screens  ***/
+	@media only screen and (max-width: 1129px) { 
+
+		.stats-cur-log-container{
+			margin-left: -6px;
+			margin-top: 10px;
+		}
+		
+		.hello-cont{
+			margin-left: -6px;
+		}
+
+		.dashboard-main-container{
+			margin-top: 0px;
+		}
+
+		.statsbox{
+			margin-top: 30px;
+			text-align: left;
+		}
+		.stats-picbox{
+			margin-top: 30px;
+			margin-left: auto;
+			
+		}
+
+		.stats-rightSide{
+			padding-top: 50px;
+			width: 100%;
+		}
+
+		.stats-leftSide{
+			width: 100%;
+		}
+
+	}
+
+	@media only screen and (min-width: 642px) and (max-width: 1129px){
+		.statsbox{
+			text-align: left;
+		}
+
+		.female-pic, .male-pic{
+			margin-left: 0px;
+		}
+
+	}
+	@media all and (max-width: 735px){
+		.top-btn-container{
+			float: left;
+		}
+		.white-btn{
+			margin-left: 0px;
+			margin-right: 5px;
+			margin-bottom: 8px;
+		}
+	}
+
+	@media all and (max-width: 641px){
+		
+
+		.tooltip-qu{
+			top: 4px;
+		}
+
+		.tooltip-desc{
+			width: 100%;
+		}
+
+		.title2{
+			font-size: 22px;
+		}	
+
+		.upgrade-btn{
+			color: $mainTextColor;
+			border-bottom: 1px solid $mainTextColor;
+		}
+
+		.dashboard-stats-container{
+			padding-top: 20px !important;
+		}
+
+		.statsbox .big-num{
+			font-size: 15px;
+		}
+
+		.statsbox{
+			margin-top: 25px;
+			padding-bottom: 5px;
+		}
+		
+		.top-btn-container{
+			margin-top: 20px;
+			float: left;
+		}
+
+		.desc-txt{
+			font-size: 12px;
+		}
+
+		.stats-picbox{
+			margin-top: 17px;
+		}
+
+		.stats-rightSide{
+			padding-top: 20px;
+		}
+
+		.female-pic, .male-pic{
+			width: 16px;
+			height: 30px;
+			margin: 0px 0px 3px 0px;
+			background-size: 2420%;
+		}
+
+
+		.male-pic{
+			background-position:-621px 0px;
+		}
+		.female-pic{
+			background-position:-642px 0px;
+		}
+
+		.stats-picbox .bottom-text{
+			font-size: 16px;
+		}
+	}
+
+	.verified-icon{
+		width: 92px;
+		height: 88px;
+		display: inline-block;
+		vertical-align: top;
+
+		&.verifiedHs{ background: url("/images/admin/dashboard/verified_icons.png") 0 0; }
+		&.prescreened{ background: url("/images/admin/dashboard/verified_icons.png") -96px 0; }
+		&.verifiedApp{ background: url("/images/admin/dashboard/verified_icons.png") -190px 0; }
+	}
+
+	.loader.total{
+		top: 5px;
+		left: 0;
+		right: 0;
+		margin: auto 42px auto auto;
+	}
+		
+}

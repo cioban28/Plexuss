@@ -1,0 +1,144 @@
+// ResearchColleges/DownloadApp/styles.scss
+
+.social-download-app{
+	width: 80%;
+}
+
+.social-download-app-container {
+	background-color: #2ac56c;
+	height: 92.5vh;
+    padding: 60px 100px;
+    .downapp-banner {
+		text-align: center;
+		padding:  0 17% 0;
+    }
+    .download-app-imgs-container {
+		padding:  0 17% 0;
+    }
+	.download-app-pin {
+		padding: 50px;
+		background-color: #fff;
+		border-radius: 6px;
+		color: #000;
+		text-align: center;
+		.downapp-logo {
+			width: 50px;
+			margin: -75px auto 20px;
+		}
+		.downapp-title {
+			font-size: 24px;
+		    font-weight: 600;
+		    margin: 10px;
+		}
+		.downapp-subtitle {
+			font-size: 1em;
+    		padding: 1em;
+		}
+		.downapp-btns-container {
+			padding: 30px 60px;
+			.downapp-btns{
+				cursor: pointer;
+			}
+		}
+		.downapp-sms {
+			font-size: 1em;
+    		padding: 1em;
+			.sms-link{
+				cursor: pointer;
+				color: #2ac56c;
+				text-decoration: underline;
+				text-decoration-color: #2ac56c;
+			}
+		}
+	}
+}
+.sms-modal-container{
+	padding: 0 0 50px;
+	max-width: 600px;
+	.sms-close-btn{
+		text-align: right;
+		cursor: pointer;
+	}
+	.sms-modal-title{
+		font-size: 1.25em;
+		padding: 10px 30px;
+		text-align: center;
+	}
+	.sms-input{
+		padding: 30px 30px 20px;
+		#_PhoneNumberVerifier .country-list{
+			max-height: 100px;
+		}
+		.sms-send-btn{
+			color: #fff;
+			background-color: #ff5c27;
+			padding: 10px 20px;
+			border-radius: 6px;
+			width: 60%;
+		    text-align: center;
+		    float: right;
+		    cursor: pointer;
+		    &.disabled{
+			    opacity: .5;
+			    cursor: not-allowed;
+			    pointer-events: none;
+			}
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	.social-download-app-container {
+	    padding: 60px 50px;
+	    .download-app-imgs-container {
+			padding:  0% 10% 0;
+	    }
+	    .download-app-pin {
+		    .downapp-btns-container {
+				padding: 0 40px;
+			}
+		}
+	}
+}
+@media all and (max-width: 767px) {
+	.social-download-app{
+		width: 100%;
+	}
+	.social-download-app-container {
+	    padding: 60px 10px;
+		overflow-y: auto;
+	    .downapp-banner {
+			padding:  5% 10% 0;
+	    }
+	    .download-app-imgs-container {
+			padding:  0% 5% 0;
+	    }
+		.download-app-pin {
+			padding: 50px 25px 20px;
+		    .downapp-btns-container {
+				padding: 0 5px;
+				.downapp-btns{
+					padding: .8em .4em;
+				}
+			}
+		}
+	}
+	.sms-modal-container{
+		.sms-modal-title{
+			padding: 10px 20px;
+		}
+		.sms-input{
+			#_PhoneNumberVerifier {
+				#_phoneVerifier{
+					padding-left: 50px;
+				}
+				.country-list{
+					max-height: 200px;
+				}
+			}
+			.sms-send-btn{
+				width: 100%;
+				margin-top: 20px;
+			}
+		}
+	}
+}

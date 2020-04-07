@@ -1,0 +1,50 @@
+.messages_container{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    margin-top: 20px;
+    .left_part{
+        width: 27%;
+        background: #fff;
+        margin-right: 10px;
+    }
+    .right_part{
+        width: 73%;
+        margin-right: 10px;
+    }
+    .back_btn{
+        display: none;
+        position: absolute;
+        top: 68px;
+        i{
+            font-size: 36px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .messages_container{
+        width: 75%;
+    }
+}
+@media all and(max-width: 767px){
+    .messages_container{
+        width: 100%;
+        margin-top: 0;
+        .left_part{
+            width: 100%;
+            background: #fff;
+            margin-right: 0;
+        }
+        .right_part{
+            width: 100%;
+            margin-right: 0;
+        }
+        .mobile_handler{
+            display: none;
+        }
+        .back_btn{
+            display: block;
+        }
+    }
+}

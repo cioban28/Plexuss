@@ -1,0 +1,71 @@
+// /messages/styles.scss
+
+@import '../cms/_global.scss';
+
+$magicNumber: 320px;
+
+#_messagesContainer{
+	position: absolute;
+	top: 93px; right: 0; bottom: 0; left: 0;
+}
+
+#_threadListContainer, #_convoContainer, #_threadDetailsContainer{
+	@include absolutely();
+	height: 100%;
+	background: #fff;
+}
+
+#_threadListContainer, #_threadDetailsContainer{
+	width: $magicNumber;
+
+	&.close{ display: none; }
+}
+
+#_threadListContainer{ margin: auto auto auto 0; }
+#_threadDetailsContainer{ margin: auto 0 auto auto; }
+
+#_convoContainer{
+	left: $magicNumber;
+	right: $magicNumber;
+	animation: collapse 0.25s linear;
+
+	&.full{ 
+		right: 0;
+		animation: expand 0.25s linear;
+	}
+
+	@keyframes expand{
+		from { right: $magicNumber; }
+		to { right: 0; }
+	}
+
+	@keyframes collapse{
+		from { right: 0; }
+		to { right: $magicNumber; }
+	}
+}
+
+// small only
+@media only screen and (max-width: 40em){
+	#_threadDetailsContainer{
+		display: none;
+	}
+
+	#_threadListContainer, #_convoContainer{
+		left: 0; right: 0;
+		position: relative;
+	}
+
+	#_convoContainer{ margin: 0 0 50px; }
+}
+
+// medium up
+@media only screen and (min-width: 40.063em) {
+	#_threadListContainer{
+		border-right: 1px solid #ddd;
+	}
+
+	#_threadDetailsContainer{
+		border-left: 1px solid #ddd;
+	}
+}

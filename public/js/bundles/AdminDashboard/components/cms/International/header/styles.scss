@@ -1,0 +1,115 @@
+// styles.scss
+$gray: #797979;
+$green: #24b26b;
+$error: #d90000;
+$test: 1px solid red;
+
+.i-container{
+	color: $gray;
+
+	> .column:first-child{
+		padding: 0 0 0 20px;
+	}
+
+	h5, label{
+		color: $gray;
+	}
+
+	label{
+		text-transform: capitalize;
+		max-width: 300px;
+
+		input.cost-input{
+			color: $gray;
+
+			&.error{
+				border: 1px solid $error;
+				margin: 0;
+			}
+		}
+	}
+
+	.has-error{
+		border: 1px solid $error;
+		color: $error;
+		background: #fff;
+		margin: 0 0 15px;
+		font-size: 11px;
+		padding: 3px;
+	}
+
+	.save{
+		background: $green;
+		color: #fff;
+		border-radius: 3px;
+		padding: 12px 40px;
+	}
+
+	.options > div{
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 600;
+		font-size: 14px;
+		cursor: pointer;
+
+		&:not(:last-child){
+			margin: 0 10px 0 0;
+		}
+
+		&.active{
+			color: $green;
+		}
+	}	
+}
+
+.cost-preview{
+	background: #000;
+	border-radius: 5px 0 0 5px;
+	padding: 20px 10px;
+    max-width: 300px;
+    margin: 10px auto 0;
+    color: #fff;
+    border-right: 5px solid $green;
+
+    .title{
+    	font-size: 16px;
+    	font-weight: 600;
+    	margin: 0 0 10px;
+    }
+
+    .cost-row{
+    	> div{
+			display: inline-block;
+			vertical-align: middle;
+    	}
+
+    	.name{
+	    	font-size: 10px;
+	    	text-transform: uppercase;
+	    	width: 60%;
+	    	font-weight: 600;
+    	}
+
+    	.cost{
+	    	font-size: 12px;
+    		color: $green;
+    		font-weight: 600;
+	    	width: 40%;
+	    	text-align: right;
+    	}
+
+    	&:not(:last-child){
+    		margin: 0 0 10px;
+    	}
+
+    	&:first-child{
+    		margin: 20px 0;
+    		.name{
+    			font-size: 14px;
+    		}
+    		.cost{
+    			font-size: 16px;
+    		}
+    	}	
+    }
+}

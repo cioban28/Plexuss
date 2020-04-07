@@ -1,0 +1,188 @@
+@media (max-width: 767px) and (min-width: 320px) {
+  .redux-toastr.top-right {
+    right: 2% !important;
+    width: 95% !important;
+  }
+}
+
+.add-more-container{
+  background: #2F2F2F;
+  position: fixed;
+  padding: 30px 30%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+
+  .close-add-more-page {
+    color: #fff;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .page-title {
+    display: block;
+    margin: 30px 0 8px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .page-sub-heading {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .college-search-form {
+    display: flex;
+    background: #fff;
+    height: 37px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    .search-icon {
+      padding: 10px;
+      color: #000;
+    }
+    .college-search-bar {
+      border: none;
+    }
+  }
+  .college-list {
+    height: 55%;
+    overflow: auto;
+    &::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar
+    {
+        width: 7px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #949494
+    }
+    .card-container {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      background: #fff;
+
+      .college-image {
+        width: 20%;
+        padding: 10px;
+        display: inline-block;
+        vertical-align: middle;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .college-info {
+        width: 65%;
+        display: inline-block;
+        vertical-align: middle;
+
+        .college-name {
+          color: #4D4D4D;
+          padding: 2px;
+          font-size: 11px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .country-code {
+          color: #4D4D4D;
+          padding: 2px;
+          font-size: 10px;
+          font-weight: 400;
+        }
+      }
+      .action-button {
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+
+        .selected-college {
+          border-radius: 100%;
+          background: #2AC56C;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          cursor: pointer;
+
+          img {
+            width: 14px;
+            margin-top: 8px;
+          }
+        }
+        .add-college {
+          border: solid #999999 2px;
+          border-radius: 100%;
+          background: #777;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          cursor: pointer;
+
+          img {
+            width: 14px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  .add-college-button {
+    background: #2AC56C;
+    padding: 18px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    left: 30%;
+    width: 40%;
+    &:disabled {
+      background: #2AC56C;
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .add-more-container {
+    padding: 14px;
+
+    .add-college-button {
+      bottom: 20px;
+      left: 2%;
+      width: 96%;
+    }
+  }
+}
+
+.unset-profile-input-styles {
+  height: 2.3125rem !important;
+  margin: 0 0 1rem 0 !important;
+  width: 100% !important;
+  max-width: unset !important;
+  padding: 0.5rem !important;
+}

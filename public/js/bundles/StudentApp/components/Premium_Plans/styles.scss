@@ -1,0 +1,321 @@
+// Premium_Plans/styles.scss
+
+@import './../../utils/_global';
+
+$maxwidth: 350px;
+
+#_StudentApp_Component, #_StudentApp_Component > div{
+	height: 100%;
+}
+
+#_Premium_Plans{
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+
+	.background{
+		background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/general/green-bricks.jpg');
+		background-repeat: repeat;
+		background-color: $green;
+		height: auto;
+		min-height: 100%;
+		padding: 50px;
+	}
+
+	.header-container{
+		padding: 10px 0 30px 0;
+		color: #fff;
+		text-align: center;
+
+		.h1{ 
+			display: inline-block;
+			padding: 10px 20px;
+			font-weight: 400;
+			font-size: 38px; }
+
+		.h3{
+			font-size: 23px;
+			font-weight: 100;
+		}
+
+		.plan-toggle-btn{
+			cursor: pointer;
+			margin: 0px;
+			font-size: 20px;
+			font-weight: 100;
+			padding: 5px;
+			text-align: center;
+			width: 260px;
+			display: inline-block;
+			@include bRadius(5px);
+
+			&:first-child{
+				margin-right: 50px;
+			}
+
+			&.active{
+				background-color: rgba(0,0,0,.2);	
+				/*@include fadeIn(1s);*/
+			}
+		}
+
+	}
+
+
+
+	.w66{
+		width: 70%;
+		padding-left: 20px;
+	}
+
+	.bottom-wrapper{
+		width: 100%;
+		height: 110px;
+		position: absolute;
+		bottom: 0px;
+	}
+	.rel-wrapper{
+		
+		height: 110px;
+	}
+
+
+	.left-image-foot,
+	.right-image-foot{
+		position: fixed;
+		bottom: 0px;
+		width: 15%;
+		height: auto;
+		
+	}
+
+	.left-image-foot{
+		left: 20px;
+		padding: 0px 10px;
+	}
+
+	.right-image-foot{
+		right: 30px;
+		padding: 0px 20px;
+	}
+
+	.tipArrow{
+		border-top: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 6px solid #fff;
+		border-left: 6px solid transparent;
+		position: absolute;
+		margin-top: -27px;
+		margin-left: 33px;
+	}
+
+	.plan-container{
+		text-align: center;
+
+		> div{ display: inline-block; }
+
+		.plan{
+			position: relative;
+			background-color: rgba(0,0,0,.7);
+			display: inline-block;
+			max-width: $maxwidth;
+			color: #fff;
+			margin: 10px;
+			min-height: 532px;
+			box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.4);
+			/*overflow: hidden;*/
+			vertical-align: top;
+			@include tab(7px);	
+			@include fadeInUp(0.4s);
+
+
+			&.c-3, &.c-4, &.c-5{
+				width: 31%;
+			}
+			&.c-2{
+				width: 50%;
+			}
+			&.c-1{
+				width: 100%;
+			}
+
+			b{ color: #fff; }
+
+			
+			.name{
+				background-color: #fff;
+				@include tab(5px);
+				color: #424242;
+				font-size: 15px;
+				padding: 15px 0;
+				font-weight: 600;
+			}
+
+			.price{
+				text-align: center;
+				margin: 10px 0;
+
+				.amt{
+					font-size: 45px;
+					font-weight: 600;
+					color: #fff;
+					margin: 20px 0;
+					position: relative;
+					display: inline-block;
+
+					&.smaller{
+						font-size: 27px;
+						margin-left: -5px;
+					}
+				}
+				
+				.dollar, .wp{
+					position: absolute;
+					color: #fff;
+				}
+
+				.dollar{
+					top: 6px;
+				    right: 100%;
+				    width: 21px;
+				    font-size: 26px;
+				}
+
+				.wp{
+					bottom: 12px; left: 100%;
+					width: 70px;
+					font-size: 11px;
+				}
+			}
+
+			.feature{ 
+				padding: 0 26px;
+				text-align: left;
+				font-size: 14px;
+				margin: 0 0 25px; }
+
+			.savings{ 
+				text-align: right;
+				color: #fff; 
+				font-size: 12px;
+
+				&.total{ 
+					font-size: 14px;
+					font-weight: 600;
+					margin: 19px 0;
+					color: #2EB566;
+					text-align: center; }
+			}
+
+			a.choose{
+				display: inline-block;
+				color: #fff;
+				background-color: $orange;
+				@include bRadius(10px);
+				padding: 7px 46px;
+				font-size: 17px;
+				font-weight: 100;
+				transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);				
+
+				&:active{ @include activeBtnClick(); }
+				&:hover{ background-color: $lightorange; }
+			}
+
+			.current-btn{
+				cursor: default;
+				display: inline-block;
+				color: #5e5e5e;
+				background-color: #c5c5c5;
+				@include bRadius(10px);
+				padding: 7px 46px;
+				font-size: 17px;
+				font-weight: 400;
+			}
+		}
+	}
+
+}
+
+
+
+@media all and (max-width: 1351px){
+	#_Premium_Plans{
+
+		.w66{
+			padding-left: 0;
+		}
+
+		.plan-container{
+			.plan, .plan.c-3, .plan.c-2{
+				width: 100%;
+				margin: 10px 0;
+				max-width: none;
+				min-height: 432px;
+				text-align: center;
+
+				.feature{
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1110px){
+	#_Premium_Plans{ 
+
+		.left-image-foot > img, 
+		.right-image-foot > img{
+			display: none;
+		}
+	}
+}
+
+
+@media all and (max-width: 669px){
+	#_Premium_Plans{ 
+		
+		.w66{
+			width: 95%;
+		}
+			
+		.plan-toggle-btn{
+			margin-right: 0 !important;
+		}
+	}
+}
+
+@media all and (max-width: 640px){
+	#_Premium_Plans{
+		.right-image-foot{
+			position: relative;
+			width: 100%;
+			bottom: initial;
+			right: initial;
+		}
+	}
+}
+
+// small only
+@media only screen and (max-width: 40em){
+	#_Premium_Plans{
+
+		.w66{
+			width: 99%;
+		}
+		
+		.background{
+		   padding: 15px;
+		}
+
+		.header-container{
+			.h1{ max-width: 400px; font-size: 27px;}
+			.h3{ font-size: 18px; }
+		}
+
+		.plan-container{
+			.plan{
+				&:last-child{ margin: 0 0 50px; }
+			}
+		}
+	}
+}

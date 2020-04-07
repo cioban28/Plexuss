@@ -1,0 +1,17 @@
+
+
+._picTextButton{
+	display: inline-block;
+	padding: 0px 15px;	
+	cursor: pointer;
+
+	.btn-image, .btn-text{
+		position: relative;
+		display: inline;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+	}
+
+}
+

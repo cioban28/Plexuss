@@ -1,0 +1,563 @@
+// /messages/convo/styles.scss
+
+@import '../../../cms/_global.scss';
+
+#_convoContainer{
+	.mobile_view {
+		display: none;
+	}
+	#_convo{
+		overflow-y: auto;
+		position: absolute;
+		top: 0; right: 0; left: 0; bottom: 95px;
+		padding: 10px;
+	}
+
+	#_actionsContainer{
+		position: absolute;
+		right: 0; bottom: 0; left: 0;
+		padding: 10px;
+		background-color: #fff;
+		border-top: 1px solid #ddd;
+	}
+
+	#_ellipsis{
+		padding: 10px 0;
+
+		.ellips{ 
+			position: relative;
+			display: inline-block; 
+			@include bRadius(15px);
+			background: #ddd;
+			color: #797979;
+			padding: 0 10px;
+			vertical-align: middle;
+
+			.ellips-dot{
+				display: inline-block;
+				width: 4px;
+				height: 4px;
+				border-radius: 100%;
+				background: $gray;
+				animation: doTheWave 1.2s linear infinite;
+
+				&:not(:last-child){ margin: 0 3px 0 0; }
+				&:nth-child(2) { animation-delay: -1.0s; }
+				&:nth-child(3) { animation-delay: -0.8s; }
+
+				@keyframes doTheWave {
+					0%, 60%, 100% { transform: initial; }
+					30% { transform: translateY(-7px); }
+				}
+			}	
+		}
+
+		> span{
+			font-size: 12px;
+			display: inline-block;
+			padding: 0 0 0 5px;
+			color: $gray;
+		}
+	}	
+
+	.upload-file-wrapper {
+		    display: inline-block;
+		    background-color: rgba(24, 160, 72, 0.42);
+		    padding: 10px;
+		    border-radius: 5px;
+
+
+		    a{ color: #295c7b; font-size: 13px;}
+		}
+
+
+	.template-container{
+		margin: 0 0 10px;
+
+		> div.action{
+			display: inline-block;
+			vertical-align: middle;
+
+			&:not(:last-child){
+				margin: 0 15px 0 0;
+			}
+		}
+
+		select{
+			min-width: 128px;
+			max-width: 150px;
+			@include bRadius(3px);
+			height: 27px;
+			padding: 0 5px;
+		}
+
+		select, input[type="checkbox"], label{
+			margin: 0;
+			color: $gray;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		input[type="checkbox"]{ margin: 0 5px 0 0; }
+
+		.edit-temp-btn{
+			color: $gray;
+			font-size: 14px;
+			font-family: 'Open Sans', sans-serif;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
+
+	.send-container{
+		position: relative;
+		padding: 0 135px 0 0;
+
+		.text-icon{
+			width: 30px; height: 26px;
+			background-image: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/messages_sprites.png);
+			background-position: 8px 1px;
+			background-size: 70%;
+			background-repeat: no-repeat;
+			@include absolutely();
+			margin: 7px auto auto 0;
+		}
+
+		#send_field{
+			padding-top: 8px;
+			padding-left: 10px;
+			font-size: 14px;
+			height: 38px;
+			overflow: auto;
+			margin: 0;
+			@include bRadius(3px);
+			border: 1px solid #cccccc;
+			color: $gray;
+			resize: none;
+		    transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
+
+			&.is-text{ 
+				padding-left: 35px; 
+				padding-right: 67px;
+			}
+
+			&::placeholder{ color: #ddd; }
+			&[rows="1"]{ min-height: 38px; }
+
+		}
+
+		.text-count{
+			position: absolute;
+			top: 0; right: 144px; bottom: 0;
+			margin: 9px auto auto;
+			height: 22px;
+			font-weight: 600;
+			font-size: 14px;
+			color: #aaa;
+		}
+
+		> button{
+			display: block;
+			background-color: $green;
+			outline-color: transparent;
+		    font-family: 'Open Sans', sans-serif;
+		    padding: 8px 0 8.4px;
+		    margin: 0;
+		    width: 130px;
+		    position: relative;
+		    @include bRadius(3px);
+		    position: absolute;
+		    top: 0; right: 0;
+
+			&:hover, &:active, &:focus{
+				background-color: $green;
+			}
+		}
+	}
+
+	.bubble-container{ @include fadeInDown(0.3s); }
+
+	.me-bubble, .incoming-bubble{
+		position: relative;
+		padding: 12px 88px 12px 70px;
+
+		.pic-wrapper{
+			@include absolutely();
+			margin: auto auto auto 15px;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #eee;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			@include bRadius(100%);
+
+			.pic-name{
+				position: absolute;
+				bottom: 100%;
+				background-color: #202020;
+				color: #fff;
+				padding: 2px 7px;
+				font-size: 14px;
+				display: none;
+				white-space: nowrap;
+				@include bRadius(3px);
+			}
+
+			&:hover .pic-name{ display: block; }
+		}
+		
+
+		.msg{
+			background-color: $green;
+			color: #fff;
+			font-size: 14px;
+			font-family: 'Open Sans', sans-serif;
+			padding: 6px 10px;
+			position: relative;
+			@include bRadius(5px);
+			word-break: break-word;
+
+			.arrow{
+				width: 0; 
+				height: 0; 
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid $green;	
+				position: absolute;
+				top: 0; bottom: 0;
+				margin: auto;
+			}
+
+		}
+
+		.time{
+			@include absolutely();
+			margin: auto 0 auto auto;
+			color: $gray;
+			height: 20px;
+			width: 70px;
+			font-size: 11px;
+			font-family: 'Open Sans', sans-serif;
+			text-align: center;
+		}
+	}
+
+	.me-bubble{
+		padding: 10px 125px 10px 33px;
+
+		.pic-wrapper{ margin: auto 70px auto auto; }
+		.pic-name{ right: 0; }
+
+		.msg{
+			.arrow{ 
+				left: 100%; 
+			}
+
+			h1, h2, h3, h4, h5, h6, p{ color: #fff; }
+		}
+	}
+
+	.incoming-bubble{
+		.msg{
+			background-color: #eee;
+			color: $gray;
+
+			.arrow{ 
+				transform: rotate(180deg);
+				right: 100%;
+				border-left: 5px solid #eee; 
+			}
+
+			h1, h2, h3, h4, h5, h6, p{ color: $gray; }
+		}
+
+		.pic-name{ left: 0; }
+	}
+
+	.date-divider{
+		border-bottom: 1px solid #eee;
+		text-align: center;
+		font-size: 11px;
+	    color: #aaa;
+	    height: 9px;
+	    margin: 10px 0 15px;
+
+	    span{ 
+	    	padding: 0 20px;
+	    	background-color: #fff; }
+	}
+
+	.send-loader{
+		width: 25px;
+    	height: 25px;
+    	border: 2px solid transparent;
+    	border-top: 2px solid #fff;
+    	position: absolute;
+    	top: 0; right: 0; bottom: 0; left: 0;
+    	margin: auto;
+    	@include bRadius(100%);
+	    animation: spin 1.25s linear infinite;
+
+	    @keyframes spin {
+		    0% { transform: rotate(0deg); }
+		    100% { transform: rotate(360deg); }
+		}
+	}
+
+	.prev-msgs{
+		height: 22px; width: 175px;
+		color: $orange;
+		background-color: #ddd;
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+		margin: auto;
+		@include bRadius(3px);
+		font-size: 14px;
+		text-align: center;
+		cursor: pointer;
+		z-index: 1;
+		@include noUserSelect();
+
+		&:active{ box-shadow: none; }
+	}
+
+	.prev-loader{
+		@include singleDivLoader(20px, 1.25s, transparent, $orange);
+	}
+
+	.save-template-modal,
+	.edit-template-modal,
+	.editor-modal,
+	.plex-err-modal,
+	.attachment-preview-modal{
+		width: 400px;
+		@include bRadius(3px);
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+		color: $gray;
+		padding: 0 20px 20px;
+		background-color: #fff;
+		@include fadeInUp(0.4s);
+
+		.tname{ 
+			font-size: 18px; 
+
+			span{
+				font-size: 16px;
+				vertical-align: middle;
+				margin: 0 5px 0 0;
+			}
+
+			img{ cursor: pointer; }
+		}
+
+		.tclose{ 
+			text-align: right; 
+			span{ 
+				font-weight: 600; 
+				font-size: 30px;
+				cursor: pointer;
+			}
+		}
+
+		.err{
+			color: $error;
+			font-size: 14px;
+			margin: -10px 0 10px;
+			@include fadeInLeft(0.3s);
+		}
+	}
+
+	.save-template-modal,
+	.plex-err-modal{	
+		.tsave{
+			background-color: $orange;
+			@include bRadius(3px);
+			width: 150px;
+			text-align: center;
+			margin: auto 0 auto auto;
+			color: #fff;
+			font-weight: 600;
+			padding: 5px 0;
+			cursor: pointer;
+			@include noUserSelect();
+
+			&:active{ @include activeBtnClick(); }
+		}	
+	}
+
+	.editor-modal{ width: 500px; }
+
+	ul.template-list{
+		max-height: 200px;
+		overflow-y: auto;
+		margin: 10px 0;
+		@include bRadius(3px);
+
+		input[type="radio"]{ margin: 0 5px 10px 2px; }	
+	}
+
+	.tactions{ 
+		@include fadeInLeft(0.4s);
+
+		> button{
+			display: inline-block;
+			vertical-align: middle;
+			color: #fff;
+			@include bRadius(3px);
+			font-size: 14px;
+			cursor: pointer;
+			padding: 8px 15px;
+			margin: 0;
+
+			&:not(:last-child){ margin: 0 5px 0 0; }
+		}
+
+		.tedit{ 
+			background-color: #3F8CCB; 
+			&:active{ @include activeBtnClick(); }
+		}
+
+		.tdelete{ 
+			background-color: $orange; 
+			&:active{ @include activeBtnClick(); }
+		}
+
+		.areYouSure{ 
+			word-break: break-word;
+			margin: 0 0 10px; }
+	}
+
+	.editor-actions{
+		@include fadeInLeft(0.4s);
+
+		> div{ 
+			cursor: pointer; 
+			padding: 5px 12px;
+			@include bRadius(3px);
+		}
+
+		.tback, .tdelete{ text-decoration: underline; }
+		.tdelete{ color: $orange; }
+
+		.tback{ padding: 5px 0; }
+
+		.tsave{
+			background-color: #3F8CCB;
+			color: #fff;
+			&:active{ @include activeBtnClick(); }
+		}
+	}
+
+	.name-editor{
+		position: relative;
+		@include fadeInLeft(0.2s);
+
+		input.save-temp-name{ padding-right: 55px; }
+
+		> div{
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			background-color: #3F8CCB;
+			width: 50px;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			@include noUserSelect();
+
+			&:active{ @include activeBtnClick(); }
+		}
+	}
+
+	.plex-err-modal{
+		.tsave{ margin: auto; }
+		.err-title{
+			color: $error;
+			font-size: 20px;
+		}
+	}
+
+	.templ-err{
+		color: $error;
+		font-size: 14px;
+		margin: 0 0 10px;
+		@include fadeInLeft(0.3s);
+	}
+
+	.no-convo{
+		@include absolutely();
+		margin: auto;
+		height: 67px;
+		padding: 20px;
+		max-width: 550px;
+		@include bRadius(3px);
+		color: $gray;
+		background-color: #eee;
+	}
+
+	.attachment-preview-modal{
+		text-align: center;
+		width: 550px;
+		padding: 20px;
+		max-height: 500px;
+		overflow-y: auto;
+	}
+	
+}
+
+// small only
+@media all and (max-width: 40em){
+	#_convoContainer{
+	  margin: 0 0 0px !important;
+		.mobile_view {
+			display: block;
+		}
+		.send-container{
+			padding: 0 100px 0 0 !important;
+			> button{
+		    width: 90px !important;
+		    background-color: #ff5c27 !important;
+				&:hover, &:active, &:focus{
+					background-color: #ff5c27 !important;
+				}
+			}
+		}
+	}
+	.web_view {
+		display: none !important;
+	}
+}
+
+// medium only
+@media only screen and (min-width: 40.063em) and (max-width: 64em){
+	#_convoContainer .template-container select{
+		max-width: 40px;
+	}
+	#_convoContainer{
+	  margin: 0 0 0px !important;
+		.mobile_view {
+			display: block;
+		}
+		.send-container{
+			padding: 0 100px 0 0 !important;
+			> button{
+		    width: 90px !important;
+		    background-color: #ff5c27 !important;
+				&:hover, &:active, &:focus{
+					background-color: #ff5c27 !important;
+				}
+			}
+		}
+	}
+	.web_view {
+		display: none !important;
+	}
+	.mobile_view {
+		display: block;
+	}
+	.header_style {
+		font-size: 18px;
+		font-weight: bold;
+		color: gray;
+	}
+}

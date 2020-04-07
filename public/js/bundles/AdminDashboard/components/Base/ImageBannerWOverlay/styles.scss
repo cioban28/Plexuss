@@ -1,0 +1,391 @@
+/* here for now also -- smaller code base*/
+$statsColor: #ffffff;
+$mainTextColor: #767676;
+$mainTextColorHover: #636363;
+$mainBackColor: #dedede;
+
+$bannerHeight: 310px;
+$topbarHeight: 45px;
+
+
+@mixin nestedBannerHeight($bannerHeight){
+	min-height: ($bannerHeight + 100px);
+}
+
+
+/* bannerheight --check > 90px */
+@mixin dashMessgeHeight($bannerHeight){
+	height: ($bannerHeight - 90px);
+}
+
+@mixin dashMessageBodyHeight($bannerHeight){
+	height: ($bannerHeight - 100px);
+}
+
+/* may may this a function to produce random later */
+@mixin statsMedBackground(){
+	
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1451187580459-43490279c0fa.jpg');
+	
+	/*@extend .p#{random(3)};*/
+	min-height: 380px;
+	background-size: auto 190%;
+	background-position: 0px 0px;
+	
+}
+
+
+/* banner conatiners and background styling -- wrapper for dashboard  */
+/* meant to sit under topnav -- in topnav.blade.php -- so have a negative top: */
+.banner-wrapper{
+	position: relative;
+	top: -$topbarHeight;
+	height: $bannerHeight - $topbarHeight;
+}
+
+
+
+
+/***-------- imageBannerWOverlay banner -----------***/
+
+.banner-bg-container{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: $bannerHeight;
+}
+.dashboard-banner-bg{
+	position: absolute;
+	min-width: 120%;
+	@include nestedBannerHeight($bannerHeight);
+	height: auto;
+	background-color: #858585;
+	filter: blur(1px);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+ 	margin: -25px -10px -25px -10px;
+ 	z-index: 1;
+}
+
+.banner-bg-container:after{
+	content: '';
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 120%;
+	height: $bannerHeight + $topbarHeight;
+	background: #000000;
+	background-repeat: no-repeat;
+	z-index: 2;
+	opacity: .6;
+}
+
+
+
+/*--- container for all stats on top of banner ---*/
+
+.dashboard-stats-container{
+	position: absolute;
+	padding-top: 90px;
+	padding-bottom: 45px;
+	width: 100%;
+	top: 0px !important;
+	left: 0px !important;
+	height: $bannerHeight;
+	z-index: 5;
+	color: $statsColor;
+	font-size: 13px;
+	font-weight: 400;
+
+	h1,h2,h3,h4,h5 {
+		color: $statsColor;
+	}
+
+}
+
+
+
+
+
+/*** --- message box on one side of banner ---- ***/
+/*----------- dashboard message --------*/
+.dash-message-container{
+	position: absolute;
+	top: -30px;
+	right: 0px;
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 2px;
+	padding: 15px 25px;
+	color: $mainTextColor;
+	@include dashMessgeHeight($bannerHeight);
+	
+	min-height: 113%;
+	overflow: hidden;
+	z-index: 5;
+	
+	h1, h2, h3, h4, h5, h6, p{
+		color: $mainTextColor;
+	}
+
+	h5{
+		font-size: 20px;
+	}
+
+	.dash-msg-body{
+		font-size: 14px;
+		line-height: 20px;
+		min-height: 100px; /* min-height so that the dismiss button sits under content */
+		margin-right: 5px;
+		overflow: hidden;
+	}
+
+}
+
+
+
+
+
+
+
+
+/******** banner pictures -- each with specific placement ***/
+.p1,
+%p1{ /*flower */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1442124920820-8e5f4b07b563.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 84%;
+	background-position: 9px -202px;
+}
+.p2,
+%p2{ /* Louvre */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/NnDHkyxLTFe7d5UZv9Bk_louvre.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 84%;
+	background-position: -3px -341px;
+}
+.p3,
+%p3{ /*lightning */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1431440869543-efaf3388c585.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 75%;
+	background-position: 0px -335px;
+}
+.p4{ /* Ireland/grassy... shoreline */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1435783099294-283725c37230.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 92%;
+	background-position: 0px -152px;
+}
+.p5{ /* tropical coast */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1441794016917-7b6933969960.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 86%;
+	background-position: 0px -392px;
+}
+.p6{ /* snowy mountain */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1443891238287-325a8fddd0f7.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 87%;
+	background-position: 0px -300px;
+}
+.p7{ /* night globe */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1451187580459-43490279c0fa.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -250px;
+}
+.p8{ /* hot air balloon */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1452711932549-e7ea7f129399.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -402px;
+}
+.p9{ /* pineapple */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1452289765185-5df11aa2a706.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -598px;
+}
+.p10{ /* red sun */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1459445364195-16475050193c.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -392px;
+}
+.p11{ /* lone pine on a snowy mountain */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1460388052839-a52677720738.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -529px;
+
+}
+.p12{ /* snowy campout/ beacon */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1460458248189-2cb101df4e67.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -475px;
+}
+.p13{ /* nebulous sky -- Renaissance*/
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1462332420958-a05d1e002413.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px 0px;
+}
+.p14{ /* blue majesty -- mountain scape blue hues */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1462903004115-f8e27d6a3985.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -480px;
+}
+.p15{ /* Northern lights -- mountain */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1464054313797-e27fb58e90a9.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -392px;
+}
+.p16{ /* lighthouse */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1466278313810-9aca9abea861.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 95%;
+	background-position: -102px -275px;
+}
+.p17{ /* peaking through -- cloud covered mountain peaks */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1468083684825-012f39547b23.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -222px;
+}
+.p18{ /* what a view -- woman standing atop grassy mountains */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1469474968028-56623f02e42e-(1).jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -439px;
+}
+.p19{ /* the road less traveled -- green hills with a little road way */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1470071459604-3b5ec3a7fe05.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -392px;
+}
+.p20{ /* sharptooth -- sharp mountain peak */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1470104240373-bc1812eddc9f.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -392px;
+}
+.p21{ /* Monet -- reflections on the water */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1472647077244-23bed45e50d9-(1).jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -232px;
+}
+.p22{ /* speed racer -- highway blurred traffic light */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1473042904451-00171c69419d.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -368px;
+}
+.p23{ /* Venice -- buildings on the water */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1473615695634-d284ec918736.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -392px;
+}
+.p24{ /* path through the snow -- road through snowy mountains */
+	background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/dashboard/photo-1473800447596-01729482b8eb.jpg');
+	@extend .dashboard-banner-bg;
+	background-size: 85%;
+	background-position: 0px -279px;
+}
+
+
+@media only screen and (min-width: 1129px) and (max-width: 1273px){
+	.stats-rightSide{
+		width: 69%;
+	}
+
+	.stats-leftSide{
+		width: 30%;
+	}
+}
+
+
+
+/*** medium screens  ***/
+@media only screen and (max-width: 1129px) { 
+	.banner-wrapper{
+		top: 0px;
+		height: auto;
+	}
+	.banner-bg-container{
+		height: 0px;
+	}
+
+}
+
+
+@media all and (min-width: 641px) and (max-width: 1129px){
+
+	.dashboard-stats-container{
+		position: relative;
+		min-height: 100%;
+		height: auto;
+		margin: 0px;
+		background-color: $mainBackColor;
+		padding-bottom: 50px;
+		@include statsMedBackground(); 
+	}	
+
+}
+
+
+@media all and (max-width: 641px){
+	.dashboard-stats-container{
+		position: relative;
+		min-height: 100%;
+		height: auto;
+		margin: 0px;
+		padding-bottom: 50px;
+		background: $mainBackColor;
+		color: $mainTextColor;
+	}
+
+	.dash-message-container{
+		top: -38px;
+		left: -6px;
+		height: 114%;
+
+		.dash-msg-body{
+			min-height: 300px;
+		}
+	}
+
+	.banner-wrapper{
+		height: auto;
+	}
+}
+
+@media all and (max-width: 423px){
+	.dash-message-container{
+		top: -59px;
+		left: -5px;
+		height: 122%;
+		overflow: auto;
+		width: 105%;
+	}
+
+	#_indexedCarousel .x-close-btn{
+		top: -49px !important;
+		background: #ffffff;
+	}
+	#_indexedCarousel .dismiss-btn{
+		top: -40px !important;
+		background: #ffffff;
+	}
+	.dash-message-container .dash-msg-body{
+		margin-top: 23px;
+	}
+}

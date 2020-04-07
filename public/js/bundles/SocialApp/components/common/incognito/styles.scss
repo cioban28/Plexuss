@@ -1,0 +1,38 @@
+.incognito_post{
+    font-size: 13px;
+    color: #B1B1B1;
+    display: inline-flex;
+    justify-content: center;
+    height: 51px;
+    width: 100%;
+    background: #F6F6F6;
+    border: 1px solid #E7E7E7;
+    align-items: center;
+    border: 8px;
+    .img_container{
+        img{
+            width: 16px;
+            height: 18px;
+            margin: 0 18px;
+        }
+    }
+}
+.incognito_comment{
+    font-size: 13px;
+    color: #B1B1B1;
+    display: inline-flex;
+    justify-content: center;
+    height: 97px;
+    width: 100%;
+    background: #F6F6F6;
+    border: 1px solid #E7E7E7;
+    align-items: center;
+    border: 8px;
+    .img_container{
+        img{
+            width: 16px;
+            height: 18px;
+            margin: 0 18px;
+        }
+    }
+}

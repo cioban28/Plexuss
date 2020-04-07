@@ -1,0 +1,402 @@
+.my-body {
+    font-family: 'Open Sans', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    margin:  5%;
+}
+
+#majors-inner
+{
+  height: 100%;
+  width: 80%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url("/images/backgroundimages/tower-clouds-optimized.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.department-headning-div {
+    position: relative;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #000000;
+    padding: 20px 25px;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-size: 18px;
+    text-align: left;
+}
+.department-headning-div-first{
+    margin-top: 11px;
+}
+
+.row.collapse .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.right-bar-department-info .row {
+    margin-bottom: 10px;
+}
+
+.department-major-buttons .content {
+    margin-bottom: -1em;
+    padding-right: 0px !important;
+}
+
+.department-major-buttons .content {
+    float: left !important;
+    margin-bottom: -0.9em;
+    margin-right: -0.1em;
+}
+
+.department-major-buttons .button {
+    background-color: #000000;
+    margin-top: 0px;
+}
+
+.department-major-buttons a {
+    width: 100%;
+    font-size: 14px;
+    font-family: Open Sans;
+    color: #fff;
+    height: 68px;
+    display: -webkit-box;
+    border-radius: 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.department-headning-div {
+    position: relative;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #000000;
+    padding: 20px 25px;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.department-content-div {
+    min-height: 100px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #ffffff;
+    padding: 25px;
+    color: #000000;
+}
+
+.colleges-list-div {
+    min-height: 100px;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 20px 15px 15px 15px;
+    margin: 20px auto;
+    color: #000000;
+}
+
+.college_logo {
+    width: 60px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 70px;
+}
+
+.flag.flag-us {
+    background-position: -144px -154px;
+}
+
+.flag {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background: url(https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/countryflags.png) no-repeat;
+}
+
+ul, li {
+    font-family: 'Open Sans', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.college-pages-navbar>a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 22px;
+    text-decoration: none;
+}
+
+.filter-colleges-majors-type, a.majors-back-btn {
+    display: inline-block;
+    color: #ffffff;
+    margin: 20px 25px 20px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.majors-back-arrow {
+    font-size: 29px;
+    line-height: 10px;
+    position: relative;
+    top: 2px;
+    font-weight: 100;
+    margin-right: 2px;
+}
+
+.side-bar-departments {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+ul.ui-widget-content {
+    width: unset;
+    font-weight: unset;
+}
+
+#majors-inner ul.ui-widget-content {
+    border: unset;
+    margin-bottom: 0px;
+}
+
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    outline: none;
+}
+
+.ui-menu .ui-menu-item {
+    position: relative;
+    margin: 0;
+    padding: 3px 1em 3px .4em;
+    cursor: pointer;
+    min-height: 0;
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: none;
+    color: #40c553;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: none;
+}
+
+.side-bar-departments a.active {
+    color: #77d99f;
+}
+
+.side-bar-departments a {
+    font-weight: normal;
+    color: #666;
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+}
+
+.side-bar-departments a.active {
+    color: #77d99f;
+}
+
+.ul-hover-styling{
+    position: absolute;
+    display: block;
+    top: 0%;
+    z-index: 1;
+    left: 112%;
+}
+
+  .color-green{
+      color: #77d99f !important;
+    }
+  .color-green:hover {
+      text-decoration: underline;
+    }
+
+@media only screen and (max-width: 767px){
+    #majors-inner{
+        width: 100%;
+    }
+    .my-body {
+        margin: 10% 5%;
+    }
+    .left-space{
+        padding-left: 0;
+    }
+
+    .colapsible-item {
+        text-align: left;
+    }
+
+    .majors-toggle-btn {
+        display: block;
+        position: relative;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 20px auto;
+        color: #635d56;
+        cursor: pointer;
+        margin-bottom: 13px
+    }
+    .right-bar-department-info {
+        overflow-x: hidden;
+    }
+    .side-bar-departments.show-for-small {
+        .header-text {
+            color: #fff;
+            text-align: center;
+            i {
+                font-size: 12px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.majors-toggle-btn {
+    display: block;
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 20px auto;
+    color: #635d56;
+    cursor: pointer;
+    margin-bottom: 13px
+
+}
+
+@media only screen and (max-width:1023px){
+  #majors-inner .margin-div{
+    margin: 0px;
+  }
+
+  #majors-inner .department-headning-div {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    .heading-padding{
+        margin: 5% 2% 0% 2% !important;
+    }
+    .pd-top-10 {
+        padding-top: 10% !important;
+    }
+
+}
+
+
+#majors-inner .department-content-div ul li {
+    list-style: disc !important;
+    padding: 5px !important;
+    margin: 5px !important;
+    color: #79796A;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+
+#majors-inner .side-bar-departments {
+  text-align: left !important;
+}
+
+#majors-inner .Collapsible{
+    color: white;
+    text-align: center;
+    margin-bottom: 1%;
+
+}
+
+
+
+#major-inner .Collapsible__contentOuter{
+    margin-top: 15px;
+    text-align: left;
+}
+
+#majors-inner .adjust-height{
+    height: 65px;
+}
+
+
+.pt40 {
+    padding-top: 40px;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: none;
+}
+
+.ui-menu .ui-menu-icon {
+    left: auto;
+    right: 0;
+}
+
+.ui-menu .ui-menu {
+    margin-left: 52px;
+    border-radius: 4px;
+    left: 58% !important;
+    padding-left: 29%;
+}
+
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+
+ul.ui-widget-content {
+    width: unset;
+    font-weight: unset;
+}
+
+.ui-widget-content {
+    border: unset;
+}
+
+.side-nav-bar{
+    padding-top: 1%;
+}
+
+
+@media only screen and (min-width:767px){
+  #majors-inner .majors-toggle-btn{
+    display: none;
+  }
+}
+
+.ui-menu-item a:hover {
+    color: #40c553 !important;
+}
+
+.Collapsible__trigger {
+    cursor: pointer;
+}

@@ -1,0 +1,272 @@
+
+/*************** Attatchment modal *****************/
+._AttachmentModal{
+	background-color: #ffffff;
+	border-radius: 3px;
+	padding: 1.875rem;
+	position: relative;
+	width: 80%;
+	max-width: 68.5em;
+
+
+    *::-webkit-scrollbar{
+	    width: 20px;
+	    border-radius: 5px;
+	}
+
+	*::-webkit-scrollbar-corner{
+		border-radius: 5px;
+	} 
+
+	*::-webkit-scrollbar-track {
+	    background: transparent;
+	    padding: 2px;
+	}
+
+	*::-webkit-scrollbar-thumb {
+	  background-color: rgba(0,0,0,.2);
+	  border-radius: 9px;
+	  width: 20px;
+	  border: 5px solid #ffffff;
+	}
+
+	h5{
+		font-size: 27px;
+		color: #1f1f1f;
+	}
+
+
+	.light-text-c{
+	    text-align: center;
+	    font-size: 13px;
+	    color: #cccccc;
+	}
+
+	.close-btn{
+		color: #aaaaaa;
+		cursor: pointer;
+		font-size: 43px;
+		font-weight: 700;
+		position: absolute;
+		top: 45px;
+		right: 31px;
+	}
+
+	.attch-error{
+		color: #ff2600;
+		font-size: 13px;
+		margin: 10px auto;
+		width: 420px;
+		text-align: center;
+		max-width: 100%;
+	}
+	.attch-saving{
+		color: #797979;
+		font-size: 13px;
+		margin: 10px auto;
+		width: 420px;
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.file-attch-nav-container {
+	    border-bottom: 1px solid #aaaaaa;
+
+	    & > div {
+		    display: inline-block;
+		    padding: 5px 10px 5px 0px;
+		    margin-right: 20px;
+		    font-size: 14px;
+		    cursor: pointer;
+		    
+	    	&.active{
+		    	color: #000000;
+	    		font-weight: 700;
+		    }
+
+	    }
+    }
+
+	.new-attch-cont {
+	    text-align: center;
+	    padding: 50px 20px 20px 20px;
+	}
+
+	.fattch-preview-cont {
+	    padding: 20px;
+	    width: 410px;
+	    max-width: 100%;
+	    margin: auto;
+	    border: 2px dashed #cdcdcd;
+	    min-height: 300px;
+	    max-height: 420px;
+	    overflow: auto;
+	}
+
+	input.FileName {
+	    padding: 5px;
+	    text-align: center;
+	    width: 300px;
+	    max-width: 100%;
+	    margin-top: 15px;
+        margin-right: 5px;
+	}
+
+	input.FileInput{
+		display: none;
+	}
+
+	.fattch-attch-btn {
+	    display: inline-block;
+	    margin-top: 20px;
+	    padding: 5px 20px;
+	    border: 1px solid #999999;
+	    cursor: pointer;
+
+	    .fattch-txt {
+		    font-size: 16px;
+		    line-height: 21px;
+		}
+	}
+	   
+
+	.close-btn {
+	    float: right;
+	    font-size: 39px;
+	    font-weight: 700;
+	    color: #cccccc;
+	    cursor: pointer;
+	}
+
+
+	.managment-container {
+	    height: 420px;
+	    overflow: hidden;
+	    max-width: 100%;
+	}
+
+	.curr-choosefrom {
+	    overflow: auto;
+	    height: 100%;
+	    padding: 35px 10px 10px 10px;
+	}
+
+	.curr-chosen {
+	    overflow: auto;
+	    padding: 35px 20px 30px 20px;
+	    height: 100%;
+	    border-left: 1px solid #cccccc;
+	}
+
+	._cancelAndAttchCont{
+		text-align: right;
+		margin-top: 20px;
+	}
+
+	.cancel-btn, 
+	.attch-file-btn{
+	    color: #ffffff;
+	    font-size: 16px;
+	    padding: 10px 20px;
+	    border-radius: 3px;
+	    font-weight: 400px;
+	    cursor: pointer;
+	    display: inline-block;
+	}
+
+	.attch-file-btn {
+	    background-color: #2ac56c;
+	    margin-left: 5px;
+		
+		&.disabled {
+			opacity: .3;
+			cursor: not-allowed;
+		}
+	}
+
+
+	.cancel-btn{
+		background-color: #cccccc;
+	}
+
+
+	/****** Library ********/
+	.fattch-detail-tile{
+		position: relative;
+		display: inline-block;
+		/*float: left;*/
+		vertical-align: top;
+		margin: 8px;
+		width: 95px;
+		max-height: 70px;
+		overflow: hidden;
+		height: auto;
+		border: 1px solid #eeeeee;
+		padding: 2px;
+
+		&.selected{
+			border-color: #7ce599;
+		}
+
+		&.selected::before {
+		    content: '+';
+		    line-height: 15px;
+		    background-color: #74dd91;
+		    position: absolute;
+		    z-index: 1;
+		    width: 15px;
+		    height: 15px;
+		    text-align: center;
+		    color: #ffffff;
+		    font-weight: 700;
+		    top: -1px;
+		    right: -2px;
+		}
+	}
+
+	.fattch-tileimg-cont{
+		width: 100%;
+		min-height: 60px;
+		padding: 5px;
+		border: 2px dashed #eeeeee;
+		cursor: pointer;
+	}
+	.fattch-detail-tile img{
+		width: 100%;
+		height: auto;
+		font-size: 10px;
+	}
+
+
+}
+
+
+
+/**************** attchament Modal button ***************/
+._attachmentsButton{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 14px;
+	vertical-align: middle;
+	margin-bottom: 5px;
+	color: #797979;
+
+	.attch-icon{
+		display: inline-block;
+		width: 18px;
+		height: 16px;
+		background-image: url('https://s3-us-west-2.amazonaws.com/asset.plexuss.com/icons/attach-dark.png ');
+		background-size: 100%;
+
+	}
+
+	&.disabled{
+		opacity: .3;
+		cursor: not-allowed;
+	}
+
+	&.disabled > * {
+		cursor: not-allowed;
+	}
+
+}

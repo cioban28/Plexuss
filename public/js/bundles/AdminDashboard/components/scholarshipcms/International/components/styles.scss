@@ -1,0 +1,20 @@
+// styles.scss
+
+@import './../../_global.scss';
+
+.options > div{
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+
+	& > div{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.divider{ margin: 0 0 0 10px; }
+	&:not(:last-child){ margin: 0 10px 0 0; }
+	.active{ color: $green; }
+}
