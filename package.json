@@ -5,7 +5,7 @@
   "author": "Plexuss Engineering",
   "devDependencies": {
     "@types/node": "^8.10.29",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^6.4.1",
