@@ -98,7 +98,7 @@
     "match": "^1.2.9",
     "material-table": "^1.17.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.4",
     "object-to-formdata": "^1.6.2",
     "parse": "^2.2.1",
